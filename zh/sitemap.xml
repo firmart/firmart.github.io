@@ -12,6 +12,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="https://firminmartin.com/zh/"
                 />
@@ -54,6 +59,11 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://firminmartin.com/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -146,6 +156,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="https://firminmartin.com/zh/categories/"
                 />
@@ -157,6 +172,11 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://firminmartin.com/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/series/"
                 />
     <xhtml:link
                 rel="alternate"
