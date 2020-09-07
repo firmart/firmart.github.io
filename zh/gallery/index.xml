@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 12 Oct 2018 10:20:16 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://firminmartin.com/zh/gallery/index.xml" rel="self" type="application/rss+xml" />
@@ -22,16 +22,16 @@
 
       
       <item>
-        <title>Photo</title>
-        <link>https://firminmartin.com/zh/gallery/photo/</link>
-        <pubDate>Fri, 12 Oct 2018 10:20:16 +0900</pubDate>
+        <title>Cartoon</title>
+        <link>https://firminmartin.com/zh/gallery/cartoon/</link>
+        <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         
-        <atom:modified>Fri, 12 Oct 2018 10:20:16 +0900</atom:modified>
-        <guid>https://firminmartin.com/zh/gallery/photo/</guid>
-        <description></description>
+        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
+        <guid>https://firminmartin.com/zh/gallery/cartoon/</guid>
+        <description>Sample images from Pixabay</description>
         
         <dc:creator>Firmin Martin</dc:creator>
-        
+        <media:content url="https://firminmartin.comimages/feature2/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -40,16 +40,16 @@
       </item>
       
       <item>
-        <title>Cartoon</title>
-        <link>https://firminmartin.com/zh/gallery/cartoon/</link>
-        <pubDate>Thu, 11 Oct 2018 10:20:16 +0900</pubDate>
+        <title>Photo</title>
+        <link>https://firminmartin.com/zh/gallery/photo/</link>
+        <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         
-        <atom:modified>Thu, 11 Oct 2018 10:20:16 +0900</atom:modified>
-        <guid>https://firminmartin.com/zh/gallery/cartoon/</guid>
-        <description></description>
+        <atom:modified>Thu, 31 Oct 2019 10:20:16 +0900</atom:modified>
+        <guid>https://firminmartin.com/zh/gallery/photo/</guid>
+        <description>Sample images from Pixabay</description>
         
         <dc:creator>Firmin Martin</dc:creator>
-        
+        <media:content url="https://firminmartin.comimages/feature2/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

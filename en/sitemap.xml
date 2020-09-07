@@ -13,6 +13,71 @@
   </url>
   
   <url>
+    <loc>https://firminmartin.com/en/</loc>
+    <lastmod>2020-09-07T02:22:09+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/categories/</loc>
+    <lastmod>2020-09-07T02:22:09+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/categories/emacs/</loc>
+    <lastmod>2020-09-07T02:22:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/hugo/</loc>
+    <lastmod>2020-09-07T02:22:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/org/</loc>
+    <lastmod>2020-09-07T02:22:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/</loc>
+    <lastmod>2020-09-07T02:22:09+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/posts/first-post/</loc>
+    <lastmod>2020-09-07T02:22:09+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://firminmartin.com/en/about/</loc>
     <lastmod>2020-09-06T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -24,21 +89,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://firminmartin.com/en/about/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/"
                 />
   </url>
   
@@ -73,21 +123,6 @@
   </url>
   
   <url>
-    <loc>https://firminmartin.com/en/tags/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://firminmartin.com/en/publication/article/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url>
@@ -115,6 +150,11 @@
   <url>
     <loc>https://firminmartin.com/en/showcase/</loc>
     <lastmod>2020-01-19T15:43:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/posts/math-typesetting/</loc>
+    <lastmod>2019-12-17T12:00:06+09:00</lastmod>
   </url>
   
   <url>
@@ -215,20 +255,6 @@
   <url>
     <loc>https://firminmartin.com/en/publication/misc/misc_any_folder_name_1/</loc>
     <lastmod>2016-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/categories/"
-                />
   </url>
   
   <url>

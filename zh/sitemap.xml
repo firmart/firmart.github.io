@@ -63,6 +63,51 @@
   </url>
   
   <url>
+    <loc>https://firminmartin.com/zh/gallery/cartoon/</loc>
+    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/gallery/cartoon/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/gallery/cartoon/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/zh/gallery/</loc>
+    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/gallery/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/gallery/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/zh/gallery/photo/</loc>
+    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/gallery/photo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/gallery/photo/"
+                />
+  </url>
+  
+  <url>
     <loc>https://firminmartin.com/zh/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
@@ -89,51 +134,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://firminmartin.com/zh/about/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/zh/gallery/</loc>
-    <lastmod>2018-10-12T10:20:16+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/gallery/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/gallery/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/zh/gallery/photo/</loc>
-    <lastmod>2018-10-12T10:20:16+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/gallery/photo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/gallery/photo/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/zh/gallery/cartoon/</loc>
-    <lastmod>2018-10-11T10:20:16+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/gallery/cartoon/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/gallery/cartoon/"
                 />
   </url>
   
