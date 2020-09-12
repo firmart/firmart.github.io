@@ -3,7 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://firminmartin.com/fr/contact/</loc>
+    <lastmod>2020-09-12T17:45:33+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/contact/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/fr/about/</loc>
+    <lastmod>2020-09-06T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/about/"
+                />
+  </url>
+  
+  <url>
     <loc>https://firminmartin.com/fr/</loc>
+    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -18,6 +59,46 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://firminmartin.com/fr/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/fr/posts/</loc>
+    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/fr/archive/</loc>
+    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/archive/"
                 />
   </url>
   

@@ -3,6 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://firminmartin.com/zh/contact/</loc>
+    <lastmod>2020-09-12T17:45:33+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/contact/"
+                />
+  </url>
+  
+  <url>
     <loc>https://firminmartin.com/zh/</loc>
     <lastmod>2020-09-06T00:00:00+02:00</lastmod>
     <xhtml:link
@@ -37,6 +57,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="zh"
                 href="https://firminmartin.com/zh/posts/"
                 />
@@ -63,27 +88,17 @@
   </url>
   
   <url>
-    <loc>https://firminmartin.com/zh/gallery/cartoon/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/zh/gallery/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/zh/gallery/photo/</loc>
-    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://firminmartin.com/zh/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
                 href="https://firminmartin.com/en/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/archive/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -99,6 +114,11 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://firminmartin.com/en/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/about/"
                 />
     <xhtml:link
                 rel="alternate"
