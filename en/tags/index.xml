@@ -12,6 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 12 Sep 2020 00:00:00 +0200</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://firminmartin.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -19,6 +20,78 @@
     
     
 
+      
+      <item>
+        <title>emacs</title>
+        <link>https://firminmartin.com/en/tags/emacs/</link>
+        <pubDate>Sat, 12 Sep 2020 00:00:00 +0200</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/emacs/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>org-glaux</title>
+        <link>https://firminmartin.com/en/tags/org-glaux/</link>
+        <pubDate>Sat, 12 Sep 2020 00:00:00 +0200</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/org-glaux/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>org-mode</title>
+        <link>https://firminmartin.com/en/tags/org-mode/</link>
+        <pubDate>Sat, 12 Sep 2020 00:00:00 +0200</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/org-mode/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>vim</title>
+        <link>https://firminmartin.com/en/tags/vim/</link>
+        <pubDate>Sat, 12 Sep 2020 00:00:00 +0200</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/vim/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
 
     

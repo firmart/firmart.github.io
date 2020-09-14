@@ -23,6 +23,71 @@
   </url>
   
   <url>
+    <loc>https://firminmartin.com/en/</loc>
+    <lastmod>2020-09-12T00:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/emacs/</loc>
+    <lastmod>2020-09-12T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/posts/2020-09-12_migrate_from_vimwiki_to_org-mode/</loc>
+    <lastmod>2020-09-12T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/org-glaux/</loc>
+    <lastmod>2020-09-12T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/org-mode/</loc>
+    <lastmod>2020-09-12T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/</loc>
+    <lastmod>2020-09-12T00:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/vim/</loc>
+    <lastmod>2020-09-12T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://firminmartin.com/en/about/</loc>
     <lastmod>2020-09-06T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -39,26 +104,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://firminmartin.com/en/about/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://firminmartin.com/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/"
                 />
   </url>
   
@@ -137,25 +182,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://firminmartin.com/en/series/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://firminmartin.com/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/tags/"
                 />
   </url>
   
