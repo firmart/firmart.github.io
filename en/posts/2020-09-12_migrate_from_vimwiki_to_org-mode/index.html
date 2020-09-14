@@ -1729,7 +1729,7 @@ headlines. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-not
 <p>The last step is optional, but in my opinion is better to move headlines in separated<br />
 Org files as they was originally separated as vimwiki files.</p>
 <h4 id="fix-internal-links">Fix internal links</h4>
-<p><a id="org19ff9a1"></a><br />
+<p><a id="org2d82d73">internal-link</a><br />
 We have to make link working again. Depending on whether you are using <a href="https://github.com/firmart/org-glaux">org-glaux</a>, use one of the following evil regexps that suits you:</p>
 <ul>
 <li>Org mode file link: <code>%s/\[\[\(.*?\)\]\[\(.*?\)\]\]/[[file:\1.org][\2]]/g</code></li>
@@ -1804,7 +1804,7 @@ We have to make link working again. Depending on whether you are using <a href="
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="postlude-how-many-links-are-broken">Postlude: how many links are broken ?</h2>
-<p>This little section is reserved for <a href="https://github.com/firmart/org-glaux">org-glaux</a> users, of whom I am the only one (for now!). After all those steps, we want to make sure that all internal links are correctly interconnected. This is as simple as calling <code>M-x org-glaux-stats</code>! That command produces a statistical overview of the current wiki including the number of broken links. As long as vimwiki files are under the same directories, no broken link is detected in my side. However, since we use relative links (see ), they may be broken in the future as soon as they or their target Org files move. I plan to implement (not soon) a &ldquo;safe move&rdquo; feature inside <a href="https://github.com/firmart/org-glaux">org-glaux</a> which preserves page&rsquo;s link when page moves. But before that I should introduce caching (with <em>e.g.</em> <a href="https://github.com/l3kn/org-el-cache">l3kn/org-el-cache</a>) to annihilate links resolving overheads.</p>
+<p>This little section is reserved for <a href="https://github.com/firmart/org-glaux">org-glaux</a> users, of whom I am the only one (for now!). After all those steps, we want to make sure that all internal links are correctly interconnected. This is as simple as calling <code>M-x org-glaux-stats</code>! That command produces a statistical overview of the current wiki including the number of broken links. As long as vimwiki files are under the same directories, no broken link is detected in my side. However, since we use relative links (see <a href="#org2d82d73">internal-link</a>), they may be broken in the future as soon as they or their target Org files move. I plan to implement (not soon) a &ldquo;safe move&rdquo; feature inside <a href="https://github.com/firmart/org-glaux">org-glaux</a> which preserves page&rsquo;s link when page moves. But before that I should introduce caching (with <em>e.g.</em> <a href="https://github.com/l3kn/org-el-cache">l3kn/org-el-cache</a>) to annihilate links resolving overheads.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
