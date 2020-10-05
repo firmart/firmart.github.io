@@ -6,16 +6,16 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Posts on Firmin Martin</title>
-    <link>https://firminmartin.com/en/posts/</link>
-    <description>Recent content in Posts on Firmin Martin</description>
+    <title>offlineimap on Firmin Martin</title>
+    <link>https://firminmartin.com/en/tags/offlineimap/</link>
+    <description>Recent content in offlineimap on Firmin Martin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0200</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
-        <atom:link href="https://firminmartin.com/en/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://firminmartin.com/en/tags/offlineimap/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -52,42 +52,6 @@ A full back-and-forth cycle of email consists to
           
             
               <category>offlineimap</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Migrate from vimwiki to Org mode</title>
-        <link>https://firminmartin.com/en/posts/2020-09-12_migrate_from_vimwiki_to_org-mode/</link>
-        <pubDate>Sat, 12 Sep 2020 00:00:00 +0200</pubDate>
-        
-        <atom:modified>Sat, 12 Sep 2020 00:00:00 +0200</atom:modified>
-        <guid>https://firminmartin.com/en/posts/2020-09-12_migrate_from_vimwiki_to_org-mode/</guid>
-        <description>Around 2016-2017, I used vimwiki a lot to take spare notes of Linux, programming &amp;amp; mathematics related topics. I moved from Vim to Emacs in June 2019 for the great Org mode and never came back. Recently, I wanted to get rid of my good old vimwiki directory and merge it in my org-mode personal wiki (using org-glaux). Since it&amp;rsquo;s a one-time task, I decided to use the only available outdated script then write some Emacs code to fix the result instead of patching the old script.</description>
-        
-        <dc:creator>[Firmin Martin]</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>vim</category>
-            
-          
-            
-              <category>emacs</category>
-            
-          
-            
-              <category>org-mode</category>
-            
-          
-            
-              <category>org-glaux</category>
             
           
         
