@@ -29,7 +29,7 @@
         <atom:modified>Sun, 04 Oct 2020 00:00:00 +0200</atom:modified>
         <guid>https://firminmartin.com/en/posts/2020-09-17_read_email_in_emacs_with_notmuch/</guid>
         <description>It has been 18 months that I read &amp;amp; write my emails in Emacs. No need to say I have enjoyed the mouse-free experience brought by Emacs. Recently, I had to keep track a new email account. So I came across my old note written back then which I enhanced in this post.
-A full back-and-forth cycle of email consists to
+Introduction A full back-and-forth cycle of email consists to
  Receive email through a program which synchronize emails locally from an email server.</description>
         
         <dc:creator>[Firmin Martin]</dc:creator>
