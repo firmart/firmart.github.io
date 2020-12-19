@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>zsh on Firmin Martin</title>
+    <link>https://firminmartin.com/en/tags/zsh/</link>
+    <description>Recent content in zsh on Firmin Martin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 03 Dec 2020 00:00:00 +0100</lastBuildDate>
+    <sy:updatePeriod>weekly</sy:updatePeriod>
+    
+        <atom:link href="https://firminmartin.com/en/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>Rating images painlessly with exiftool feat. ranger &amp; sxiv</title>
+        <link>https://firminmartin.com/en/posts/2020-12-03_annotate_images_metadata_painlessly_with_exiftool/</link>
+        <pubDate>Thu, 03 Dec 2020 00:00:00 +0100</pubDate>
+        
+        <atom:modified>Thu, 03 Dec 2020 00:00:00 +0100</atom:modified>
+        <guid>https://firminmartin.com/en/posts/2020-12-03_annotate_images_metadata_painlessly_with_exiftool/</guid>
+        <description>Background I was looking for a way to classifying images by rating them on the fly. My first attempt was using darktable as suggested in a thread. Indeed, the auto-advance rating mechanism was quite handy. But it is still too heavy for this sole purpose. In darktable, user have to import images before editing metadata. When tens of thousands images are involved, the process of importing images can be quite time-consuming1 as it creates for each image an XMP file to store metadata.</description>
+        
+        <dc:creator>[Firmin Martin]</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>linux</category>
+            
+          
+            
+              <category>ranger</category>
+            
+          
+            
+              <category>exiftool</category>
+            
+          
+            
+              <category>zsh</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

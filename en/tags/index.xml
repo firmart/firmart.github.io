@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 03 Dec 2020 00:00:00 +0100</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://firminmartin.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,78 @@
     
     
 
+      
+      <item>
+        <title>exiftool</title>
+        <link>https://firminmartin.com/en/tags/exiftool/</link>
+        <pubDate>Thu, 03 Dec 2020 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/exiftool/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>linux</title>
+        <link>https://firminmartin.com/en/tags/linux/</link>
+        <pubDate>Thu, 03 Dec 2020 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/linux/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>ranger</title>
+        <link>https://firminmartin.com/en/tags/ranger/</link>
+        <pubDate>Thu, 03 Dec 2020 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/ranger/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>zsh</title>
+        <link>https://firminmartin.com/en/tags/zsh/</link>
+        <pubDate>Thu, 03 Dec 2020 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/zsh/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>emacs</title>

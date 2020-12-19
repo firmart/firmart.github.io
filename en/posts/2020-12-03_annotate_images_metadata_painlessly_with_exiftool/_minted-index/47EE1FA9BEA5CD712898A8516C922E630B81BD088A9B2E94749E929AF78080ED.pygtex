@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+exiftool \PYGZhy{}rating\PYG{o}{=}\PYG{l+m}{5} \PYGZhy{}overwrite\PYGZus{}original\PYGZus{}in\PYGZus{}place \PYGZlt{}files\PYGZgt{}
+\end{Verbatim}

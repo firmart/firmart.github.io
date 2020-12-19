@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+zmodload zsh/mapfile
+\PYG{c+c1}{\PYGZsh{} 1. Find recursively all XMP under the current directory}
+\PYG{c+c1}{\PYGZsh{} 2. Use GNU parallel, for each XMP}
+\PYG{c+c1}{\PYGZsh{}   (a) Extract the rating with grep and awk; put it in \PYGZdl{}RATE.}
+\PYG{c+c1}{\PYGZsh{}   (b) Append the image path to .xmp\PYGZhy{}\PYGZdl{}RATE\PYGZhy{}rating.db}
+find . \PYGZhy{}type f \PYGZhy{}regex \PYG{l+s+s2}{\PYGZdq{}.*\PYGZbs{}.xmp\PYGZdq{}} \PYGZhy{}print0 \PYG{p}{|} \PYG{l+s+se}{\PYGZbs{}}
+parallel \PYGZhy{}0  \PYG{l+s+se}{\PYGZbs{}}
+\PYG{l+s+s1}{\PYGZsq{}RATE=\PYGZdl{}(grep \PYGZhy{}o \PYGZdq{}Rating=\PYGZbs{}\PYGZdq{}[012345]\PYGZbs{}\PYGZdq{}\PYGZdq{} \PYGZob{}\PYGZcb{} | \PYGZbs{}}
+\PYG{l+s+s1}{ awk \PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{\PYGZsq{}\PYGZob{}print gensub(/Rating=\PYGZdq{}([0\PYGZhy{}5])\PYGZdq{}/, \PYGZdq{}\PYGZbs{}\PYGZbs{}1\PYGZdq{}, \PYGZdq{}g\PYGZdq{}, \PYGZdl{}1)\PYGZcb{}\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{\PYGZsq{}); \PYGZbs{}}
+\PYG{l+s+s1}{ echo \PYGZob{}\PYGZcb{} \PYGZgt{}\PYGZgt{} .xmp\PYGZhy{}\PYGZdl{}RATE\PYGZhy{}rating.db\PYGZsq{}}
+\PYG{c+c1}{\PYGZsh{} 3. For each \PYGZdl{}RATE:}
+\PYG{k}{for} i in \PYG{o}{\PYGZob{}}\PYG{l+m}{1}..5\PYG{o}{\PYGZcb{}}\PYG{p}{;} \PYG{k}{do}
+    \PYG{n+nv}{FNAME}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}xmp\PYGZhy{}}\PYG{n+nv}{\PYGZdl{}i}\PYG{l+s+s2}{\PYGZhy{}rating.db\PYGZdq{}}
+    \PYG{c+c1}{\PYGZsh{} For each file in .xmp\PYGZhy{}\PYGZdl{}RATE\PYGZhy{}rating.db}
+    \PYG{k}{for} f in \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{p}{(f)mapfile[}\PYG{n+nv}{\PYGZdl{}FNAME}\PYG{p}{]}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{;} \PYG{k}{do}
+	\PYG{c+c1}{\PYGZsh{} Use exiftool to rate it with the corresponding \PYGZdl{}RATE}
+	exiftool \PYGZhy{}rating\PYG{o}{=}\PYG{n+nv}{\PYGZdl{}i} \PYGZhy{}overwrite\PYGZus{}original\PYGZus{}in\PYGZus{}place \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nv}{f}\PYG{p}{\PYGZpc{}.*}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}
+    \PYG{k}{done}
+\PYG{k}{done}
+\end{Verbatim}

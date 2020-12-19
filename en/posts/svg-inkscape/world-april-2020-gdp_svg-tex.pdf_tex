@@ -1,0 +1,507 @@
+%% Creator: Inkscape inkscape 0.92.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'world-april-2020-gdp_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{762.75bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.66666667)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.23617776,0.66445428){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Afghanistan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19577751,0.66150442){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Albania\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19267563,0.65855457){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Algeria\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.296454,0.65560472){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Angola\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.1409578,0.65265487){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Antigua and Barbuda\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18541474,0.64970501){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Argentina\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.29099747,0.64675516){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Armenia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.11606,0.64380531){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Aruba\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17263081,0.64085546){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Australia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16916654,0.6379056){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Austria\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.26070735,0.63495575){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Azerbaijan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.15569425,0.6320059){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Bahamas, The\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.22175829,0.62905605){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Bahrain\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.62610619){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Bangladesh\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16266249,0.62315634){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Barbados\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18135804,0.62020649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Belarus\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17030453,0.61725664){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Belgium\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.12653832,0.61430678){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Belize\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.61135693){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Benin\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.60840708){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Bhutan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.23885897,0.60545723){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Bolivia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19577751,0.60250737){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Bosnia and Herzegovina\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18969081,0.59955752){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Botswana\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19116913,0.59660767){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Brazil\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.59365782){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Brunei Darussalam\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21342552,0.59070796){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Bulgaria\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.58775811){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Burkina Faso\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18823961,0.58480826){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Burundi\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21342552,0.58185841){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Cabo Verde\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.28589326,0.57890855){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Cambodia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.30864548,0.5759587){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Cameroon\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17876476,0.57300885){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Canada\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.570059){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Central African Republic\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.4503524,0.56710914){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Chad\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=35]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.20411028,0.56415929){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Chile\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=36]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.56120944){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}China, People's Republic of\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=37]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.25382577,0.55825959){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Colombia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=38]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.30864548,0.55530973){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Comoros\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=39]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.26070735,0.55235988){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Congo, Dem. Rep. of the\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=40]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.25719174,0.54941003){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Congo, Republic of\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=41]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.22863986,0.54646018){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Costa Rica\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=42]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.14929057,0.54351032){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Croatia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=43]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17502761,0.54056047){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Cyprus\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=44]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17502761,0.53761062){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Czech Republic\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=45]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.53466077){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Côte d'Ivoire\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=46]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17502761,0.53171091){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Denmark\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=47]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.52876106){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Djibouti\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=48]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.20067113,0.52581121){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dominica\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=49]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.32306496,0.52286136){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dominican Republic\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=50]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17749931,0.5199115){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ecuador\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=51]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.51696165){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Egypt\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=52]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18969081,0.5140118){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}El Salvador\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=53]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18823961,0.51106195){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Equatorial Guinea\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=54]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.50811209){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Eritrea\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=55]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16371003,0.50516224){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Estonia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=56]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.33139773,0.50221239){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Eswatini\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=57]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.49926254){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ethiopia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=58]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18403926,0.49631268){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Fiji\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=59]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18135804,0.49336283){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Finland\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=60]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16693856,0.49041298){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}France\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=61]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.30864548,0.48746313){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Gabon\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=62]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.48451327){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Gambia, The\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=63]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21342552,0.48156342){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Georgia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=64]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16916654,0.47861357){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Germany\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=65]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.47566372){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ghana\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=66]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.1409578,0.47271386){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Greece\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=67]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.15860579,0.46976401){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Grenada\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=68]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.26824525,0.46681416){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Guatemala\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=69]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.46386431){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Guinea\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=70]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.29099747,0.46091445){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Guinea-Bissau\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=71]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.4579646){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Guyana\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=72]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21342552,0.45501475){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Haiti\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=73]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.25382577,0.4520649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Honduras\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=74]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19900604,0.44911504){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hong Kong SAR\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=75]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.23358447,0.44616519){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hungary\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=76]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16693856,0.44321534){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Iceland\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=77]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.44026549){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}India\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=78]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.43731563){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Indonesia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=79]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18135804,0.43436578){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Iran\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=80]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.20067113,0.43141593){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Iraq\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=81]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17145913,0.42846608){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ireland\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=82]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17749931,0.42551622){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Israel\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=83]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.14841664,0.42256637){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Italy\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=84]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18681455,0.41961652){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Jamaica\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=85]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19267563,0.41666667){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Japan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=86]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21959135,0.41371681){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Jordan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=87]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.25059724,0.41076696){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kazakhstan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=88]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.40781711){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kenya\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=89]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0,0.40486726){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kiribati\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=90]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.30864548,0.4019174){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Korea, Republic of\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=91]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19577751,0.39896755){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kosovo\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=92]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.31552706,0.3960177){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kuwait\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=93]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21342552,0.39306785){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Kyrgyz Republic\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=94]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.39011799){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Lao P.D.R.\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=95]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.15288609,0.38716814){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Latvia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=96]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.12653832,0.38421829){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Lebanon\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=97]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19267563,0.38126844){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Lesotho\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=98]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.25059724,0.37831858){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Liberia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=99]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.00098328,0.37536873){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Libya\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=100]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.15762332,0.37241888){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Lithuania\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=101]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.1973753,0.36946903){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Luxembourg\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=102]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.05513219,0.36651917){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Macao SAR\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=103]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.36356932){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Madagascar\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=104]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.36061947){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Malawi\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=105]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.28109855,0.35766962){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Malaysia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=106]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.15762332,0.35471976){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Maldives\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=107]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.35176991){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mali\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=108]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.24163428,0.34882006){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Malta\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=109]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.4503524,0.34587021){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Marshall Islands\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=110]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.26824525,0.34292035){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mauritania\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=111]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17145913,0.3399705){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mauritius\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=112]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17382013,0.33702065){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mexico\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=113]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.39553269,0.3340708){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Micronesia, Fed. States of\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=114]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.23617776,0.33112094){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Moldova\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=115]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.32306496,0.32817109){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mongolia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=116]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.14929057,0.32522124){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Montenegro\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=117]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21959135,0.32227139){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Morocco\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=118]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.31932153){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mozambique\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=119]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.31637168){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Myanmar\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=120]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.25059724,0.31342183){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Namibia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=121]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.28109855,0.31047198){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Nauru\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=122]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.30752212){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Nepal\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=123]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16371003,0.30457227){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Netherlands\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=124]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16693856,0.30162242){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}New Zealand\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=125]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18135804,0.29867257){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Nicaragua\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=126]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.29572271){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Niger\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=127]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.22627884,0.29277286){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Nigeria\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=128]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21342552,0.28982301){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}North Macedonia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=129]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17749931,0.28687316){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Norway\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=130]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.24163428,0.2839233){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Oman\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=131]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.29099747,0.28097345){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Pakistan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=132]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.12720015,0.2780236){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Palau\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=133]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.26824525,0.27507375){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Panama\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=134]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.32306496,0.27212389){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Papua New Guinea\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=135]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.32306496,0.26917404){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Paraguay\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=136]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.20411028,0.26622419){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Peru\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=137]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.26327434){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Philippines\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=138]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.20237201,0.26032448){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Poland\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=139]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.15860579,0.25737463){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Portugal\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=140]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18135804,0.25442478){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Puerto Rico\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=141]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.20770582,0.25147493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Qatar\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=142]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19577751,0.24852507){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Romania\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=143]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18823961,0.24557522){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Russian Federation\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=144]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.24262537){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Rwanda\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=145]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.15762332,0.23967552){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Saint Kitts and Nevis\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=146]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.15381111,0.23672566){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Saint Lucia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=147]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.20411028,0.23377581){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Saint Vincent and the Grenadines\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=148]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21959135,0.23082596){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Samoa\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=149]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.12523105,0.22787611){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}San Marino\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=150]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.25719174,0.22492625){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Saudi Arabia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=151]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.2219764){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Senegal\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=152]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.23617776,0.21902655){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Serbia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=153]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.13487109,0.2160767){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Seychelles\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=154]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.25719174,0.21312684){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sierra Leone\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=155]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.22398627,0.21017699){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Singapore\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=156]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17876476,0.20722714){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Slovak Republic\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=157]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.15860579,0.20427729){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Slovenia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=158]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.26438653,0.20132743){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Solomon Islands\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=159]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.25059724,0.19837758){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Somalia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=160]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18403926,0.19542773){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}South Africa\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=161]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.19247788){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}South Sudan, Republic of\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=162]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.15860579,0.18952802){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Spain\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=163]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.37788468,0.18657817){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sri Lanka\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=164]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16693856,0.18362832){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sudan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=165]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.1973753,0.18067847){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Suriname\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=166]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17145913,0.17772861){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sweden\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=167]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18135804,0.17477876){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Switzerland\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=168]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18135804,0.17182891){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}São Tomé and Príncipe\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=169]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21342552,0.16887906){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Taiwan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=170]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.1659292){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tajikistan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=171]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.16297935){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tanzania\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=172]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17263081,0.1600295){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Thailand\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=173]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.23617776,0.15707965){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Timor-Leste\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=174]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.15412979){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Togo\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=175]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.30864548,0.15117994){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tonga\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=176]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.20411028,0.14823009){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Trinidad and Tobago\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=177]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.20770582,0.14528024){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tunisia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=178]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19577751,0.14233038){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Turkey\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=179]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.13938053){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Turkmenistan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=180]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.32306496,0.13643068){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tuvalu\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=181]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.13348083){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Uganda\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=182]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16162864,0.13053097){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ukraine\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=183]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.22398627,0.12758112){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}United Arab Emirates\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=184]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17502761,0.12463127){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}United Kingdom\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=185]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18268728,0.12168142){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}United States\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=186]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.23617776,0.11873156){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Uruguay\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=187]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.11578171){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Uzbekistan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=188]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.22863986,0.11283186){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Vanuatu\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=189]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.10889031,0.10988201){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Venezuela\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=190]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.10693215){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Vietnam\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=191]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.23617776,0.1039823){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Yemen\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=192]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.22398627,0.10103245){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Zambia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=193]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16477164,0.0980826){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Zimbabwe\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=194]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.28109855,0.09513274){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Africa (Region)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=195]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.4503524,0.09218289){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Asia and Pacific\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=196]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17263081,0.08923304){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Australia and New Zealand\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=197]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.24163428,0.08628319){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Caribbean\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=198]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.23617776,0.08333333){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Central America\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=199]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.22398627,0.08038348){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Central Asia and the Caucasus\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=200]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.07743363){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}East Asia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=201]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18969081,0.07448378){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Eastern Europe\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=202]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17263081,0.07153392){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Europe\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=203]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.21342552,0.06858407){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Middle East (Region)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=204]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.28109855,0.06563422){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}North Africa\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=205]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18135804,0.06268437){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}North America\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=206]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.26438653,0.05973451){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Pacific Islands\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=207]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19577751,0.05678466){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}South America\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=208]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.05383481){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}South Asia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=209]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.35127371,0.05088496){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Southeast Asia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=210]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.27657802,0.0479351){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sub-Saharan Africa (Region)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=211]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16584767,0.04498525){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Western Europe\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=212]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18541474,0.0420354){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Western Hemisphere (Region)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=213]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19577751,0.03908555){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}ASEAN\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=214]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.18005077,0.03318584){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Advanced economies\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=215]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.50517214,0.03023599){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Emerging and Developing Asia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=216]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19267563,0.02728614){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Emerging and Developing Europe\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=217]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.32306496,0.02433628){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Emerging market and developing economies\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=218]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16371003,0.02138643){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Euro area\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=219]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.16804471,0.01843658){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}European Union\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=220]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.19267563,0.01548673){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Latin America and the Caribbean\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=221]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.17876476,0.01253687){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Major advanced economies (G7)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=222]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.24163428,0.00958702){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Middle East and Central Asia\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=223]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.20237201,0.00663717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Other advanced economies\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=224]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.28589326,0.00368732){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sub-Saharan Africa\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=225]{world-april-2020-gdp_svg-tex.pdf}}%
+    \put(0.23617776,0.00073746){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}World\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://firminmartin.com/en/</loc>
-    <lastmod>2020-10-04T00:00:00+02:00</lastmod>
+    <lastmod>2020-12-03T00:00:00+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -20,6 +20,51 @@
                 hreflang="en"
                 href="https://firminmartin.com/en/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/exiftool/</loc>
+    <lastmod>2020-12-03T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/linux/</loc>
+    <lastmod>2020-12-03T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/ranger/</loc>
+    <lastmod>2020-12-03T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/posts/2020-12-03_annotate_images_metadata_painlessly_with_exiftool/</loc>
+    <lastmod>2020-12-03T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/</loc>
+    <lastmod>2020-12-03T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/zsh/</loc>
+    <lastmod>2020-12-03T00:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -45,26 +90,6 @@
   <url>
     <loc>https://firminmartin.com/en/posts/2020-09-17_read_email_in_emacs_with_notmuch/</loc>
     <lastmod>2020-10-04T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/</loc>
-    <lastmod>2020-10-04T00:00:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://firminmartin.com/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/tags/"
-                />
   </url>
   
   <url>

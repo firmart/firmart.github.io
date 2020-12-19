@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+exiftool \PYGZhy{}p \PYG{l+s+s1}{\PYGZsq{}\PYGZdl{}Rating \PYGZdl{}Filepath\PYGZsq{}} \PYGZhy{}f \PYGZlt{}files\PYGZgt{}
+\end{Verbatim}
