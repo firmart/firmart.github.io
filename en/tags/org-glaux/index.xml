@@ -26,7 +26,7 @@
         <link>https://firminmartin.com/en/posts/2020-09-12_migrate_from_vimwiki_to_org-mode/</link>
         <pubDate>Sat, 12 Sep 2020 00:00:00 +0200</pubDate>
         
-        <atom:modified>Sat, 12 Sep 2020 00:00:00 +0200</atom:modified>
+        <atom:modified>Sun, 20 Dec 2020 03:17:42 +0100</atom:modified>
         <guid>https://firminmartin.com/en/posts/2020-09-12_migrate_from_vimwiki_to_org-mode/</guid>
         <description>Around 2016-2017, I used vimwiki a lot to take spare notes of Linux, programming &amp;amp; mathematics related topics. I moved from Vim to Emacs in June 2019 for the great Org mode and never came back. Recently, I wanted to get rid of my good old vimwiki directory and merge it in my org-mode personal wiki (using org-glaux). Since it&amp;rsquo;s a one-time task, I decided to use the only available outdated script then write some Emacs code to fix the result instead of patching the old script.</description>
         

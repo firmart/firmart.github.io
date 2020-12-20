@@ -12,7 +12,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 03 Dec 2020 00:00:00 +0100</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://firminmartin.com/en/index.xml" rel="self" type="application/rss+xml" />
@@ -47,7 +46,7 @@
         <link>https://firminmartin.com/en/posts/2020-12-03_annotate_images_metadata_painlessly_with_exiftool/</link>
         <pubDate>Thu, 03 Dec 2020 00:00:00 +0100</pubDate>
         
-        <atom:modified>Thu, 03 Dec 2020 00:00:00 +0100</atom:modified>
+        <atom:modified>Sun, 20 Dec 2020 00:24:31 +0100</atom:modified>
         <guid>https://firminmartin.com/en/posts/2020-12-03_annotate_images_metadata_painlessly_with_exiftool/</guid>
         <description>Background I was looking for a way to classifying images by rating them on the fly. My first attempt was using darktable as suggested in a thread. Indeed, the auto-advance rating mechanism was quite handy. But it is still too heavy for this sole purpose. In darktable, user have to import images before editing metadata. When tens of thousands images are involved, the process of importing images can be quite time-consuming1 as it creates for each image an XMP file to store metadata.</description>
         
@@ -83,7 +82,7 @@
         <link>https://firminmartin.com/en/posts/2020-09-17_read_email_in_emacs_with_notmuch/</link>
         <pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate>
         
-        <atom:modified>Sun, 04 Oct 2020 00:00:00 +0200</atom:modified>
+        <atom:modified>Sun, 20 Dec 2020 00:24:31 +0100</atom:modified>
         <guid>https://firminmartin.com/en/posts/2020-09-17_read_email_in_emacs_with_notmuch/</guid>
         <description>It has been 18 months that I read &amp;amp; write my emails in Emacs. No need to say I have enjoyed the mouse-free experience brought by Emacs. Recently, I had to keep track a new email account. So I came across my old note written back then which I enhanced in this post.
 Introduction A full back-and-forth cycle of email consists to
@@ -121,7 +120,7 @@ Introduction A full back-and-forth cycle of email consists to
         <link>https://firminmartin.com/en/posts/2020-09-12_migrate_from_vimwiki_to_org-mode/</link>
         <pubDate>Sat, 12 Sep 2020 00:00:00 +0200</pubDate>
         
-        <atom:modified>Sat, 12 Sep 2020 00:00:00 +0200</atom:modified>
+        <atom:modified>Sun, 20 Dec 2020 03:17:42 +0100</atom:modified>
         <guid>https://firminmartin.com/en/posts/2020-09-12_migrate_from_vimwiki_to_org-mode/</guid>
         <description>Around 2016-2017, I used vimwiki a lot to take spare notes of Linux, programming &amp;amp; mathematics related topics. I moved from Vim to Emacs in June 2019 for the great Org mode and never came back. Recently, I wanted to get rid of my good old vimwiki directory and merge it in my org-mode personal wiki (using org-glaux). Since it&amp;rsquo;s a one-time task, I decided to use the only available outdated script then write some Emacs code to fix the result instead of patching the old script.</description>
         
