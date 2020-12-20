@@ -2245,28 +2245,24 @@ associated local/remote sections;</li>
 </nav>
     
   
-    <span id="/en/posts/2020-09-17_read_email_in_emacs_with_notmuch/" class="leancloud_visitors" data-flag-title="Read and Compose Email in Emacs with Notmuch">
-  <span class="post-meta-item-text"> Visitors </span>
-  <span class="leancloud-visitors-count">0</span>
-  <p></p>
-  </span>
-<div id="vcomments"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+    <div id="disqus_thread"></div>
 <script>
-  new Valine({
-      el: '#vcomments' ,
-      appId: 'EGGzSHntb86cLMcUeIFIoROo-MdYXbMMI',
-      appKey: 'i0d3Lr1Rmz5E7bNAgNHW8kL4',
-      notify:  true ,
-      verify:  false ,
-      avatar:'retro',
-      placeholder: 'Write something...',
-      visitor:  true ,
-      lang: 'en'
-  });
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function () {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + 'firminmartin-com' + '.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  }) ();
 </script>
-
   
 
     <div class="modal micromodal-slide" id="modal" aria-hidden="true">
