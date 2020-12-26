@@ -1227,7 +1227,7 @@
 <meta name="keywords" content="linux,ranger,exiftool,zsh">
 
 <meta name="created" content="2020-12-03T00:00:00&#43;0100">
-<meta name="modified" content="2020-12-25T01:47:34&#43;0100">
+<meta name="modified" content="2020-12-26T15:34:55&#43;0100">
 <meta property="article:published_time" content="2020-12-03T00:00:00&#43;0100">
 
 <meta name="author" content="[Firmin Martin]">
@@ -1277,7 +1277,7 @@
     "@type": "WebPage",
     "headline": "Rating images painlessly with exiftool feat. ranger \u0026 sxiv",
     "datePublished": "2020-12-03T00:00:00+01:00",
-    "dateModified": "2020-12-25T01:47:34+01:00",
+    "dateModified": "2020-12-26T15:34:55+01:00",
     "url" : "https://firminmartin.com/en/posts/2020-12-03_annotate_images_metadata_painlessly_with_exiftool/",
     "description": "Background I was looking for a way to classifying images by rating them on the fly. My first attempt was using darktable as suggested in a thread. Indeed, the …",
     "keywords": ["linux","ranger","exiftool","zsh"],
@@ -1599,9 +1599,9 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Dec 3, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <time class="single__info" title="Modified At"> 📝&nbsp;Dec 25, 2020 </time>
+  &nbsp;&middot;&nbsp; <time class="single__info" title="Modified At"> 📝&nbsp;Dec 26, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;9&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;10&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;
 
@@ -1704,299 +1704,47 @@ Thus, what has been and will be said is not limited to images and rating.</p>
   <span class="table-number">Table 1</span>:
   File types supported by exiftool (v11.88) (r = read, w = write, c = create).
 </div>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>3FR</code>   (r)</td>
-<td><code>DR4</code>   (r/w/c)</td>
-<td><code>ITC</code>   (r)</td>
-<td><code>ODP</code>   (r)</td>
-<td><code>RIFF</code>  (r)</td>
-</tr>
-<tr>
-<td><code>3G2</code>   (r/w)</td>
-<td><code>DSS</code>   (r)</td>
-<td><code>J2C</code>   (r)</td>
-<td><code>ODS</code>   (r)</td>
-<td><code>RSRC</code>  (r)</td>
-</tr>
-<tr>
-<td><code>3GP</code>   (r/w)</td>
-<td><code>DV</code>    (r)</td>
-<td><code>JNG</code>   (r/w)</td>
-<td><code>ODT</code>   (r)</td>
-<td><code>RTF</code>   (r)</td>
-</tr>
-<tr>
-<td><code>A</code>     (r)</td>
-<td><code>DVB</code>   (r/w)</td>
-<td><code>JP2</code>   (r/w)</td>
-<td><code>OFR</code>   (r)</td>
-<td><code>RW2</code>   (r/w)</td>
-</tr>
-<tr>
-<td><code>AA</code>    (r)</td>
-<td><code>DVR</code>-<code>MS</code> (r)</td>
-<td><code>JPEG</code>  (r/w)</td>
-<td><code>OGG</code>   (r)</td>
-<td><code>RWL</code>   (r/w)</td>
-</tr>
-<tr>
-<td><code>AAE</code>   (r)</td>
-<td><code>DYLIB</code> (r)</td>
-<td><code>JSON</code>  (r)</td>
-<td><code>OGV</code>   (r)</td>
-<td><code>RWZ</code>   (r)</td>
-</tr>
-<tr>
-<td><code>AAX</code>   (r/w)</td>
-<td><code>EIP</code>   (r)</td>
-<td><code>K25</code>   (r)</td>
-<td><code>OPUS</code>  (r)</td>
-<td><code>RM</code>    (r)</td>
-</tr>
-<tr>
-<td><code>ACR</code>   (r)</td>
-<td><code>EPS</code>   (r/w)</td>
-<td><code>KDC</code>   (r)</td>
-<td><code>ORF</code>   (r/w)</td>
-<td><code>SEQ</code>   (r)</td>
-</tr>
-<tr>
-<td><code>AFM</code>   (r)</td>
-<td><code>EPUB</code>  (r)</td>
-<td><code>KEY</code>   (r)</td>
-<td><code>OTF</code>   (r)</td>
-<td><code>SKETCH</code> (r)</td>
-</tr>
-<tr>
-<td><code>AI</code>    (r/w)</td>
-<td><code>ERF</code>   (r/w)</td>
-<td><code>LA</code>    (r)</td>
-<td><code>PAC</code>   (r)</td>
-<td><code>SO</code>    (r)</td>
-</tr>
-<tr>
-<td><code>AIFF</code>  (r)</td>
-<td><code>EXE</code>   (r)</td>
-<td><code>LFP</code>   (r)</td>
-<td><code>PAGES</code> (r)</td>
-<td><code>SR2</code>   (r/w)</td>
-</tr>
-<tr>
-<td><code>APE</code>   (r)</td>
-<td><code>EXIF</code>  (r/w/c)</td>
-<td><code>LNK</code>   (r)</td>
-<td><code>PBM</code>   (r/w)</td>
-<td><code>SRF</code>   (r)</td>
-</tr>
-<tr>
-<td><code>ARQ</code>   (r/w)</td>
-<td><code>EXR</code>   (r)</td>
-<td><code>LRV</code>   (r/w)</td>
-<td><code>PCD</code>   (r)</td>
-<td><code>SRW</code>   (r/w)</td>
-</tr>
-<tr>
-<td><code>ARW</code>   (r/w)</td>
-<td><code>EXV</code>   (r/w/c)</td>
-<td><code>M2TS</code>  (r)</td>
-<td><code>PCX</code>   (r)</td>
-<td><code>SVG</code>   (r)</td>
-</tr>
-<tr>
-<td><code>ASF</code>   (r)</td>
-<td><code>F4A</code>, <code>F4V</code> (r/w)</td>
-<td><code>M4A</code>, <code>M4V</code> (r/w)</td>
-<td><code>PDB</code>   (r)</td>
-<td><code>SWF</code>   (r)</td>
-</tr>
-<tr>
-<td><code>AVI</code>   (r)</td>
-<td><code>FFF</code>   (r/w)</td>
-<td><code>MAX</code>   (r)</td>
-<td><code>PDF</code>   (r/w)</td>
-<td><code>THM</code>   (r/w)</td>
-</tr>
-<tr>
-<td><code>AVIF</code>  (r/w)</td>
-<td><code>FITS</code>  (r)</td>
-<td><code>MEF</code>   (r/w)</td>
-<td><code>PEF</code>   (r/w)</td>
-<td><code>TIFF</code>  (r/w)</td>
-</tr>
-<tr>
-<td><code>AZW</code>   (r)</td>
-<td><code>FLA</code>   (r)</td>
-<td><code>MIE</code>   (r/w/c)</td>
-<td><code>PFA</code>   (r)</td>
-<td><code>TORRENT</code> (r)</td>
-</tr>
-<tr>
-<td><code>BMP</code>   (r)</td>
-<td><code>FLAC</code>  (r)</td>
-<td><code>MIFF</code>  (r)</td>
-<td><code>PFB</code>   (r)</td>
-<td><code>TTC</code>   (r)</td>
-</tr>
-<tr>
-<td><code>BPG</code>   (r)</td>
-<td><code>FLIF</code>  (r/w)</td>
-<td><code>MKA</code>   (r)</td>
-<td><code>PFM</code>   (r)</td>
-<td><code>TTF</code>   (r)</td>
-</tr>
-<tr>
-<td><code>BTF</code>   (r)</td>
-<td><code>FLV</code>   (r)</td>
-<td><code>MKS</code>   (r)</td>
-<td><code>PGF</code>   (r)</td>
-<td><code>TXT</code>   (r)</td>
-</tr>
-<tr>
-<td><code>CHM</code>   (r)</td>
-<td><code>FPF</code>   (r)</td>
-<td><code>MKV</code>   (r)</td>
-<td><code>PGM</code>   (r/w)</td>
-<td><code>VCF</code>   (r)</td>
-</tr>
-<tr>
-<td><code>COS</code>   (r)</td>
-<td><code>FPX</code>   (r)</td>
-<td><code>MNG</code>   (r/w)</td>
-<td><code>PLIST</code> (r)</td>
-<td><code>VRD</code>   (r/w/c)</td>
-</tr>
-<tr>
-<td><code>CR2</code>   (r/w)</td>
-<td><code>GIF</code>   (r/w)</td>
-<td><code>MOBI</code>  (r)</td>
-<td><code>PICT</code>  (r)</td>
-<td><code>VSD</code>   (r)</td>
-</tr>
-<tr>
-<td><code>CR3</code>   (r/w)</td>
-<td><code>GPR</code>   (r/w)</td>
-<td><code>MODD</code>  (r)</td>
-<td><code>PMP</code>   (r)</td>
-<td><code>WAV</code>   (r)</td>
-</tr>
-<tr>
-<td><code>CRM</code>   (r/w)</td>
-<td><code>GZ</code>    (r)</td>
-<td><code>MOI</code>   (r)</td>
-<td><code>PNG</code>   (r/w)</td>
-<td><code>WDP</code>   (r/w)</td>
-</tr>
-<tr>
-<td><code>CRW</code>   (r/w)</td>
-<td><code>HDP</code>   (r/w)</td>
-<td><code>MOS</code>   (r/w)</td>
-<td><code>PPM</code>   (r/w)</td>
-<td><code>WEBP</code>  (r)</td>
-</tr>
-<tr>
-<td><code>CS1</code>   (r/w)</td>
-<td><code>HDR</code>   (r)</td>
-<td><code>MOV</code>   (r/w)</td>
-<td><code>PPT</code>   (r)</td>
-<td><code>WEBM</code>  (r)</td>
-</tr>
-<tr>
-<td><code>CSV</code>   (r)</td>
-<td><code>HEIC</code>  (r/w)</td>
-<td><code>MP3</code>   (r)<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></td>
-<td><code>PPTX</code>  (r)</td>
-<td><code>WMA</code>   (r)</td>
-</tr>
-<tr>
-<td><code>DCM</code>   (r)</td>
-<td><code>HEIF</code>  (r/w)</td>
-<td><code>MP4</code>   (r/w)</td>
-<td><code>PS</code>    (r/w)</td>
-<td><code>WMV</code>   (r)</td>
-</tr>
-<tr>
-<td><code>DCP</code>   (r/w)</td>
-<td><code>HTML</code>  (r)</td>
-<td><code>MPC</code>   (r)</td>
-<td><code>PSB</code>   (r/w)</td>
-<td><code>WTV</code>   (r)</td>
-</tr>
-<tr>
-<td><code>DCR</code>   (r)</td>
-<td><code>ICC</code>   (r/w/c)</td>
-<td><code>MPG</code>   (r)</td>
-<td><code>PSD</code>   (r/w)</td>
-<td><code>WV</code>    (r)</td>
-</tr>
-<tr>
-<td><code>DFONT</code> (r)</td>
-<td><code>ICS</code>   (r)</td>
-<td><code>MPO</code>   (r/w)</td>
-<td><code>PSP</code>   (r)</td>
-<td><code>X3F</code>   (r/w)</td>
-</tr>
-<tr>
-<td><code>DIVX</code>  (r)</td>
-<td><code>IDML</code>  (r)</td>
-<td><code>MQV</code>   (r/w)</td>
-<td><code>QTIF</code>  (r/w)</td>
-<td><code>XCF</code>   (r)</td>
-</tr>
-<tr>
-<td><code>DJVU</code>  (r)</td>
-<td><code>IIQ</code>   (r/w)</td>
-<td><code>MRW</code>   (r/w)</td>
-<td><code>R3D</code>   (r)</td>
-<td><code>XLS</code>   (r)</td>
-</tr>
-<tr>
-<td><code>DLL</code>   (r)</td>
-<td><code>IND</code>   (r/w)</td>
-<td><code>MXF</code>   (r)</td>
-<td><code>RA</code>    (r)</td>
-<td><code>XLSX</code>  (r)</td>
-</tr>
-<tr>
-<td><code>DNG</code>   (r/w)</td>
-<td><code>INSP</code>  (r/w)</td>
-<td><code>NEF</code>   (r/w)</td>
-<td><code>RAF</code>   (r/w)</td>
-<td><code>XMP</code>   (r/w/c)</td>
-</tr>
-<tr>
-<td><code>DOC</code>   (r)</td>
-<td><code>INSV</code>  (r)</td>
-<td><code>NRW</code>   (r/w)</td>
-<td><code>RAM</code>   (r)</td>
-<td><code>ZIP</code>   (r)</td>
-</tr>
-<tr>
-<td><code>DOCX</code>  (r)</td>
-<td><code>INX</code>   (r)</td>
-<td><code>NUMBERS</code> (r)</td>
-<td><code>RAR</code>   (r)</td>
-<td></td>
-</tr>
-<tr>
-<td><code>DPX</code>   (r)</td>
-<td><code>ISO</code>   (r)</td>
-<td><code>O</code>     (r)</td>
-<td><code>RAW</code>   (r/w)</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p>| <code>3FR</code>   (r) || <code>DR4</code>   (r/w/c) || <code>ITC</code>   (r) || <code>ODP</code>   (r) || <code>RIFF</code>  (r) |
+|&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;|&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;&mdash;-|
+| <code>3G2</code>   (r/w) || <code>DSS</code>   (r) || <code>J2C</code>   (r) || <code>ODS</code>   (r) || <code>RSRC</code>  (r) |
+| <code>3GP</code>   (r/w) || <code>DV</code>    (r) || <code>JNG</code>   (r/w) || <code>ODT</code>   (r) || <code>RTF</code>   (r) |
+| <code>A</code>     (r) || <code>DVB</code>   (r/w) || <code>JP2</code>   (r/w) || <code>OFR</code>   (r) || <code>RW2</code>   (r/w) |
+| <code>AA</code>    (r) || <code>DVR</code>-<code>MS</code> (r) || <code>JPEG</code>  (r/w) || <code>OGG</code>   (r) || <code>RWL</code>   (r/w) |
+| <code>AAE</code>   (r) || <code>DYLIB</code> (r) || <code>JSON</code>  (r) || <code>OGV</code>   (r) || <code>RWZ</code>   (r) |
+| <code>AAX</code>   (r/w) || <code>EIP</code>   (r) || <code>K25</code>   (r) || <code>OPUS</code>  (r) || <code>RM</code>    (r) |
+| <code>ACR</code>   (r) || <code>EPS</code>   (r/w) || <code>KDC</code>   (r) || <code>ORF</code>   (r/w) || <code>SEQ</code>   (r) |
+| <code>AFM</code>   (r) || <code>EPUB</code>  (r) || <code>KEY</code>   (r) || <code>OTF</code>   (r) || <code>SKETCH</code> (r) |
+| <code>AI</code>    (r/w) || <code>ERF</code>   (r/w) || <code>LA</code>    (r) || <code>PAC</code>   (r) || <code>SO</code>    (r) |
+| <code>AIFF</code>  (r) || <code>EXE</code>   (r) || <code>LFP</code>   (r) || <code>PAGES</code> (r) || <code>SR2</code>   (r/w) |
+| <code>APE</code>   (r) || <code>EXIF</code>  (r/w/c) || <code>LNK</code>   (r) || <code>PBM</code>   (r/w) || <code>SRF</code>   (r) |
+| <code>ARQ</code>   (r/w) || <code>EXR</code>   (r) || <code>LRV</code>   (r/w) || <code>PCD</code>   (r) || <code>SRW</code>   (r/w) |
+| <code>ARW</code>   (r/w) || <code>EXV</code>   (r/w/c) || <code>M2TS</code>  (r) || <code>PCX</code>   (r) || <code>SVG</code>   (r) |
+| <code>ASF</code>   (r) || <code>F4A</code>, <code>F4V</code> (r/w) || <code>M4A</code>, <code>M4V</code> (r/w) || <code>PDB</code>   (r) || <code>SWF</code>   (r) |
+| <code>AVI</code>   (r) || <code>FFF</code>   (r/w) || <code>MAX</code>   (r) || <code>PDF</code>   (r/w) || <code>THM</code>   (r/w) |
+| <code>AVIF</code>  (r/w) || <code>FITS</code>  (r) || <code>MEF</code>   (r/w) || <code>PEF</code>   (r/w) || <code>TIFF</code>  (r/w) |
+| <code>AZW</code>   (r) || <code>FLA</code>   (r) || <code>MIE</code>   (r/w/c) || <code>PFA</code>   (r) || <code>TORRENT</code> (r) |
+| <code>BMP</code>   (r) || <code>FLAC</code>  (r) || <code>MIFF</code>  (r) || <code>PFB</code>   (r) || <code>TTC</code>   (r) |
+| <code>BPG</code>   (r) || <code>FLIF</code>  (r/w) || <code>MKA</code>   (r) || <code>PFM</code>   (r) || <code>TTF</code>   (r) |
+| <code>BTF</code>   (r) || <code>FLV</code>   (r) || <code>MKS</code>   (r) || <code>PGF</code>   (r) || <code>TXT</code>   (r) |
+| <code>CHM</code>   (r) || <code>FPF</code>   (r) || <code>MKV</code>   (r) || <code>PGM</code>   (r/w) || <code>VCF</code>   (r) |
+| <code>COS</code>   (r) || <code>FPX</code>   (r) || <code>MNG</code>   (r/w) || <code>PLIST</code> (r) || <code>VRD</code>   (r/w/c) |
+| <code>CR2</code>   (r/w) || <code>GIF</code>   (r/w) || <code>MOBI</code>  (r) || <code>PICT</code>  (r) || <code>VSD</code>   (r) |
+| <code>CR3</code>   (r/w) || <code>GPR</code>   (r/w) || <code>MODD</code>  (r) || <code>PMP</code>   (r) || <code>WAV</code>   (r) |
+| <code>CRM</code>   (r/w) || <code>GZ</code>    (r) || <code>MOI</code>   (r) || <code>PNG</code>   (r/w) || <code>WDP</code>   (r/w) |
+| <code>CRW</code>   (r/w) || <code>HDP</code>   (r/w) || <code>MOS</code>   (r/w) || <code>PPM</code>   (r/w) || <code>WEBP</code>  (r) |
+| <code>CS1</code>   (r/w) || <code>HDR</code>   (r) || <code>MOV</code>   (r/w) || <code>PPT</code>   (r) || <code>WEBM</code>  (r) |
+| <code>CSV</code>   (r) || <code>HEIC</code>  (r/w) || <code>MP3</code>   (r)<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> || <code>PPTX</code>  (r) || <code>WMA</code>   (r) |
+| <code>DCM</code>   (r) || <code>HEIF</code>  (r/w) || <code>MP4</code>   (r/w) || <code>PS</code>    (r/w) || <code>WMV</code>   (r) |
+| <code>DCP</code>   (r/w) || <code>HTML</code>  (r) || <code>MPC</code>   (r) || <code>PSB</code>   (r/w) || <code>WTV</code>   (r) |
+| <code>DCR</code>   (r) || <code>ICC</code>   (r/w/c) || <code>MPG</code>   (r) || <code>PSD</code>   (r/w) || <code>WV</code>    (r) |
+| <code>DFONT</code> (r) || <code>ICS</code>   (r) || <code>MPO</code>   (r/w) || <code>PSP</code>   (r) || <code>X3F</code>   (r/w) |
+| <code>DIVX</code>  (r) || <code>IDML</code>  (r) || <code>MQV</code>   (r/w) || <code>QTIF</code>  (r/w) || <code>XCF</code>   (r) |
+| <code>DJVU</code>  (r) || <code>IIQ</code>   (r/w) || <code>MRW</code>   (r/w) || <code>R3D</code>   (r) || <code>XLS</code>   (r) |
+| <code>DLL</code>   (r) || <code>IND</code>   (r/w) || <code>MXF</code>   (r) || <code>RA</code>    (r) || <code>XLSX</code>  (r) |
+| <code>DNG</code>   (r/w) || <code>INSP</code>  (r/w) || <code>NEF</code>   (r/w) || <code>RAF</code>   (r/w) || <code>XMP</code>   (r/w/c) |
+| <code>DOC</code>   (r) || <code>INSV</code>  (r) || <code>NRW</code>   (r/w) || <code>RAM</code>   (r) || <code>ZIP</code>   (r) |
+| <code>DOCX</code>  (r) || <code>INX</code>   (r) || <code>NUMBERS</code> (r) || <code>RAR</code>   (r) ||  |
+| <code>DPX</code>   (r) || <code>ISO</code>   (r) || <code>O</code>     (r) || <code>RAW</code>   (r/w) ||  |</p>
 <h2 id="ranger">ranger</h2>
 <p><a href="https://github.com/ranger/ranger/">ranger</a> is a free and open-source CLI files manager I&rsquo;m using for years. It is very handy to select
 images and preview them<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</p>
@@ -2128,11 +1876,11 @@ Add the following entries in <code>~/.config/sxiv/exec/key-handler</code><sup id
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># ~/.config/sxiv/exec/key-handler</span>
 <span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
 <span class="c1"># ...</span>
-<span class="s2">&#34;C-1&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 exiftool -rating<span class="o">=</span><span class="m">1</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
-<span class="s2">&#34;C-2&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 exiftool -rating<span class="o">=</span><span class="m">2</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
-<span class="s2">&#34;C-3&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 exiftool -rating<span class="o">=</span><span class="m">3</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
-<span class="s2">&#34;C-4&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 exiftool -rating<span class="o">=</span><span class="m">4</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
-<span class="s2">&#34;C-5&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 exiftool -rating<span class="o">=</span><span class="m">5</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
+<span class="s2">&#34;C-1&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 -I <span class="o">{}</span> exiftool -rating<span class="o">=</span><span class="m">1</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
+<span class="s2">&#34;C-2&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 -I <span class="o">{}</span> exiftool -rating<span class="o">=</span><span class="m">2</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
+<span class="s2">&#34;C-3&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 -I <span class="o">{}</span> exiftool -rating<span class="o">=</span><span class="m">3</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
+<span class="s2">&#34;C-4&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 -I <span class="o">{}</span> exiftool -rating<span class="o">=</span><span class="m">4</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
+<span class="s2">&#34;C-5&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 -I <span class="o">{}</span> exiftool -rating<span class="o">=</span><span class="m">5</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
 <span class="k">esac</span>
 </code></pre></td></tr></table>
 </div>
@@ -2447,16 +2195,31 @@ parallel -0  <span class="s1">&#39;TMP=$(grep -o &#34;Rating=\&#34;[012345]\&#34
     <section class="related">
     
     
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        See Also
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/en/posts/2020-12-03_rate_images_painlessly_with_exiftool/" class="related__link">Rating images painlessly with exiftool feat. ranger &amp; sxiv</a>
+        </li>
+        
+    </ul>
+    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-      <a href="https://firminmartin.com/en/posts/2020-09-17_read_email_in_emacs_with_notmuch/" class="pagination-single__left">
+      <a href="https://firminmartin.com/en/posts/2020-12-03_rate_images_painlessly_with_exiftool/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Read and Compose Email in Emacs with Notmuch</div>      
+        <div class="pagination-single__left-title">Rating images painlessly with exiftool feat. ranger &amp; sxiv</div>      
       </a>
     
     <div class="grow"></div>

@@ -26,8 +26,44 @@
         <link>https://firminmartin.com/en/posts/2020-12-03_annotate_images_metadata_painlessly_with_exiftool/</link>
         <pubDate>Thu, 03 Dec 2020 00:00:00 +0100</pubDate>
         
-        <atom:modified>Fri, 25 Dec 2020 01:47:34 +0100</atom:modified>
+        <atom:modified>Sat, 26 Dec 2020 15:34:55 +0100</atom:modified>
         <guid>https://firminmartin.com/en/posts/2020-12-03_annotate_images_metadata_painlessly_with_exiftool/</guid>
+        <description>Background I was looking for a way to classifying images by rating them on the fly. My first attempt was using darktable as suggested in a thread. Indeed, the auto-advance rating mechanism was quite handy. But it is still too heavy for this sole purpose. In darktable, user have to import images before editing metadata. When tens of thousands images are involved, the process of importing images can be quite time-consuming1 as it creates for each image an XMP file to store metadata.</description>
+        
+        <dc:creator>[Firmin Martin]</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>linux</category>
+            
+          
+            
+              <category>ranger</category>
+            
+          
+            
+              <category>exiftool</category>
+            
+          
+            
+              <category>zsh</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Rating images painlessly with exiftool feat. ranger &amp; sxiv</title>
+        <link>https://firminmartin.com/en/posts/2020-12-03_rate_images_painlessly_with_exiftool/</link>
+        <pubDate>Thu, 03 Dec 2020 00:00:00 +0100</pubDate>
+        
+        <atom:modified>Sat, 26 Dec 2020 15:34:55 +0100</atom:modified>
+        <guid>https://firminmartin.com/en/posts/2020-12-03_rate_images_painlessly_with_exiftool/</guid>
         <description>Background I was looking for a way to classifying images by rating them on the fly. My first attempt was using darktable as suggested in a thread. Indeed, the auto-advance rating mechanism was quite handy. But it is still too heavy for this sole purpose. In darktable, user have to import images before editing metadata. When tens of thousands images are involved, the process of importing images can be quite time-consuming1 as it creates for each image an XMP file to store metadata.</description>
         
         <dc:creator>[Firmin Martin]</dc:creator>
