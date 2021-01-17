@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+find \PYGZhy{}L \PYGZhy{}type f \PYGZhy{}regex \PYG{l+s+s2}{\PYGZdq{}.*\PYGZbs{}.jpg}\PYGZdl{}\PYG{l+s+s2}{\PYGZdq{}} \PYG{p}{|}
+parallel \PYGZhy{}L \PYG{l+m}{5000} \PYG{l+s+se}{\PYGZbs{}}
+ \PYG{l+s+s1}{\PYGZsq{}noglob exiftool \PYGZhy{}p \PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{}Rating \PYGZdl{}Filename\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{\PYGZsq{} \PYGZhy{}f \PYGZhy{}q \PYGZhy{}q \PYGZob{}\PYGZcb{} | \PYGZbs{}}
+\PYG{l+s+s1}{  head \PYGZhy{}\PYGZhy{}lines=\PYGZhy{}1 | \PYGZbs{}}
+\PYG{l+s+s1}{  awk \PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{}1 \PYGZti{} /[\PYGZca{}0\PYGZhy{}]/ \PYGZob{}print \PYGZdl{}0\PYGZcb{}\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{\PYGZsq{} \PYGZsq{}} \PYGZgt{}\PYGZgt{} ratingdb.txt
+\end{Verbatim}

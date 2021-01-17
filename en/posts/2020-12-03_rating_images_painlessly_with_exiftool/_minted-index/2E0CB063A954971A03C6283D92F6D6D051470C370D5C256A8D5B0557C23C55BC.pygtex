@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} \PYGZti{}/.config/ranger/rc.conf}
+\PYG{n+na}{map r1 rate\PYGZus{}image 1}
+\PYG{n+na}{map r2 rate\PYGZus{}image 2}
+\PYG{n+na}{map r3 rate\PYGZus{}image 3}
+\PYG{n+na}{map r4 rate\PYGZus{}image 4}
+\PYG{n+na}{map r5 rate\PYGZus{}image 5}
+\end{Verbatim}
