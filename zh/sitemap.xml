@@ -23,13 +23,8 @@
   </url>
   
   <url>
-    <loc>https://firminmartin.com/zh/tags/index/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://firminmartin.com/zh/posts/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
+    <lastmod>2021-03-01T04:50:52+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -48,8 +43,23 @@
   </url>
   
   <url>
+    <loc>https://firminmartin.com/zh/tags/emacs/</loc>
+    <lastmod>2021-03-01T04:50:52+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/tags/emacs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/tags/emacs/"
+                />
+  </url>
+  
+  <url>
     <loc>https://firminmartin.com/zh/tags/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
+    <lastmod>2021-03-01T04:50:52+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -65,6 +75,26 @@
                 hreflang="zh"
                 href="https://firminmartin.com/zh/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/zh/posts/2021-02-27_consult_dictionaries_in_emacs/</loc>
+    <lastmod>2021-03-01T04:50:52+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/posts/2021-02-27_consult_dictionaries_in_emacs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/posts/2021-02-27_consult_dictionaries_in_emacs/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/zh/tags/%E5%AD%97%E5%85%B8/</loc>
+    <lastmod>2021-03-01T04:50:52+01:00</lastmod>
   </url>
   
   <url>

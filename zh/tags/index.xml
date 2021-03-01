@@ -12,7 +12,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0200</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://firminmartin.com/zh/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -22,12 +22,30 @@
 
       
       <item>
-        <title>index</title>
-        <link>https://firminmartin.com/zh/tags/index/</link>
-        <pubDate>Sun, 06 Sep 2020 00:00:00 +0200</pubDate>
+        <title>emacs</title>
+        <link>https://firminmartin.com/zh/tags/emacs/</link>
+        <pubDate>Tue, 09 Jun 2020 00:00:00 +0200</pubDate>
         
         
-        <guid>https://firminmartin.com/zh/tags/index/</guid>
+        <guid>https://firminmartin.com/zh/tags/emacs/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>字典</title>
+        <link>https://firminmartin.com/zh/tags/%E5%AD%97%E5%85%B8/</link>
+        <pubDate>Tue, 09 Jun 2020 00:00:00 +0200</pubDate>
+        
+        
+        <guid>https://firminmartin.com/zh/tags/%E5%AD%97%E5%85%B8/</guid>
         <description></description>
         
         <dc:creator>Firmin Martin</dc:creator>
