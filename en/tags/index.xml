@@ -12,12 +12,66 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 03 Dec 2020 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0100</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://firminmartin.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>driver</title>
+        <link>https://firminmartin.com/en/tags/driver/</link>
+        <pubDate>Mon, 01 Mar 2021 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/driver/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>hardware</title>
+        <link>https://firminmartin.com/en/tags/hardware/</link>
+        <pubDate>Mon, 01 Mar 2021 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/hardware/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>virtualbox</title>
+        <link>https://firminmartin.com/en/tags/virtualbox/</link>
+        <pubDate>Mon, 01 Mar 2021 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/virtualbox/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>exiftool</title>
