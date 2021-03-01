@@ -17,8 +17,6 @@
     
         <atom:link href="https://firminmartin.com/zh/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    
 
       
       <item>
@@ -26,7 +24,7 @@
         <link>https://firminmartin.com/zh/posts/2020/06/consult_dictionaries_in_emacs/</link>
         <pubDate>Tue, 09 Jun 2020 00:00:00 +0200</pubDate>
         
-        <atom:modified>Tue, 09 Jun 2020 00:00:00 +0200</atom:modified>
+        <atom:modified>Mon, 01 Mar 2021 09:47:12 +0100</atom:modified>
         <guid>https://firminmartin.com/zh/posts/2020/06/consult_dictionaries_in_emacs/</guid>
         <description>學語言或者讀文學作品，最費時的莫過於查字典了。求學期間，曾經歷過「翻閱紙本辭典」、 「使用線上辭典」到目前為止的「Google Chrome搜索</description>
         

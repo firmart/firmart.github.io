@@ -17,8 +17,6 @@
     
         <atom:link href="https://firminmartin.com/en/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    
 
       
       <item>
@@ -26,7 +24,7 @@
         <link>https://firminmartin.com/en/posts/2020/12/rating_images_painlessly_with_exiftool/</link>
         <pubDate>Thu, 03 Dec 2020 00:00:00 +0100</pubDate>
         
-        <atom:modified>Thu, 03 Dec 2020 00:00:00 +0100</atom:modified>
+        <atom:modified>Mon, 01 Mar 2021 09:47:12 +0100</atom:modified>
         <guid>https://firminmartin.com/en/posts/2020/12/rating_images_painlessly_with_exiftool/</guid>
         <description>Background I was looking for a way to classifying images by rating them on the fly. My first attempt was using darktable as suggested in a thread. Indeed, the auto-advance rating mechanism was quite handy. But it is still too heavy for this sole purpose. In darktable, user have to import images before editing metadata. When tens of thousands images are involved, the process of importing images can be quite time-consuming1 as it creates for each image an XMP file to store metadata.</description>
         
