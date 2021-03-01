@@ -12,7 +12,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0200</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://firminmartin.com/zh/index.xml" rel="self" type="application/rss+xml" />
@@ -41,6 +40,34 @@
         
       
 
+      
+      <item>
+        <title>在Emacs裏查閱辭典</title>
+        <link>https://firminmartin.com/zh/posts/2020/06/consult_dictionaries_in_emacs/</link>
+        <pubDate>Tue, 09 Jun 2020 00:00:00 +0200</pubDate>
+        
+        <atom:modified>Tue, 09 Jun 2020 00:00:00 +0200</atom:modified>
+        <guid>https://firminmartin.com/zh/posts/2020/06/consult_dictionaries_in_emacs/</guid>
+        <description>學語言或者讀文學作品，最費時的莫過於查字典了。求學期間，曾經歷過「翻閱紙本辭典」、 「使用線上辭典」到目前為止的「Google Chrome搜索</description>
+        
+        <dc:creator>[Firmin Martin]</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>emacs</category>
+            
+          
+            
+              <category>字典</category>
+            
+          
+        
+        
+        
+      </item>
       
 
     

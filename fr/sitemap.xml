@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://firminmartin.com/fr/contact/</loc>
-    <lastmod>2020-09-12T17:45:33+01:00</lastmod>
+    <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -24,7 +24,7 @@
   
   <url>
     <loc>https://firminmartin.com/fr/about/</loc>
-    <lastmod>2020-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -43,28 +43,8 @@
   </url>
   
   <url>
-    <loc>https://firminmartin.com/fr/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://firminmartin.com/fr/"
-                />
-  </url>
-  
-  <url>
     <loc>https://firminmartin.com/fr/posts/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
+    <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -84,7 +64,7 @@
   
   <url>
     <loc>https://firminmartin.com/fr/archive/</loc>
-    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -99,6 +79,26 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://firminmartin.com/fr/archive/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/fr/</loc>
+    <lastmod>2020-12-20T00:26:17+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/"
                 />
   </url>
   

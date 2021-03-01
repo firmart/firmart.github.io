@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://firminmartin.com/zh/contact/</loc>
-    <lastmod>2020-09-12T17:45:33+01:00</lastmod>
+    <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -23,33 +23,8 @@
   </url>
   
   <url>
-    <loc>https://firminmartin.com/zh/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://firminmartin.com/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/zh/tags/index/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://firminmartin.com/zh/posts/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
+    <lastmod>2021-03-01T04:50:52+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -68,8 +43,23 @@
   </url>
   
   <url>
+    <loc>https://firminmartin.com/zh/tags/emacs/</loc>
+    <lastmod>2020-06-09T00:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/tags/emacs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/tags/emacs/"
+                />
+  </url>
+  
+  <url>
     <loc>https://firminmartin.com/zh/tags/</loc>
-    <lastmod>2020-09-06T00:00:00+02:00</lastmod>
+    <lastmod>2020-06-09T00:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -88,8 +78,28 @@
   </url>
   
   <url>
+    <loc>https://firminmartin.com/zh/posts/2020/06/consult_dictionaries_in_emacs/</loc>
+    <lastmod>2020-06-09T00:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/posts/2020/06/consult_dictionaries_in_emacs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/posts/2020/06/consult_dictionaries_in_emacs/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/zh/tags/%E5%AD%97%E5%85%B8/</loc>
+    <lastmod>2020-06-09T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://firminmartin.com/zh/archive/</loc>
-    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -109,7 +119,7 @@
   
   <url>
     <loc>https://firminmartin.com/zh/about/</loc>
-    <lastmod>2019-10-09T11:44:14+09:00</lastmod>
+    <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -124,6 +134,26 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://firminmartin.com/zh/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/zh/</loc>
+    <lastmod>2020-12-20T00:26:17+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/"
                 />
   </url>
   
