@@ -24,7 +24,7 @@
         <link>https://firminmartin.com/en/posts/2021/03/a_tale_of_installing_rt18812au_driver_and_make_it_works_in_virtualbox/</link>
         <pubDate>Mon, 01 Mar 2021 00:00:00 +0100</pubDate>
         
-        <atom:modified>Mon, 01 Mar 2021 00:00:00 +0100</atom:modified>
+        <atom:modified>Mon, 01 Mar 2021 15:48:37 +0100</atom:modified>
         <guid>https://firminmartin.com/en/posts/2021/03/a_tale_of_installing_rt18812au_driver_and_make_it_works_in_virtualbox/</guid>
         <description>Few days ago, I bought a USB Wi-Fi adapter to learn about pentesting. The goal was using this adapter to connect a virtual Kali Linux distribution in VirtualBox to Wi-Fi network through USB.
 After some hesitations, I picked up a cheap enough model which uses a RT18812AU chip. An important factor to choose this chip is that it is dual-band. This was the first time I&amp;rsquo;m dealing with such material. Of course, there was no such thing as plug-and-play.</description>
