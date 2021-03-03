@@ -6,16 +6,16 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>notmuch on Firmin Martin</title>
-    <link>https://firminmartin.com/en/tags/notmuch/</link>
-    <description>Recent content in notmuch on Firmin Martin</description>
+    <title>emacs-lisp on Firmin Martin</title>
+    <link>https://firminmartin.com/en/tags/emacs-lisp/</link>
+    <description>Recent content in emacs-lisp on Firmin Martin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 03 Mar 2021 00:00:00 +0100</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
-        <atom:link href="https://firminmartin.com/en/tags/notmuch/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://firminmartin.com/en/tags/emacs-lisp/index.xml" rel="self" type="application/rss+xml" />
     
 
       
@@ -50,42 +50,6 @@ Notmuch show To retrieve header from emails, we need the command notmuch show.</
           
             
               <category>emacs</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Read and Compose Email in Emacs with Notmuch</title>
-        <link>https://firminmartin.com/en/posts/2020/10/read_email_in_emacs_with_notmuch/</link>
-        <pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate>
-        
-        <atom:modified>Mon, 01 Mar 2021 09:47:12 +0100</atom:modified>
-        <guid>https://firminmartin.com/en/posts/2020/10/read_email_in_emacs_with_notmuch/</guid>
-        <description>It has been 18 months that I read &amp;amp; write my emails in Emacs. No need to say I have enjoyed the mouse-free experience brought by Emacs. Recently, I had to keep track a new email account. So I came across my old note written back then which I enhanced in this post. I made lots of updates subsequently including password management through pass, multi-accounts support etc. to make it as complete as possible.</description>
-        
-        <dc:creator>[Firmin Martin]</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>emacs</category>
-            
-          
-            
-              <category>notmuch</category>
-            
-          
-            
-              <category>email</category>
-            
-          
-            
-              <category>offlineimap</category>
             
           
         

@@ -3,6 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://firminmartin.com/en/tags/emacs/</loc>
+    <lastmod>2021-03-03T12:43:55+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/tags/emacs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/tags/emacs/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/emacs-lisp/</loc>
+    <lastmod>2021-03-03T12:43:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/email/</loc>
+    <lastmod>2021-03-03T12:43:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/notmuch/</loc>
+    <lastmod>2021-03-03T12:43:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/posts/2021/03/obtain_emails_header_in_notmuch/</loc>
+    <lastmod>2021-03-03T12:43:55+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/</loc>
+    <lastmod>2021-03-03T12:43:55+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/tags/"
+                />
+  </url>
+  
+  <url>
     <loc>https://firminmartin.com/en/posts/2021/03/bfs-grep/</loc>
     <lastmod>2021-03-02T09:47:43+01:00</lastmod>
   </url>
@@ -20,26 +75,6 @@
   <url>
     <loc>https://firminmartin.com/en/tags/shell/</loc>
     <lastmod>2021-03-02T09:47:43+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/</loc>
-    <lastmod>2021-03-02T09:47:43+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://firminmartin.com/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/tags/"
-                />
   </url>
   
   <url>
@@ -79,31 +114,6 @@
   
   <url>
     <loc>https://firminmartin.com/en/tags/zsh/</loc>
-    <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/emacs/</loc>
-    <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/tags/emacs/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/tags/emacs/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/email/</loc>
-    <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/notmuch/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
   </url>
   

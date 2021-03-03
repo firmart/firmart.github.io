@@ -12,12 +12,50 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 04 Oct 2020 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 03 Mar 2021 00:00:00 +0100</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://firminmartin.com/en/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Obtain emails header in notmuch</title>
+        <link>https://firminmartin.com/en/posts/2021/03/obtain_emails_header_in_notmuch/</link>
+        <pubDate>Wed, 03 Mar 2021 00:00:00 +0100</pubDate>
+        
+        <atom:modified>Wed, 03 Mar 2021 12:43:55 +0100</atom:modified>
+        <guid>https://firminmartin.com/en/posts/2021/03/obtain_emails_header_in_notmuch/</guid>
+        <description>Introduction It&amp;rsquo;s been half a month that I&amp;rsquo;m gradually writing an Emacs package for notmuch email notification. Although it works fine so far, it misses an important feature which consists to display the subject and the sender name on the notification instead of merely saying &amp;ldquo;2 new messages since last refresh&amp;rdquo;.
+Fortunately, probably because the development of the notmuch Emacs frontend, notmuch can speak Lisp S-expression.
+Notmuch show To retrieve header from emails, we need the command notmuch show.</description>
+        
+        <dc:creator>[Firmin Martin]</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>notmuch</category>
+            
+          
+            
+              <category>email</category>
+            
+          
+            
+              <category>emacs-lisp</category>
+            
+          
+            
+              <category>emacs</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Read and Compose Email in Emacs with Notmuch</title>

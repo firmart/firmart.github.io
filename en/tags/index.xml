@@ -12,12 +12,84 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 03 Mar 2021 00:00:00 +0100</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://firminmartin.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>emacs</title>
+        <link>https://firminmartin.com/en/tags/emacs/</link>
+        <pubDate>Wed, 03 Mar 2021 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/emacs/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>emacs-lisp</title>
+        <link>https://firminmartin.com/en/tags/emacs-lisp/</link>
+        <pubDate>Wed, 03 Mar 2021 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/emacs-lisp/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>email</title>
+        <link>https://firminmartin.com/en/tags/email/</link>
+        <pubDate>Wed, 03 Mar 2021 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/email/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>notmuch</title>
+        <link>https://firminmartin.com/en/tags/notmuch/</link>
+        <pubDate>Wed, 03 Mar 2021 00:00:00 +0100</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/notmuch/</guid>
+        <description></description>
+        
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>cli</title>
@@ -170,60 +242,6 @@
         
         
         <guid>https://firminmartin.com/en/tags/zsh/</guid>
-        <description></description>
-        
-        <dc:creator>Firmin Martin</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>emacs</title>
-        <link>https://firminmartin.com/en/tags/emacs/</link>
-        <pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate>
-        
-        
-        <guid>https://firminmartin.com/en/tags/emacs/</guid>
-        <description></description>
-        
-        <dc:creator>Firmin Martin</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>email</title>
-        <link>https://firminmartin.com/en/tags/email/</link>
-        <pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate>
-        
-        
-        <guid>https://firminmartin.com/en/tags/email/</guid>
-        <description></description>
-        
-        <dc:creator>Firmin Martin</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>notmuch</title>
-        <link>https://firminmartin.com/en/tags/notmuch/</link>
-        <pubDate>Sun, 04 Oct 2020 00:00:00 +0200</pubDate>
-        
-        
-        <guid>https://firminmartin.com/en/tags/notmuch/</guid>
         <description></description>
         
         <dc:creator>Firmin Martin</dc:creator>
