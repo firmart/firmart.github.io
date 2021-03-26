@@ -20,6 +20,51 @@
 
       
       <item>
+        <title>Tabs in Alacritty</title>
+        <link>https://firminmartin.com/en/posts/2021/03/tabs_in_alacritty/</link>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0100</pubDate>
+        
+        <atom:modified>Fri, 26 Mar 2021 00:00:00 +0100</atom:modified>
+        <guid>https://firminmartin.com/en/posts/2021/03/tabs_in_alacritty/</guid>
+        <description>Introduction Some time ago, I switched my daily terminal from kitty to alacritty due to issue regarding CJK input methods1. However, alacritty is known to not support tabs by design. There are at least two ways to enable tabs: through tabbed or tmux. Both are available in Ubuntu 20.04 package manager.
+tabbed tabbed is kind of a wrapper that will equip alacritty with tabs. To open alacritty with tabbed, use the following command:</description>
+        
+        <dc:creator>[Firmin Martin]</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>terminal</category>
+            
+          
+            
+              <category>tmux</category>
+            
+          
+            
+              <category>tabbed</category>
+            
+          
+            
+              <category>alacritty</category>
+            
+          
+            
+              <category>kitty</category>
+            
+          
+            
+              <category>linux</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Obtain emails header in notmuch</title>
         <link>https://firminmartin.com/en/posts/2021/03/obtain_emails_header_in_notmuch/</link>
         <pubDate>Wed, 03 Mar 2021 00:00:00 +0100</pubDate>

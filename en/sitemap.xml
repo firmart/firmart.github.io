@@ -3,6 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://firminmartin.com/en/tags/alacritty/</loc>
+    <lastmod>2021-03-26T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/kitty/</loc>
+    <lastmod>2021-03-26T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/linux/</loc>
+    <lastmod>2021-03-26T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/tabbed/</loc>
+    <lastmod>2021-03-26T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/posts/2021/03/tabs_in_alacritty/</loc>
+    <lastmod>2021-03-26T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/</loc>
+    <lastmod>2021-03-26T00:00:00+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://firminmartin.com/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://firminmartin.com/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://firminmartin.com/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/terminal/</loc>
+    <lastmod>2021-03-26T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://firminmartin.com/en/tags/tmux/</loc>
+    <lastmod>2021-03-26T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://firminmartin.com/en/tags/emacs/</loc>
     <lastmod>2021-03-03T12:43:55+01:00</lastmod>
     <xhtml:link
@@ -38,37 +93,12 @@
   </url>
   
   <url>
-    <loc>https://firminmartin.com/en/tags/</loc>
-    <lastmod>2021-03-03T12:43:55+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://firminmartin.com/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://firminmartin.com/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://firminmartin.com/en/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://firminmartin.com/en/posts/2021/03/bfs-grep/</loc>
     <lastmod>2021-03-02T09:47:43+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://firminmartin.com/en/tags/cli/</loc>
-    <lastmod>2021-03-02T09:47:43+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/linux/</loc>
     <lastmod>2021-03-02T09:47:43+01:00</lastmod>
   </url>
   
