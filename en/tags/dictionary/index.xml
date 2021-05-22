@@ -11,7 +11,7 @@
     <description>Recent content in dictionary on Firmin Martin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0200</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
@@ -28,8 +28,94 @@
         <guid>https://firminmartin.com/en/posts/2020/06/consult_dictionaries_in_emacs/</guid>
         <description>The most time-wasting thing when learning natural languages or reading literature works is nothing more than consulting a dictionary. During my studies, I came through three stages: paperback dictionary, online dictionary and Google Chrome search engines. The time requiring to consult one entry has decreased from a few minutes to dozens of seconds, but I’m still not satisfied with this speed.
 
-  Figure 1: A Kangxi Dictionary. It was quite fascinating to read when I was a child.</description>
-        
+ Figure 1: A Kangxi Dictionary. It was quite fascinating to read when I was a child.</description>
+        <content:encoded>&lt;p&gt;The most time-wasting thing when learning natural languages or reading
+literature works is nothing more than consulting a dictionary. During my
+studies, I came through three stages: paperback dictionary, online dictionary
+and Google Chrome search engines. The time requiring to consult one entry has
+decreased from a few minutes to dozens of seconds, but I’m still not satisfied
+with this speed.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;org76a0d62&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;kang-xi.jpg&#34;
+         alt=&#34;Figure 1: A Kangxi Dictionary. It was quite fascinating to read when I was a child.&#34;/&gt;&lt;figcaption&gt;
+            &lt;p&gt;Figure 1: A &lt;a href=&#34;https://en.wikipedia.org/wiki/Kangxi%5FDictionary&#34;&gt;Kangxi Dictionary&lt;/a&gt;. It was quite fascinating to read when I was a child.&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It happens it’s been around thirteen months that I moved from Vim to Emacs which
+means, in other words, that I handle all text-based file in Emacs. Naturally, I
+searched if there was such dictionary package for Emacs. Unsurprisingly, the
+author of Ivy, Oleh Krehel (a.k.a. abo-abo) has written an easy-to-use package
+named &lt;a href=&#34;https://github.com/abo-abo/define-word&#34;&gt;define-word&lt;/a&gt; for this purpose. In short, at each request
+it parses with regex an HTML page, retrieves the word definition and displays
+the result on minibuffer. A request can be made from a selected region or a
+prompted string.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;orgf5cf769&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;define-word.png&#34;
+         alt=&#34;Figure 2: Official screenshot of define-word&#34;/&gt;&lt;figcaption&gt;
+            &lt;p&gt;Figure 2: Official screenshot of define-word&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;As I just started to work on my first ever package (&lt;a href=&#34;https://github.com/firmart/org-glaux&#34;&gt;org-glaux&lt;/a&gt; to be precise), I
+read the source code and learn how it is easy to write a new parser. Of course,
+that is due to the design made by abo-abo&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. The first online dictionary I
+wanted to parse was Wiktionary&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, but because of its wiki specificity, it has
+complex markup and hyperlink, so I gave up straight away. Then, I moved on to a
+Franco-Chinese dictionary I use from time to time. It works, but there was still
+some sporadic issues, such as looking up conjugated verb form doesn’t redirect
+to the verb definition but to the verb morphology. Also, the HTML layout was
+barely consistent, thus not very interesting to parse for what it provides.&lt;/p&gt;
+&lt;p&gt;My thoughts then turned to the Larousse dictionary. This French-French dictionary
+despite having the problem of one word might have multiple pages, it has not so
+many defects.&lt;/p&gt;
+&lt;p&gt;My thoughts then turned to the &lt;a href=&#34;https://www.larousse.fr/dictionnaires/francais/&#34;&gt;Larousse dictionary&lt;/a&gt;. This French-French
+dictionary, despite having the problem that one word might have multiple
+corresponding pages, it has not so many defects.&lt;/p&gt;
+&lt;p&gt;After adding some utilities in the source code, such as HTML special characters
+decoding, the Larousse parser I wrote has finally highlighting for lexical
+class, examples and etymology (see figures &lt;a href=&#34;#org683df42&#34;&gt;3&lt;/a&gt; &amp;amp;
+&lt;a href=&#34;#orga18ff91&#34;&gt;4&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;If I spend more time on this, I would certainly be able to add some cool
+features like the possibility to search among multiple dictionaries, and even
+combine it to make flashcard with org-drill&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. It is would be also good to
+add a few encyclopedias and synonym dictionaries during my spare time.&lt;/p&gt;
+&lt;p&gt;Look up one word now takes an overhead of barely one second&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;. I&amp;rsquo;m quite
+happy with the result, but of course still open to a faster solution!&lt;/p&gt;
+&lt;p&gt;You can find &lt;a href=&#34;https://github.com/firmart/define-word/tree/fr-larousse&#34;&gt;here&lt;/a&gt; my fork implementing Larousse dictionary and test it by
+yourself.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;org683df42&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;define-word-1.png&#34;
+         alt=&#34;Figure 3: Looking up the French word &amp;amp;ldquo;couture&amp;amp;rdquo; in Larousse dictionary.&#34;/&gt;&lt;figcaption&gt;
+            &lt;p&gt;Figure 3: Looking up the French word &amp;ldquo;couture&amp;rdquo; in &lt;a href=&#34;https://www.larousse.fr/dictionnaires/francais/couture&#34;&gt;Larousse&lt;/a&gt; dictionary.&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a id=&#34;orga18ff91&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;define-word-2.png&#34;
+         alt=&#34;Figure 4: Looking up the French word &amp;amp;ldquo;abandon&amp;amp;rdquo; in Larousse dictionary.&#34;/&gt;&lt;figcaption&gt;
+            &lt;p&gt;Figure 4: Looking up the French word &amp;ldquo;abandon&amp;rdquo; in &lt;a href=&#34;https://www.larousse.fr/dictionnaires/francais/abandon&#34;&gt;Larousse&lt;/a&gt; dictionary.&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://oremacs.com/2015/05/22/define-word/&#34;&gt;According to the author&lt;/a&gt;, define-word only takes it 30 minutes to write.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;At the time of writing, I realized that define-word &lt;a href=&#34;https://github.com/abo-abo/define-word/commit/6e4a427503aef096484f88332962c346cdd10847&#34;&gt;supports now offline Wiktionary&lt;/a&gt; ! It suffices to download &lt;a href=&#34;https://en.wiktionary.org/wiki/User:Matthias%5FBuchmeier/download&#34;&gt;offline Wiktionary&lt;/a&gt; in ding format to use this feature.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;And sync it in org-agenda by schedule it.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;It&amp;rsquo;s a matter of pressing &lt;code&gt;C-c d&lt;/code&gt; upon a word.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>[Firmin Martin]</dc:creator>
         
         

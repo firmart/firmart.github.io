@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://firminmartin.com/en/tags/alacritty/</loc>
-    <lastmod>2021-03-26T12:02:48+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/kitty/</loc>
-    <lastmod>2021-03-26T12:02:48+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/linux/</loc>
-    <lastmod>2021-03-26T12:02:48+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/tabbed/</loc>
-    <lastmod>2021-03-26T12:02:48+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/posts/2021/03/tabs_in_alacritty/</loc>
-    <lastmod>2021-03-26T12:02:48+01:00</lastmod>
-  </url>
-  
-  <url>
+    <loc>https://firminmartin.com/en/tags/autocomplete/</loc>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
+    <loc>https://firminmartin.com/en/tags/fzf/</loc>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
+    <loc>https://firminmartin.com/en/tags/git/</loc>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
+    <loc>https://firminmartin.com/en/posts/2021/05/git_autocomplete_trailer_and_recipients_in_zsh/</loc>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/</loc>
-    <lastmod>2021-03-26T12:02:48+01:00</lastmod>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -45,19 +31,31 @@
                 hreflang="en"
                 href="https://firminmartin.com/en/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://firminmartin.com/en/tags/zsh/</loc>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
+    <loc>https://firminmartin.com/en/tags/alacritty/</loc>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
+    <loc>https://firminmartin.com/en/tags/kitty/</loc>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
+    <loc>https://firminmartin.com/en/tags/linux/</loc>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
+    <loc>https://firminmartin.com/en/tags/tabbed/</loc>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
+    <loc>https://firminmartin.com/en/posts/2021/03/tabs_in_alacritty/</loc>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/terminal/</loc>
-    <lastmod>2021-03-26T12:02:48+01:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/tmux/</loc>
-    <lastmod>2021-03-26T12:02:48+01:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-05-22T16:03:38+02:00</lastmod>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/emacs/</loc>
     <lastmod>2021-03-03T12:43:55+01:00</lastmod>
     <xhtml:link
@@ -70,94 +68,55 @@
                 hreflang="en"
                 href="https://firminmartin.com/en/tags/emacs/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/emacs-lisp/</loc>
     <lastmod>2021-03-03T12:43:55+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/email/</loc>
     <lastmod>2021-03-03T12:43:55+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/notmuch/</loc>
     <lastmod>2021-03-03T12:43:55+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/posts/2021/03/obtain_emails_header_in_notmuch/</loc>
     <lastmod>2021-03-03T12:43:55+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/posts/2021/03/bfs-grep/</loc>
     <lastmod>2021-03-02T09:47:43+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/cli/</loc>
     <lastmod>2021-03-02T09:47:43+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/shell/</loc>
     <lastmod>2021-03-02T09:47:43+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/posts/2021/03/a_tale_of_installing_rt18812au_driver_and_make_it_works_in_virtualbox/</loc>
     <lastmod>2021-03-01T15:48:37+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/driver/</loc>
     <lastmod>2021-03-01T15:48:37+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/hardware/</loc>
     <lastmod>2021-03-01T15:48:37+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/virtualbox/</loc>
     <lastmod>2021-03-01T15:48:37+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/exiftool/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/ranger/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/posts/2020/12/rating_images_painlessly_with_exiftool/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://firminmartin.com/en/tags/zsh/</loc>
-    <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/offlineimap/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/posts/2020/10/read_email_in_emacs_with_notmuch/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/contact/</loc>
     <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
@@ -175,29 +134,19 @@
                 hreflang="en"
                 href="https://firminmartin.com/en/contact/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/posts/2020/09/migrate_from_vimwiki_to_org-mode/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/org-glaux/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/org-mode/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/vim/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/about/</loc>
     <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
@@ -215,9 +164,7 @@
                 hreflang="en"
                 href="https://firminmartin.com/en/about/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/posts/</loc>
     <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
@@ -235,9 +182,7 @@
                 hreflang="en"
                 href="https://firminmartin.com/en/posts/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/posts/2020/06/consult_dictionaries_in_emacs/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
     <xhtml:link
@@ -250,14 +195,10 @@
                 hreflang="en"
                 href="https://firminmartin.com/en/posts/2020/06/consult_dictionaries_in_emacs/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/tags/dictionary/</loc>
     <lastmod>2021-03-01T09:47:12+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/archive/</loc>
     <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
@@ -275,9 +216,7 @@
                 hreflang="en"
                 href="https://firminmartin.com/en/archive/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/</loc>
     <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
@@ -295,9 +234,7 @@
                 hreflang="en"
                 href="https://firminmartin.com/en/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -314,9 +251,7 @@
                 hreflang="en"
                 href="https://firminmartin.com/en/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/en/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -334,5 +269,4 @@
                 href="https://firminmartin.com/en/series/"
                 />
   </url>
-  
 </urlset>

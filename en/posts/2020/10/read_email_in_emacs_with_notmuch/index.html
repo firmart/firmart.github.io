@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -307,7 +307,7 @@
     var notAllowedTitleIds = null;
 
     
-    var tocFolding = JSON.parse("true");
+    var tocFolding = JSON.parse("false");
     
     var tocLevels = JSON.parse("[\"h2\",\"h3\",\"h4\"]");
     
@@ -663,6 +663,12 @@
     
     var enableSearch = JSON.parse("true");
     
+    var searchDistance = JSON.parse("null");
+    
+    var searchThreshold = JSON.parse("null");
+    
+    var searchContent = JSON.parse("null");
+    
     var enableSearchHighlight = JSON.parse("true");
     
     var searchResultPosition = JSON.parse("\"main\"");
@@ -686,12 +692,13 @@
         xhr.onload = function () {
           if (xhr.status === 200) {
             fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : 
+                searchContent ? ['title', 'description', 'content'] : ['title', 'description'],
               includeMatches: enableSearchHighlight,
               shouldSort: true, 
-              threshold: 0.4, 
+              threshold: searchThreshold ? searchThreshold : 0.4, 
               location: 0, 
-              distance: 100, 
+              distance: searchDistance ? searchDistance : 100, 
               maxPatternLength: 32,
               minMatchCharLength: 1,
               isCaseSensitive: false, 
@@ -1342,7 +1349,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Firmin Martin personal website.">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.83.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1413,7 +1420,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1657,7 +1663,7 @@ if (!doNotTrack) {
             
             
 
-<main class="single__main main-main">
+<main class="single__main main">
   
     <nav class="breadcrumb hide" aria-label="breadcrumbs">
   <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
@@ -2392,22 +2398,22 @@ account may be used to write email;</li>
 <hr />
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>After setting up <code>offlineimap</code> correctly, you can check this information by running <code>fdupes -mr .</code> under <code>~/.email/</code>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>After setting up <code>offlineimap</code> correctly, you can check this information by running <code>fdupes -mr .</code> under <code>~/.email/</code>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>Note that, at the time of writing, <code>offlineimap</code> is <a href="https://github.com/OfflineIMAP/offlineimap/issues/670">in the process</a> to port from <code>python2</code> (2020-01-01 ⚰️) to <code>python3</code>, see <a href="https://github.com/OfflineIMAP/offlineimap3">OfflineIMAP/offlineimap3</a>. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Note that, at the time of writing, <code>offlineimap</code> is <a href="https://github.com/OfflineIMAP/offlineimap/issues/670">in the process</a> to port from <code>python2</code> (2020-01-01 ⚰️) to <code>python3</code>, see <a href="https://github.com/OfflineIMAP/offlineimap3">OfflineIMAP/offlineimap3</a>.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p><a href="http://www.offlineimap.org/configuration/2016/01/29/why-i-m-not-using-maxconnctions.html">OfflineIMAP community&rsquo;s website : No, I&rsquo;m not using maxconnections</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="http://www.offlineimap.org/configuration/2016/01/29/why-i-m-not-using-maxconnctions.html">OfflineIMAP community&rsquo;s website : No, I&rsquo;m not using maxconnections</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:4" role="doc-endnote">
-<p>Technically you can aggregate all duplicate email addresses with <code>jq</code>, but you would have to handle the case, comma-separated addresses, and the <code>&quot;First Last &lt;first.last@gmail.com&gt;&quot;</code> notation. It&rsquo;s merely an example after all. <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Technically you can aggregate all duplicate email addresses with <code>jq</code>, but you would have to handle the case, comma-separated addresses, and the <code>&quot;First Last &lt;first.last@gmail.com&gt;&quot;</code> notation. It&rsquo;s merely an example after all.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5" role="doc-endnote">
-<p>If your Google account has 2-step verification activated, you will likely have to create and use an <a href="https://support.google.com/accounts/answer/185833?hl=en&amp;ref%5Ftopic=7189145">app password</a> instead of your regular password. <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>If your Google account has 2-step verification activated, you will likely have to create and use an <a href="https://support.google.com/accounts/answer/185833?hl=en&amp;ref%5Ftopic=7189145">app password</a> instead of your regular password.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6" role="doc-endnote">
-<p>If you retrieve your emails at a frequency lower than every 10 minutes, then you should also assign the same value of <code>max-cache-ttl</code> to <code>default-cache-ttl</code>. <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>If you retrieve your emails at a frequency lower than every 10 minutes, then you should also assign the same value of <code>max-cache-ttl</code> to <code>default-cache-ttl</code>.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -2814,7 +2820,7 @@ account may be used to write email;</li>
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3100,71 +3106,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </main>
 
 
-<aside class="single__side main-side">
-  
-
-
-<section class="sidebar hide">
-  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
-  <div class="toc__flexbox" data-position="fixed">
-    <h6 class="toc__title" data-ani="true">What&#39;s on this Page</h6>
-    
-      <label class="switch" data-ani="true">
-        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-    
-  </div>
-  <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#receiving-email">Receiving email</a>
-      <ul>
-        <li><a href="#configure-offlineimap">Configure offlineimap</a></li>
-        <li><a href="#launch-offlineimap-automatically-at-boot">Launch offlineimap automatically at boot</a></li>
-        <li><a href="#auto-tagging-with-notmuch">Auto-tagging with notmuch</a>
-          <ul>
-            <li><a href="#configurate-notmuch">Configurate notmuch</a></li>
-            <li><a href="#expose-highly-active-addresses">Expose highly active addresses</a></li>
-            <li><a href="#auto-tagging-script">Auto-tagging script</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#reading-mail">Reading mail</a>
-      <ul>
-        <li><a href="#notmuch-dot-el">notmuch.el</a>
-          <ul>
-            <li><a href="#key-bindings">Key-bindings</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#compose-email">Compose email</a></li>
-    <li><a href="#send-email">Send email</a>
-      <ul>
-        <li><a href="#smtp-configuration">SMTP configuration</a></li>
-        <li><a href="#patch-fully-qualified-domain-name--fqdn">Patch: Fully-Qualified Domain Name (FQDN)</a></li>
-      </ul>
-    </li>
-    <li><a href="#bonus-passwords-encryption-with-pass">Bonus: passwords encryption with pass</a>
-      <ul>
-        <li><a href="#dot-offlineimaprc">~/.offlineimaprc</a></li>
-        <li><a href="#auth-source-pass">auth-source-pass</a></li>
-        <li><a href="#cache-gpg-passphrase">Cache gpg passphrase</a></li>
-      </ul>
-    </li>
-    <li><a href="#addendum-general-workflow">Addendum: general workflow</a></li>
-  </ul>
-</nav>
-  </div>
-</section>
-
-
-
-</aside>
-
 <script>
   
   
@@ -3172,7 +3113,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var enableToc = JSON.parse("true");
   var toc = JSON.parse("null");
-  var tocPosition = JSON.parse("\"inner\"");
+  var tocPosition = JSON.parse("\"outer\"");
   
   var singleMainElem = document.querySelector('.single__main');
   var singleSideElem = document.querySelector('.single__side');
@@ -3326,7 +3267,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var hideToc = JSON.parse("false");
     var tocFlexbox = document.querySelector('.toc__flexbox');
     var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
-    var tocFolding = JSON.parse("true");
+    var tocFolding = JSON.parse("false");
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
@@ -3893,6 +3834,64 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div class="wrapper__right hide" data-pad="true" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+  
+    
+      
+        <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
+          <h6 class="toc__title toc__title--outer" data-ani="true">What&#39;s on this Page</h6>
+          
+          <label class="switch" data-ani="true">
+            <input id="visible-toc" aria-label="Visible TOC" type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+          
+        </div>
+        <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#receiving-email">Receiving email</a>
+      <ul>
+        <li><a href="#configure-offlineimap">Configure offlineimap</a></li>
+        <li><a href="#launch-offlineimap-automatically-at-boot">Launch offlineimap automatically at boot</a></li>
+        <li><a href="#auto-tagging-with-notmuch">Auto-tagging with notmuch</a>
+          <ul>
+            <li><a href="#configurate-notmuch">Configurate notmuch</a></li>
+            <li><a href="#expose-highly-active-addresses">Expose highly active addresses</a></li>
+            <li><a href="#auto-tagging-script">Auto-tagging script</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#reading-mail">Reading mail</a>
+      <ul>
+        <li><a href="#notmuch-dot-el">notmuch.el</a>
+          <ul>
+            <li><a href="#key-bindings">Key-bindings</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#compose-email">Compose email</a></li>
+    <li><a href="#send-email">Send email</a>
+      <ul>
+        <li><a href="#smtp-configuration">SMTP configuration</a></li>
+        <li><a href="#patch-fully-qualified-domain-name--fqdn">Patch: Fully-Qualified Domain Name (FQDN)</a></li>
+      </ul>
+    </li>
+    <li><a href="#bonus-passwords-encryption-with-pass">Bonus: passwords encryption with pass</a>
+      <ul>
+        <li><a href="#dot-offlineimaprc">~/.offlineimaprc</a></li>
+        <li><a href="#auth-source-pass">auth-source-pass</a></li>
+        <li><a href="#cache-gpg-passphrase">Cache gpg passphrase</a></li>
+      </ul>
+    </li>
+    <li><a href="#addendum-general-workflow">Addendum: general workflow</a></li>
+  </ul>
+</nav>
+        </div>
+      
+    
   
 </div>
 

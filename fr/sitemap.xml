@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://firminmartin.com/fr/contact/</loc>
     <lastmod>2020-12-20T00:26:17+01:00</lastmod>
@@ -20,9 +19,7 @@
                 hreflang="fr"
                 href="https://firminmartin.com/fr/contact/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/fr/about/</loc>
     <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
@@ -40,9 +37,7 @@
                 hreflang="fr"
                 href="https://firminmartin.com/fr/about/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/fr/posts/</loc>
     <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
@@ -60,9 +55,7 @@
                 hreflang="fr"
                 href="https://firminmartin.com/fr/posts/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/fr/archive/</loc>
     <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
@@ -80,9 +73,7 @@
                 hreflang="fr"
                 href="https://firminmartin.com/fr/archive/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/fr/</loc>
     <lastmod>2020-12-20T00:26:17+01:00</lastmod>
     <xhtml:link
@@ -100,9 +91,7 @@
                 hreflang="fr"
                 href="https://firminmartin.com/fr/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -119,9 +108,7 @@
                 hreflang="fr"
                 href="https://firminmartin.com/fr/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/fr/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -138,9 +125,7 @@
                 hreflang="fr"
                 href="https://firminmartin.com/fr/series/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://firminmartin.com/fr/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -158,5 +143,4 @@
                 href="https://firminmartin.com/fr/tags/"
                 />
   </url>
-  
 </urlset>

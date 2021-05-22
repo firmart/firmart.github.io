@@ -11,7 +11,7 @@
     <description>Recent content in kitty on Firmin Martin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0100</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
@@ -24,11 +24,108 @@
         <link>https://firminmartin.com/en/posts/2021/03/tabs_in_alacritty/</link>
         <pubDate>Fri, 26 Mar 2021 00:00:00 +0100</pubDate>
         
-        <atom:modified>Fri, 26 Mar 2021 12:02:48 +0100</atom:modified>
+        <atom:modified>Sat, 22 May 2021 16:03:38 +0200</atom:modified>
         <guid>https://firminmartin.com/en/posts/2021/03/tabs_in_alacritty/</guid>
         <description>Introduction Some time ago, I switched my daily terminal from kitty to alacritty due to issue regarding CJK input methods1. However, alacritty is known to not support tabs by design. There are at least two ways to enable tabs: through tabbed or tmux. Both are available in Ubuntu 20.04 package manager.
 tabbed tabbed is kind of a wrapper that will equip alacritty with tabs. To open alacritty with tabbed, use the following command:</description>
-        
+        <content:encoded>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Some time ago, I switched my daily terminal from &lt;a href=&#34;https://github.com/kovidgoyal/kitty&#34;&gt;kitty&lt;/a&gt; to &lt;a href=&#34;https://github.com/alacritty/alacritty&#34;&gt;alacritty&lt;/a&gt; due to
+issue regarding CJK input methods&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. However, alacritty is known to &lt;a href=&#34;https://github.com/alacritty/alacritty/issues/3129&#34;&gt;not
+support tabs by design&lt;/a&gt;. There are at least two ways to enable tabs: through
+&lt;a href=&#34;https://git.suckless.org/tabbed/file/README.html&#34;&gt;tabbed&lt;/a&gt; or &lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;tmux&lt;/a&gt;. Both are available in Ubuntu 20.04 package manager.&lt;/p&gt;
+&lt;h2 id=&#34;tabbed&#34;&gt;tabbed&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tabbed&lt;/code&gt; is kind of a wrapper that will equip alacritty with tabs. To open
+alacritty with &lt;code&gt;tabbed&lt;/code&gt;, use the following command:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;tabbed alacritty --embed
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Some notable keybindings:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Ctrl+Shift+Ret&lt;/code&gt; to open a new tab.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl+Tab&lt;/code&gt; or &lt;code&gt;Ctrl+Shift+h&lt;/code&gt; / &lt;code&gt;Ctrl+Shift+l&lt;/code&gt; to cycle tabs.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl+q&lt;/code&gt; to kill a tab.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tmux&#34;&gt;tmux&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tmux&lt;/code&gt; is probably one of the most-used &lt;a href=&#34;https://en.wikipedia.org/wiki/Terminal%5Fmultiplexer&#34;&gt;terminal multiplexer&lt;/a&gt;.  In &lt;code&gt;tmux&lt;/code&gt; jargon,
+tabs are called &lt;em&gt;windows&lt;/em&gt;. You may want to directly work under &lt;code&gt;tmux&lt;/code&gt;. To do so,
+open alacritty with &lt;code&gt;tmux&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;alacritty -e tmux
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;tmux&lt;/code&gt; offers a bunch of features and customizability, but essentially, to just
+try out &lt;code&gt;tmux&lt;/code&gt; windows feature, note the following shortcuts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a window with &lt;code&gt;C-b c&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Cycle forward/backward among windows with &lt;code&gt;C-b n&lt;/code&gt; / &lt;code&gt;C-b p&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Kill a window with &lt;code&gt;C-b &amp;amp;&lt;/code&gt; or &lt;code&gt;C-d&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;bonus-keep-only-one-terminal-instance&#34;&gt;Bonus: keep only one terminal instance&lt;/h2&gt;
+&lt;p&gt;In my opinion, it&amp;rsquo;s not a good idea to keep multiple terminal windows: switching
+among them is quickly irritating. Personally, I bind &lt;code&gt;Super+T&lt;/code&gt; to terminal and
+keep a single instance by using &lt;code&gt;wmctrl&lt;/code&gt;. Concretely, combining up with the
+above commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For &lt;code&gt;tabbed&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;wmctrl -x -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;tabbed&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; tabbed alacritty --embed
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For &lt;code&gt;tmux&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;wmctrl -x -a &lt;span class=&#34;s2&#34;&gt;&amp;#34;alacritty&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;||&lt;/span&gt; alacritty -e tmux
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The commands check if there is a terminal instance, if so focus on it, otherwise
+create a new instance. You will have to wrap these commands in &lt;code&gt;bash -c &#39;&amp;lt;command&amp;gt;&#39;&lt;/code&gt; if you want to bind them in Ubuntu settings (Keyboard shortcuts &amp;gt;
+Custom shortcuts). I use this tactic to bind the global keybindings I use 99% of
+the time: namely &lt;code&gt;Super+C&lt;/code&gt; for browser, &lt;code&gt;Super+E&lt;/code&gt; for Emacs and &lt;code&gt;Super+T&lt;/code&gt; for terminal.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tabbed&lt;/code&gt; is light enough for people needing only tabs and no more. But I noticed
+some encumbrances making me switched to &lt;code&gt;tmux&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keybindings are hardcoded in &lt;a href=&#34;https://git.suckless.org/tabbed/file/config.def.h.html&#34;&gt;config.def.h&lt;/a&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, although you can easily change it
+and compile a local version, it might not be worth it.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ranger/ranger&#34;&gt;Ranger&lt;/a&gt; image preview doesn&amp;rsquo;t work anymore.&lt;/li&gt;
+&lt;li&gt;The developpement is kind of inactive&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;They actually work, but the feature is &lt;a href=&#34;https://github.com/kovidgoyal/kitty/issues/469#issuecomment-419406438&#34;&gt;turned off by default&lt;/a&gt;. One has to enable it by setting the environment variable &lt;code&gt;GLFW_IM_MODULE=ibus&lt;/code&gt;.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;In my case, I bound in Vim &lt;code&gt;C-q&lt;/code&gt; as &lt;code&gt;:q!&lt;/code&gt; for years and was not ready to change it just for &lt;code&gt;tabbed&lt;/code&gt;.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;You might want to check out &lt;a href=&#34;https://github.com/podocarp/tabbed&#34;&gt;this fork&lt;/a&gt; for better support.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>[Firmin Martin]</dc:creator>
         
         

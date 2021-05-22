@@ -11,13 +11,85 @@
     <description>Recent content in Tags on Firmin Martin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 26 Mar 2021 00:00:00 +0100</lastBuildDate>
+    <copyright>©2021, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 20 May 2021 00:00:00 +0200</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
         <atom:link href="https://firminmartin.com/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>autocomplete</title>
+        <link>https://firminmartin.com/en/tags/autocomplete/</link>
+        <pubDate>Thu, 20 May 2021 00:00:00 +0200</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/autocomplete/</guid>
+        <description></description>
+        <content:encoded></content:encoded>
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>fzf</title>
+        <link>https://firminmartin.com/en/tags/fzf/</link>
+        <pubDate>Thu, 20 May 2021 00:00:00 +0200</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/fzf/</guid>
+        <description></description>
+        <content:encoded></content:encoded>
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>git</title>
+        <link>https://firminmartin.com/en/tags/git/</link>
+        <pubDate>Thu, 20 May 2021 00:00:00 +0200</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/git/</guid>
+        <description></description>
+        <content:encoded></content:encoded>
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>zsh</title>
+        <link>https://firminmartin.com/en/tags/zsh/</link>
+        <pubDate>Thu, 20 May 2021 00:00:00 +0200</pubDate>
+        
+        
+        <guid>https://firminmartin.com/en/tags/zsh/</guid>
+        <description></description>
+        <content:encoded></content:encoded>
+        <dc:creator>Firmin Martin</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>alacritty</title>
@@ -27,7 +99,7 @@
         
         <guid>https://firminmartin.com/en/tags/alacritty/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -45,7 +117,7 @@
         
         <guid>https://firminmartin.com/en/tags/kitty/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -63,7 +135,7 @@
         
         <guid>https://firminmartin.com/en/tags/linux/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -81,7 +153,7 @@
         
         <guid>https://firminmartin.com/en/tags/tabbed/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -99,7 +171,7 @@
         
         <guid>https://firminmartin.com/en/tags/terminal/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -117,7 +189,7 @@
         
         <guid>https://firminmartin.com/en/tags/tmux/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -135,7 +207,7 @@
         
         <guid>https://firminmartin.com/en/tags/emacs/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -153,7 +225,7 @@
         
         <guid>https://firminmartin.com/en/tags/emacs-lisp/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -171,7 +243,7 @@
         
         <guid>https://firminmartin.com/en/tags/email/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -189,7 +261,7 @@
         
         <guid>https://firminmartin.com/en/tags/notmuch/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -207,7 +279,7 @@
         
         <guid>https://firminmartin.com/en/tags/cli/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -225,7 +297,7 @@
         
         <guid>https://firminmartin.com/en/tags/shell/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -243,7 +315,7 @@
         
         <guid>https://firminmartin.com/en/tags/driver/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -261,7 +333,7 @@
         
         <guid>https://firminmartin.com/en/tags/hardware/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -279,7 +351,7 @@
         
         <guid>https://firminmartin.com/en/tags/virtualbox/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -297,7 +369,7 @@
         
         <guid>https://firminmartin.com/en/tags/exiftool/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -315,25 +387,7 @@
         
         <guid>https://firminmartin.com/en/tags/ranger/</guid>
         <description></description>
-        
-        <dc:creator>Firmin Martin</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>zsh</title>
-        <link>https://firminmartin.com/en/tags/zsh/</link>
-        <pubDate>Thu, 03 Dec 2020 00:00:00 +0100</pubDate>
-        
-        
-        <guid>https://firminmartin.com/en/tags/zsh/</guid>
-        <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -351,7 +405,7 @@
         
         <guid>https://firminmartin.com/en/tags/offlineimap/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -369,7 +423,7 @@
         
         <guid>https://firminmartin.com/en/tags/org-glaux/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -387,7 +441,7 @@
         
         <guid>https://firminmartin.com/en/tags/org-mode/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -405,7 +459,7 @@
         
         <guid>https://firminmartin.com/en/tags/vim/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         
@@ -423,7 +477,7 @@
         
         <guid>https://firminmartin.com/en/tags/dictionary/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Firmin Martin</dc:creator>
         
         

@@ -11,7 +11,7 @@
     <description>Recent content in emacs on Firmin Martin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Wed, 03 Mar 2021 00:00:00 +0100</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
@@ -29,7 +29,160 @@
         <description>Introduction It&amp;rsquo;s been half a month that I&amp;rsquo;m gradually writing an Emacs package for notmuch email notification. Although it works fine so far, it misses an important feature which consists to display the subject and the sender name on the notification instead of merely saying &amp;ldquo;2 new messages since last refresh&amp;rdquo;.
 Fortunately, probably because the development of the notmuch Emacs frontend, notmuch can speak Lisp S-expression.
 Notmuch show To retrieve header from emails, we need the command notmuch show.</description>
-        
+        <content:encoded>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;It&amp;rsquo;s been half a month that I&amp;rsquo;m gradually writing &lt;a href=&#34;https://github.com/firmart/notmuch-notify&#34;&gt;an Emacs package for notmuch
+email notification&lt;/a&gt;. Although it works fine so far, it misses an important
+feature which consists to display the subject and the sender name on the
+notification instead of merely saying &amp;ldquo;2 new messages since last refresh&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Fortunately, probably because the development of the notmuch Emacs frontend,
+notmuch can speak Lisp &lt;a href=&#34;https://en.wikipedia.org/wiki/S-expression&#34;&gt;S-expression&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;notmuch-show&#34;&gt;Notmuch show&lt;/h2&gt;
+&lt;p&gt;To retrieve header from emails, we need the command &lt;a href=&#34;https://notmuchmail.org/manpages/notmuch-show-1/&#34;&gt;notmuch show&lt;/a&gt;. Moreover,
+since we have no interest on email body and other emails that mismatch the
+query, we need the options &lt;code&gt;--body=false&lt;/code&gt; and &lt;code&gt;--entire-thread=false&lt;/code&gt;. As stated
+above, we also want S-expression as output format, &lt;em&gt;e.g.&lt;/em&gt; &lt;code&gt;--format=sexp&lt;/code&gt;. Putting together:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;notmuch show --body&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt; --entire-thread&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt; --format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;sexp &amp;lt;search-term&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;where &lt;a href=&#34;https://notmuchmail.org/manpages/notmuch-search-terms-7/&#34;&gt;search-term&lt;/a&gt; corresponds, in notmuch jargon, to the query expression.&lt;/p&gt;
+&lt;p&gt;From &lt;a href=&#34;https://notmuchmail.org/manpages/notmuch-show-1/&#34;&gt;notmuch show&lt;/a&gt; documentation, a thread corresponds to a nested structure.
+For testing purpose, I wrote to myself several emails to obtain two threads of the
+following structure (with the sent time to better identifying them later):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;|- email 1 (12:32:37)
+|  |
+|  |-- email 2 (12:32:56)
+|  |  |
+|  |  |- email 3 (12:33:18)
+|  |
+|  |-- email 4 (12:33:34)
+|
+|- email 5 (12:44:34)
+   |
+   |- email 6 (12:45:41)
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&amp;hellip; and use an appropriate search term to filter out exactly these threads.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;notmuch&lt;/code&gt; package already provides the function &lt;code&gt;notmuch-call-notmuch-sexp&lt;/code&gt;
+to convert the shell output to Emacs Lisp S-expression.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; We can thus
+translate the previous shell command into&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;notmuch-call-notmuch-sexp&lt;/span&gt;
+     &lt;span class=&#34;s&#34;&gt;&amp;#34;show&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;--body=false&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;--entire-thread=false&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;--format=sexp&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;search-term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;But! My instinct tells me that we could have better. So, searching which
+functions actually call &lt;code&gt;notmuch-call-notmuch-sexp&lt;/code&gt; brings me to the library
+&lt;code&gt;notmuch-query&lt;/code&gt; which contains lots of useful functions. In particular, the
+function call above can, kind of&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, be simplify to&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;notmuch-query-get-threads&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;search-term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;notmuch-thread-structure&#34;&gt;Notmuch thread structure&lt;/h2&gt;
+&lt;p&gt;In notmuch, an email corresponds to a property list (plist) with the following
+fields &lt;code&gt;id&lt;/code&gt;, &lt;code&gt;match&lt;/code&gt;, &lt;code&gt;excluded&lt;/code&gt;, &lt;code&gt;filename&lt;/code&gt;, &lt;code&gt;timestamp&lt;/code&gt;, &lt;code&gt;date_relative&lt;/code&gt;,
+&lt;code&gt;tags&lt;/code&gt;, &lt;code&gt;body&lt;/code&gt;, &lt;code&gt;crypto&lt;/code&gt;, &lt;code&gt;headers&lt;/code&gt;. Needless to say, we will pay particular
+attention on &lt;code&gt;headers&lt;/code&gt;. &lt;code&gt;tags&lt;/code&gt; and &lt;code&gt;body&lt;/code&gt; could be useful for further
+development. The command above returns me six plists surrounded by countless
+parentheses. To understand better the structure, I replaced the plists by the
+sent time:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;12:44:34&amp;#34;&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;12:45:41&amp;#34;&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))))&lt;/span&gt;
+
+ &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;12:32:37&amp;#34;&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;12:32:56&amp;#34;&lt;/span&gt;
+     &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;12:33:18&amp;#34;&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;12:33:34&amp;#34;&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Comparing to the threads I artificially created, it&amp;rsquo;s pretty much the same.&lt;/p&gt;
+&lt;h2 id=&#34;flatten-the-s-expression&#34;&gt;Flatten the S-expression&lt;/h2&gt;
+&lt;p&gt;The tree structure is not relevant for our purpose, so we want to flatten it as
+a list of plist. We actually don&amp;rsquo;t want to parse the S-expression ourselves, as
+stated above, the &lt;code&gt;notmuch-query&lt;/code&gt; library provides some functions we can use
+directly. It can be done by&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;notmuch-query-map-threads&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;#&amp;#39;identity&lt;/span&gt;
+			   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;notmuch-query-get-threads&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;search-term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;And as it is actually a &lt;a href=&#34;https://en.wikipedia.org/wiki/Map%5F(higher-order%5Ffunction)&#34;&gt;map&lt;/a&gt; function, to obtain a list of headers we can simply
+define the following function.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;notmuch-notify--show-headers&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;search-term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;notmuch-query-map-threads&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;plist-get&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;:headers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;notmuch-query-get-threads&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;search-term&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Having emails header given a search term, we can now easily introduce subject
+and email sender along with the notification message.&lt;/p&gt;
+&lt;p&gt;See my work-in-progress package &lt;a href=&#34;https://github.com/firmart/notmuch-notify&#34;&gt;notmuch-notify&lt;/a&gt; for more information!&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Equivalently, one can use &lt;code&gt;(read (shell-command-to-string ...))&lt;/code&gt; for the same purpose. But &lt;code&gt;notmuch-call-notmuch-sexp&lt;/code&gt; is more robust as it offers error handling.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;It misses the arguments &lt;code&gt;--body=false&lt;/code&gt; and &lt;code&gt;--entire-thread=false&lt;/code&gt;, but they are actually not so important as they won&amp;rsquo;t save us much performance.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>[Firmin Martin]</dc:creator>
         
         
@@ -65,7 +218,680 @@ Notmuch show To retrieve header from emails, we need the command notmuch show.</
         <atom:modified>Mon, 01 Mar 2021 09:47:12 +0100</atom:modified>
         <guid>https://firminmartin.com/en/posts/2020/10/read_email_in_emacs_with_notmuch/</guid>
         <description>It has been 18 months that I read &amp;amp; write my emails in Emacs. No need to say I have enjoyed the mouse-free experience brought by Emacs. Recently, I had to keep track a new email account. So I came across my old note written back then which I enhanced in this post. I made lots of updates subsequently including password management through pass, multi-accounts support etc. to make it as complete as possible.</description>
-        
+        <content:encoded>&lt;p&gt;It has been 18 months that I read &amp;amp; write my emails in Emacs. No need to say I have enjoyed
+the mouse-free experience brought by Emacs. Recently, I had to keep track a new
+email account. So I came across my old note written back then which I enhanced
+in this post. I made lots of updates subsequently including password management
+through &lt;code&gt;pass&lt;/code&gt;, multi-accounts support &lt;em&gt;etc.&lt;/em&gt; to make it as complete as possible.&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A full back-and-forth cycle of email consists to&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Receive email&lt;/strong&gt; through a program which synchronize emails locally from an
+email server.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Read email&lt;/strong&gt; through a program (&lt;a href=&#34;https://en.wikipedia.org/wiki/Email%5Fclient&#34;&gt;MUA&lt;/a&gt;) whose the UI offers an organized &amp;amp; handy
+presentation of emails.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compose email&lt;/strong&gt; in whatever editor.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Send email&lt;/strong&gt; with a &lt;a href=&#34;https://en.wikipedia.org/wiki/Message%5Ftransfer%5Fagent&#34;&gt;mail transfer agent&lt;/a&gt; or an interface of it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I made the following choices which I will detail the configuration throughout this post:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Receive email&lt;/strong&gt;: &lt;a href=&#34;https://github.com/OfflineIMAP/offlineimap&#34;&gt;offlineimap&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Read email&lt;/strong&gt;: &lt;a href=&#34;https://notmuchmail.org/notmuch-emacs/&#34;&gt;notmuch.el&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compose email&lt;/strong&gt;: &lt;a href=&#34;https://www.gnu.org/software/emacs/manual/html%5Fmono/message.html&#34;&gt;Emacs message mode&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Send email&lt;/strong&gt;: &lt;a href=&#34;https://github.com/vapniks/smtpmail-multi&#34;&gt;smtpmail-multi&lt;/a&gt; to send email through multiple SMTP servers.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;As you may have seen, except the reception of email, the remaining can be
+done within Emacs.&lt;/p&gt;
+&lt;h2 id=&#34;receiving-email&#34;&gt;Receiving email&lt;/h2&gt;
+&lt;p&gt;As stated above, we use &lt;code&gt;offlineimap&lt;/code&gt; to fetch emails from potentially multiple
+mailbox. But most importantly, we store all emails &lt;strong&gt;locally&lt;/strong&gt; for two purposes:
+&lt;strong&gt;1.&lt;/strong&gt; to be able to read emails offline, &lt;strong&gt;2.&lt;/strong&gt; to not mess up tags synchronization
+which may cause data loss. You may think that your huge mailbox would take a
+tremendous place in your disk. Well, I can say that if you pay attention to
+keep only one copy of your emails&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, it should not take much. For instance,
+I have 2.6k emails taking 460MB of the disk.&lt;/p&gt;
+&lt;h3 id=&#34;configure-offlineimap&#34;&gt;Configure offlineimap&lt;/h3&gt;
+&lt;p&gt;Install &lt;code&gt;offlineimap&lt;/code&gt; with your favorite package manager&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. Then copy
+the minimal configuration (the path depends on your distribution).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;cp /usr/share/doc/offlineimap/examples/offlineimap.conf.minimal ~/.offlineimaprc
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Here is the relevant part of my configuration (&lt;code&gt;~/.offlineimaprc&lt;/code&gt;) for reference.
+See the documentation in &lt;code&gt;/usr/share/doc/offlineimap/examples/offlineimap.conf&lt;/code&gt;
+or &lt;a href=&#34;https://wiki.archlinux.org/index.php/OfflineIMAP&#34;&gt;Archwiki&lt;/a&gt; for more information. Note the &lt;code&gt;postsynchook&lt;/code&gt; option at the account
+level: it&amp;rsquo;s an email tagging script which is run as soon as new email arrives. We
+will come soon to its content in this section. Remember what I said regarding
+the space taken by locally stored email? Well, they remain tiny provided that
+they are not duplicated elsewhere. That&amp;rsquo;s not always the case, for instance
+Gmail may store an email in the folder &lt;code&gt;[Gmail].Important&lt;/code&gt; beside &lt;code&gt;[Gmail].All Mail&lt;/code&gt;.
+You may consider to filter out the extra folders you don&amp;rsquo;t want as below with a
+python&amp;rsquo;s lambda expression or a function (see the documentation).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ~/.offlineimaprc&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;general&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;accounts&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Acc1_Gmail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Acc2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Acc3&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# comma-separated list of accounts&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Account&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Acc1_Gmail&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;localrepository&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LocalAcc1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;remoterepository&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RemoteAcc1&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;postsynchook&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;postsync&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sh&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# notmuch tagging script&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;utf8foldernames&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;yes&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Repository&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LocalAcc1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Maildir&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;localfolders&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;email&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;my&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;acc1&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@gmail.com&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Repository&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RemoteAcc1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Gmail&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;remoteuser&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;my&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;acc1&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@gmail.com&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;remotepass&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;password&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;sslcacertfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;etc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ssl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;certs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ca&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;certificates&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;crt&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# readonly if you don&amp;#39;t want mess up with the &amp;#39;unread&amp;#39; tag...&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;folderfilter&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;foldername&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;foldername&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;[Gmail].All Mail&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Account&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Acc2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;launch-offlineimap-automatically-at-boot&#34;&gt;Launch offlineimap automatically at boot&lt;/h3&gt;
+&lt;p&gt;You would certainly want to launch automatically &lt;code&gt;offlineimap&lt;/code&gt; at boot.
+This can be done with &lt;code&gt;systemd&lt;/code&gt;. In my case, I have three accounts, &lt;a href=&#34;https://wiki.archlinux.org/index.php/OfflineIMAP#Tips%5Fand%5Ftricks&#34;&gt;it&amp;rsquo;s
+advised&lt;/a&gt; &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; to create three separated &lt;code&gt;systemd&lt;/code&gt; services and set &lt;code&gt;maxsyncaccounts = 1&lt;/code&gt; in &lt;code&gt;~/.offlineimaprc&lt;/code&gt; as we have done above.&lt;/p&gt;
+&lt;p&gt;Instead of write three different system service files, I write the following
+&lt;strong&gt;template unit file&lt;/strong&gt; where the variable &lt;code&gt;%i&lt;/code&gt; will match later with an account
+name in &lt;code&gt;.offlineimaprc&lt;/code&gt;. (Note that you should avoid &amp;ldquo;@&amp;rdquo; in the account name
+since &lt;code&gt;systemd&lt;/code&gt; gives it a precise meaning).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ~/.config/systemd/user/offlineimap@.service&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;[Unit]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;Description&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Sync mail with offlineIMAP for Account %i in .offlineimaprc&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;Documentation&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;man:offlineimap(1)&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;[Service]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;ExecStart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/usr/bin/offlineimap -a %i -u basic&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;Restart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;always&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;RestartSec&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;60&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;[Install]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;WantedBy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;default.target&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then run &lt;code&gt;systemctl daemon-reload&lt;/code&gt; to load the new service file.
+The following commands enable the auto-start on boot and launch the service right now.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; --user --now offlineimap@account-1.service
+systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; --user --now offlineimap@account-2.service
+systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; --user --now offlineimap@account-3.service
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Note that &lt;code&gt;account-*&lt;/code&gt; is the account name appeared in each &lt;code&gt;[ Account XXX ]&lt;/code&gt; section.
+If everything goes well, &lt;code&gt;offlineimap&lt;/code&gt; will sync emails on the next boot automatically.&lt;/p&gt;
+&lt;h3 id=&#34;auto-tagging-with-notmuch&#34;&gt;Auto-tagging with notmuch&lt;/h3&gt;
+&lt;p&gt;The next thing to do is email auto-tagging, without this feature your mailbox
+will be a nightmare. Again, install &lt;a href=&#34;https://notmuchmail.org/&#34;&gt;notmuch&lt;/a&gt; with your favorite package manager.
+We will write the script aforementioned so that email be filtered as soon as
+they are synced locally.&lt;/p&gt;
+&lt;h4 id=&#34;configurate-notmuch&#34;&gt;Configurate notmuch&lt;/h4&gt;
+&lt;p&gt;Before starting to use notmuch, you must configure it. In particular, you have to set the
+database path, your email accounts which appeared in &lt;code&gt;~/.offlineimaprc&lt;/code&gt;,
+tagging rule for incoming email and tag to exclude by default when searching.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ~/.notmuch-config&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;[database]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;/home/firmart/.email&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;[user]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Firmin Martin&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;primary_email&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;my-acc1@gmail.com&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;other_email&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;my-acc2@gmail.com; my-acc3@gmail.com&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;[new]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;inbox;unread;&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;ignore&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;[search]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;exclude_tags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;deleted;&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;[maildir]&lt;/span&gt;
+&lt;span class=&#34;na&#34;&gt;synchronize_flags&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;expose-highly-active-addresses&#34;&gt;Expose highly active addresses&lt;/h4&gt;
+&lt;p&gt;The following command lists email-senders address sorted by decreasing amounts of emails sent&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;notmuch show --format&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;json --body&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt; --entire-thread&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; jq &lt;span class=&#34;s1&#34;&gt;&amp;#39;.[] | .[] | .[0].headers.From&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; uniq -c &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; sort -n
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Replace &lt;code&gt;From&lt;/code&gt; by &lt;code&gt;To&lt;/code&gt; to expose highly active mailing list.&lt;/p&gt;
+&lt;p&gt;The snippet above help us to find out the best contributors of our inbox to tag them
+properly.&lt;/p&gt;
+&lt;h4 id=&#34;auto-tagging-script&#34;&gt;Auto-tagging script&lt;/h4&gt;
+&lt;p&gt;Here is my little shell script &lt;code&gt;~/.email/postsync.sh&lt;/code&gt; which is run once &lt;code&gt;offlineimap&lt;/code&gt;
+finished to sync my emails. You might want to take a look at &lt;code&gt;notmuch help search-terms&lt;/code&gt;
+to understand the syntax of tagging commands.&lt;/p&gt;
+&lt;p&gt;I identify several visibility categories of emails:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I don&amp;rsquo;t want to see them at all and they&amp;rsquo;re harmful =&amp;gt; spam&lt;/li&gt;
+&lt;li&gt;I don&amp;rsquo;t want to see them at all =&amp;gt; blacklisted&lt;/li&gt;
+&lt;li&gt;I want to see them but it doesn&amp;rsquo;t matter when =&amp;gt; move out inbox&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s important! =&amp;gt; keep them in the inbox and tag them more&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!--listend--&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/usr/bin/env bash
+&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# ~/.email/postsync.sh&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# tag_new &amp;lt;tags&amp;gt; &amp;lt;search-term&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; tag_new &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; notmuch tag &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt; -- tag:inbox and &lt;span class=&#34;nv&#34;&gt;$2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# blacklist &amp;lt;search-term&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; blacklist &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; tag_new &lt;span class=&#34;s2&#34;&gt;&amp;#34;-inbox -unread +deleted&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# spam &amp;lt;search-term&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; spam &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; tag_new &lt;span class=&#34;s2&#34;&gt;&amp;#34;-inbox -unread +spam +deleted&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# security &amp;lt;search-term&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; security &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt; tag_new &lt;span class=&#34;s2&#34;&gt;&amp;#34;-inbox +Security&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# update : let notmuch process new mails&lt;/span&gt;
+notmuch new
+
+&lt;span class=&#34;c1&#34;&gt;# blacklisting&lt;/span&gt;
+notmuch tag -inbox -- tag:deleted and tag:inbox
+blacklist &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:/.*@.*[.]pinterest[.]com/&amp;#34;&lt;/span&gt;
+blacklist &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:/.*@linkedin[.]com/&amp;#34;&lt;/span&gt;
+blacklist &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:/.*@quora[.]com/&amp;#34;&lt;/span&gt;
+blacklist &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:noreply@medium.com&amp;#34;&lt;/span&gt;
+blacklist &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:noreply@youtube.com&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;## this list continue with 100+ addresses ...&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# ... and spams&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# `+spam&amp;#39; can&amp;#39;t be found at all in notmuch if `exclude_tags=deleted;spam;&amp;#39;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# is set in the [search] section of `.notmuch-config&amp;#39;.&lt;/span&gt;
+spam &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:esf@cnnsimail.com&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Family first&lt;/span&gt;
+tag_new &lt;span class=&#34;s2&#34;&gt;&amp;#34;+family&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:dad@gmail.com or from:mom@gmail.com&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Friends&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Co-workers&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Mailing list&lt;/span&gt;
+tag_new &lt;span class=&#34;s2&#34;&gt;&amp;#34;-inbox +CoqClub&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;to:coq-club@inria.fr or [Coq-Club]&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Newsletter&lt;/span&gt;
+tag_new &lt;span class=&#34;s2&#34;&gt;&amp;#34;-inbox +SE.newsletter&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:do-not-reply@stackoverflow.email&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Universities&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Security (accounts/verification code/email confirmation/... etc.)&lt;/span&gt;
+security &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:no-reply@accounts.google.com or accounts-noreply@google.com&amp;#34;&lt;/span&gt;
+security &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:account-security-noreply@account.microsoft.com&amp;#34;&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# and more ...&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# From me&lt;/span&gt;
+tag_new &lt;span class=&#34;s2&#34;&gt;&amp;#34;-inbox -unread +FromMe&amp;#34;&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;from:my-main-gmail@gmail.com or from:univ-account@my-univ.fr or from:my-second@gmail.com&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;reading-mail&#34;&gt;Reading mail&lt;/h2&gt;
+&lt;h3 id=&#34;notmuch-dot-el&#34;&gt;notmuch.el&lt;/h3&gt;
+&lt;p&gt;Follow the instructions given on the &lt;a href=&#34;https://notmuchmail.org/notmuch-emacs/&#34;&gt;official website&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;key-bindings&#34;&gt;Key-bindings&lt;/h4&gt;
+&lt;p&gt;The key-bindings I use are from &lt;a href=&#34;https://github.com/emacs-evil/evil-collection/blob/master/modes/notmuch/evil-collection-notmuch.el&#34;&gt;evil-collection&lt;/a&gt;. They are quite different from the default ones.
+You can define new keybindings for different notmuch views (&lt;code&gt;tree&lt;/code&gt;, &lt;code&gt;show&lt;/code&gt;, &lt;code&gt;hello&lt;/code&gt;,
+&lt;code&gt;search&lt;/code&gt;, &lt;code&gt;message&lt;/code&gt;) as below, but usually I rarely tag manually an email (except flagging important one).
+Instead, I add a new tagging rule as depicted above.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;define-key&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;notmuch-show-mode-map&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;S&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+    &lt;span class=&#34;s&#34;&gt;&amp;#34;delete message and move on&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;notmuch-show-tag&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;+deleted&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;-unread&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;notmuch-show-next-open-message-or-pop&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;compose-email&#34;&gt;Compose email&lt;/h2&gt;
+&lt;p&gt;Simply press &lt;code&gt;C-x m&lt;/code&gt; (&lt;code&gt;compose-mail&lt;/code&gt;) in Emacs to compose an email to send. Normally, the
+&lt;code&gt;From:=/=To:&lt;/code&gt; fields can be autocompleted.&lt;/p&gt;
+&lt;h2 id=&#34;send-email&#34;&gt;Send email&lt;/h2&gt;
+&lt;p&gt;Unless your local system is configured for sending email using &lt;a href=&#34;https://en.wikipedia.org/wiki/Sendmail&#34;&gt;sendmail&lt;/a&gt;, you
+may want to access a remote SMTP server.&lt;/p&gt;
+&lt;h3 id=&#34;smtp-configuration&#34;&gt;SMTP configuration&lt;/h3&gt;
+&lt;p&gt;Below is a fragment of my SMTP setup. You should acquire this information from
+the host (&lt;a href=&#34;https://support.google.com/a/answer/176600&#34;&gt;Gmail&lt;/a&gt;&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;, your institution, your company etc.). Using &lt;code&gt;smtpmail&lt;/code&gt; is not
+enough to sending email with different accounts. Fortunately, the package
+&lt;a href=&#34;https://github.com/vapniks/smtpmail-multi&#34;&gt;smtpmail-multi&lt;/a&gt; made the task easier.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;use-package&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;smtpmail-multi&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;:ensure&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;:config&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;smtpmail-multi-accounts&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;host&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;firmin.martin@host.fr&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;smtp.host.fr&amp;#34;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;587&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;firmin.martin@host.fr&amp;#34;&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;gmail-main&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;firmin.martin@gmail.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;smtp.gmail.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;587&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;firmin.martin@gmail.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))))&lt;/span&gt;
+
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;smtpmail-multi-associations&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;firmin.martin@host.fr&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;firmin.martin@gmail.com&amp;#34;&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;gmail-main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;smtpmail-multi-default-account&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;gmail-main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;message-send-mail-function&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;smtpmail-multi-send-it&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;smtpmail-debug-info&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;smtpmail-debug-verbose&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then you have to put your credentials somewhere. Such places are designated by
+the variable &lt;code&gt;auth-sources&lt;/code&gt; which defaults to &lt;code&gt;(&amp;quot;~/.authinfo&amp;quot; &amp;quot;~/.authinfo.gpg&amp;quot; &amp;quot;~/.netrc&amp;quot;)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;For instance, put the following in &lt;code&gt;~/.authinfo&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;machine smtp.host.fr login firmin.martin port 587 password abc123
+machine smtp.gmail.com login firmin.martin port 587 password abc123
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;patch-fully-qualified-domain-name--fqdn&#34;&gt;Patch: Fully-Qualified Domain Name (FQDN)&lt;/h3&gt;
+&lt;p&gt;You may encounter issue regarding the FQDN when sending email. I have the
+following patch in my configuration coming from &lt;a href=&#34;https://emacs.stackexchange.com/a/32188/23697&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;emacs-major-version&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;25&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;smtpmail-local-domain&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;car&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;split-string&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;shell-command-to-string&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;hostname -f&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;bonus-passwords-encryption-with-pass&#34;&gt;Bonus: passwords encryption with pass&lt;/h2&gt;
+&lt;p&gt;You may have seen a security hole which would hopefully make you uncomfortable:
+we have written credentials in plain text. Let&amp;rsquo;s fix it. I assume in the
+following that the reader has already setup &lt;a href=&#34;https://www.gnupg.org/gph/en/manual.pdf&#34;&gt;gpg&lt;/a&gt; (2.1+) and &lt;a href=&#34;https://www.passwordstore.org/&#34;&gt;pass&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Remember, we have stored passwords in &lt;code&gt;~/.offlineimaprc&lt;/code&gt; to pull emails locally
+with &lt;code&gt;offlineimap&lt;/code&gt; and in &lt;code&gt;~/.authinfo&lt;/code&gt; so that Emacs is able to send email.&lt;/p&gt;
+&lt;h3 id=&#34;dot-offlineimaprc&#34;&gt;~/.offlineimaprc&lt;/h3&gt;
+&lt;p&gt;Quoting &lt;a href=&#34;https://wiki.archlinux.org/index.php/OfflineIMAP#Using%5Fpass&#34;&gt;ArchWiki&lt;/a&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Create a password for your email account.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;pass insert email/myaccount
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a python function that retrieves the password (in &lt;code&gt;~/.offlineimap/pass.py&lt;/code&gt; for instance).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#! /usr/bin/env python3&lt;/span&gt;
+&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;subprocess&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;check_output&lt;/span&gt;
+
+&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;get_pass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;account&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;check_output&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;pass email/&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;account&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;splitlines&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In &lt;code&gt;.offlineimaprc&lt;/code&gt;, under the general section, indicate the python file&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;general&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;# ...&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;pythonfile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;offlineimap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;pass&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;py&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;and replace each &lt;code&gt;remotepass = password&lt;/code&gt; by the next one.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;n&#34;&gt;remotepasseval&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;get_pass&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;myaccount&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;auth-source-pass&#34;&gt;auth-source-pass&lt;/h3&gt;
+&lt;p&gt;To make Emacs read credentials through &lt;code&gt;pass&lt;/code&gt;, we use the package
+&lt;a href=&#34;https://github.com/DamienCassou/auth-source-pass&#34;&gt;auth-source-pass&lt;/a&gt; which exactly do the job for us. The configuration is simple.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;use-package&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;auth-source-pass&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;:ensure&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;
+  &lt;span class=&#34;nb&#34;&gt;:config&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;auth-source-pass-enable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You should create a &lt;code&gt;&amp;lt;smtp host&amp;gt;.gpg&lt;/code&gt; with &lt;code&gt;pass --edit email/&amp;lt;smtp host&amp;gt;&lt;/code&gt; for
+each smtp server. For instance, the entry of &lt;code&gt;.authinfo&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;machine smtp.host.fr login firmin.martin port 587 password abc123
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;corresponds to &lt;code&gt;~/.password-store/email/smtp.host.fr.gpg&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;abc123
+user: firmin.martin
+host: smtp.host.fr
+port: 587
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;cache-gpg-passphrase&#34;&gt;Cache gpg passphrase&lt;/h3&gt;
+&lt;p&gt;By now, &lt;code&gt;offlineimap&lt;/code&gt; and Emacs will retrieve your passwords through
+&lt;code&gt;pass&lt;/code&gt;. Great! But, if you setup &lt;code&gt;gpg&lt;/code&gt; without extra configuration, you will be
+prompted the passphrase every two hours. Why? The answer lies in the gpg agent
+options &lt;code&gt;default-cache-ttl&lt;/code&gt; and &lt;code&gt;--max-cache-ttl&lt;/code&gt;. The &lt;a href=&#34;https://www.gnupg.org/documentation/manuals/gnupg/Agent-Options.html&#34;&gt;documentation&lt;/a&gt; says&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;--default-cache-ttl n
+    Set the time a cache entry is valid to n seconds. The default is 600
+    seconds. Each time a cache entry is accessed, the entry’s timer is reset. To set
+    an entry’s maximum lifetime, use max-cache-ttl. Note that a cached passphrase
+    may not be evicted immediately from memory if no client requests a cache
+    operation. This is due to an internal housekeeping function which is only run
+    every few seconds.
+
+--max-cache-ttl n
+    Set the maximum time a cache entry is valid to n seconds. After this time a
+    cache entry will be expired even if it has been accessed recently or has
+    been set using gpg-preset-passphrase. The default is 2 hours (7200 seconds).
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;That is, by default, the passphrase is cached 10 minutes and can be extended
+each time it is accessed up to 2 hours. As we set &lt;code&gt;RestartSec=60&lt;/code&gt; in
+&lt;code&gt;~/.config/systemd/user/offlineimap@.service&lt;/code&gt;, it ensures that we reach the
+maximum cache time. To increase the cache time permanently to one day, add the
+line below in &lt;code&gt;~/.gnupg/gpg-agent.conf&lt;/code&gt;.&lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cfg&#34; data-lang=&#34;cfg&#34;&gt;&lt;span class=&#34;na&#34;&gt;max-cache-ttl 86400&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;You should restart &lt;code&gt;gpg-agent&lt;/code&gt; to see the effect (&lt;code&gt;gpg -K&lt;/code&gt; should be enough).
+At this point, not only are your passwords secure to some extent, but no one can
+see and write emails on your behalf after one day without enter the passphrase.&lt;/p&gt;
+&lt;h2 id=&#34;addendum-general-workflow&#34;&gt;Addendum: general workflow&lt;/h2&gt;
+&lt;p&gt;I summarize below how one maintains this email workflow.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tagging emails&lt;/strong&gt;. Update &lt;code&gt;~/.email/postsync.sh&lt;/code&gt; when necessary (usually to
+blacklist some addresses).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Changing password&lt;/strong&gt;. Modify adequately &lt;code&gt;~/.offlineimaprc&lt;/code&gt; and &lt;code&gt;.authinfo&lt;/code&gt;, or
+if you use &lt;code&gt;pass&lt;/code&gt; as above, update the passwords with &lt;code&gt;pass edit email/&amp;lt;account&amp;gt;&lt;/code&gt;. Beware, if you only change your password remotely, you won&amp;rsquo;t
+be able to receive and (possibly) write any email.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Adding new email&lt;/strong&gt;. Each time you want to add a new email account in you
+workflow, you should&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;update &lt;code&gt;.offlineimaprc&lt;/code&gt;: update &lt;code&gt;accounts&lt;/code&gt;, add one more account section plus&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;associated local/remote sections;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;update &lt;code&gt;.notmuch-config&lt;/code&gt;: update &lt;code&gt;primary_email&lt;/code&gt; or &lt;code&gt;other_email&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;update &lt;code&gt;smtpmail-multi-accounts&lt;/code&gt; and &lt;code&gt;smtpmail-multi-associations&lt;/code&gt; if that
+account may be used to write email;&lt;/li&gt;
+&lt;li&gt;update credentials with &lt;code&gt;pass&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;systemctl enable --user --now offlineimap@ACCOUNT-NAME.service&lt;/code&gt;;&lt;/li&gt;
+&lt;li&gt;(optional) update &lt;code&gt;postsync.sh&lt;/code&gt; to tag the email written by yourself.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;After setting up &lt;code&gt;offlineimap&lt;/code&gt; correctly, you can check this information by running &lt;code&gt;fdupes -mr .&lt;/code&gt; under &lt;code&gt;~/.email/&lt;/code&gt;.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Note that, at the time of writing, &lt;code&gt;offlineimap&lt;/code&gt; is &lt;a href=&#34;https://github.com/OfflineIMAP/offlineimap/issues/670&#34;&gt;in the process&lt;/a&gt; to port from &lt;code&gt;python2&lt;/code&gt; (2020-01-01 ⚰️) to &lt;code&gt;python3&lt;/code&gt;, see &lt;a href=&#34;https://github.com/OfflineIMAP/offlineimap3&#34;&gt;OfflineIMAP/offlineimap3&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.offlineimap.org/configuration/2016/01/29/why-i-m-not-using-maxconnctions.html&#34;&gt;OfflineIMAP community&amp;rsquo;s website : No, I&amp;rsquo;m not using maxconnections&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Technically you can aggregate all duplicate email addresses with &lt;code&gt;jq&lt;/code&gt;, but you would have to handle the case, comma-separated addresses, and the &lt;code&gt;&amp;quot;First Last &amp;lt;first.last@gmail.com&amp;gt;&amp;quot;&lt;/code&gt; notation. It&amp;rsquo;s merely an example after all.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;If your Google account has 2-step verification activated, you will likely have to create and use an &lt;a href=&#34;https://support.google.com/accounts/answer/185833?hl=en&amp;amp;ref%5Ftopic=7189145&#34;&gt;app password&lt;/a&gt; instead of your regular password.&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:6&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;If you retrieve your emails at a frequency lower than every 10 minutes, then you should also assign the same value of &lt;code&gt;max-cache-ttl&lt;/code&gt; to &lt;code&gt;default-cache-ttl&lt;/code&gt;.&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>[Firmin Martin]</dc:creator>
         
         
@@ -101,7 +927,214 @@ Notmuch show To retrieve header from emails, we need the command notmuch show.</
         <atom:modified>Mon, 01 Mar 2021 09:47:12 +0100</atom:modified>
         <guid>https://firminmartin.com/en/posts/2020/09/migrate_from_vimwiki_to_org-mode/</guid>
         <description>Around 2016-2017, I used vimwiki a lot to take spare notes of Linux, programming &amp;amp; mathematics related topics. I moved from Vim to Emacs in June 2019 for the great Org mode and never came back. Recently, I wanted to get rid of my good old vimwiki directory and merge it in my org-mode personal wiki (using org-glaux). Since it&amp;rsquo;s a one-time task, I decided to use the only available outdated script then write some Emacs code to fix the result instead of patching the old script.</description>
-        
+        <content:encoded>&lt;p&gt;Around 2016-2017, I used vimwiki a lot to take spare notes of Linux, programming &amp;amp; mathematics related topics. I moved from Vim to Emacs in June 2019 for the great Org mode and never came back. Recently, I wanted to get rid of my good old vimwiki directory and merge it in my org-mode personal wiki (using &lt;a href=&#34;https://github.com/firmart/org-glaux&#34;&gt;org-glaux&lt;/a&gt;). Since it&amp;rsquo;s a one-time task, I decided to use the only available outdated script then write some Emacs code to fix the result instead of patching the old script.&lt;/p&gt;
+&lt;h2 id=&#34;prelude-the-power-of-vimwiki2org&#34;&gt;Prelude: the power of vimwiki2org&lt;/h2&gt;
+&lt;p&gt;I looked for a vimwiki/Org converter, and luckily found &lt;a href=&#34;https://github.com/fasheng/vimwiki2org&#34;&gt;a legacy Perl script&lt;/a&gt; (written 8 years ago). Well, it&amp;rsquo;s better than nothing. To install, as usual&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git clone https://github.com/fasheng/vimwiki2org
+&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; vimwiki2org
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;After tweaking available options a bit, I came up with this one-liner which outputs the whole vimwiki content into one single Org file &lt;code&gt;vimwiki.org&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;vimwiki2org --no-ignore-lonely-header -L fix index.wiki &amp;gt; vimwiki.org
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The option &lt;code&gt;-L fix&lt;/code&gt; seems necessary to correctly detect subdirectories, such as &lt;code&gt;diary/diary.wiki&lt;/code&gt;. The option &lt;code&gt;--no-ignore-lonely-header&lt;/code&gt; was necessary to prevent some heading be commented out (for a good reason).&lt;/p&gt;
+&lt;h2 id=&#34;interlude-reworking-the-remaining&#34;&gt;Interlude: reworking the remaining&lt;/h2&gt;
+&lt;h3 id=&#34;fix-possible-encoding-issue&#34;&gt;Fix possible encoding issue&lt;/h3&gt;
+&lt;p&gt;An issue I have encountered was the failure to display correctly Unicode. If you have this issue, it means that some characters in the buffer cannot be rendered properly with Unicode. In my case, I have had a &lt;code&gt;.png&lt;/code&gt; disguised as a vimwiki file output into &lt;code&gt;vimwiki.org&lt;/code&gt;. That messes up the forthcoming steps.&lt;/p&gt;
+&lt;p&gt;If you are not sure, evaluate (&lt;code&gt;M-:&lt;/code&gt;) the following snippet on the &lt;code&gt;vimwiki.org&lt;/code&gt; buffer.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;decode-coding-string&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;buffer-string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;ss&#34;&gt;&amp;#39;utf-8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;erase-buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;insert&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now, save &lt;code&gt;vimwiki.org&lt;/code&gt;. If there is a prompt asking you what encoding do you want to choose, then you should examine whether or not &lt;code&gt;vimwiki.org&lt;/code&gt; contains weird stuff.&lt;/p&gt;
+&lt;h3 id=&#34;remove-vimwiki-toc&#34;&gt;Remove vimwiki TOC&lt;/h3&gt;
+&lt;p&gt;Auto-generated TOC by vimwiki seems unnecessary since Org mode produce TOC when exporting. It&amp;rsquo;s better to remove them as they create unexportable links. Inspired from &lt;a href=&#34;https://emacs.stackexchange.com/a/38354/23697&#34;&gt;this snippet&lt;/a&gt;, the following snippet removes the content of headline named &lt;code&gt;Contents&lt;/code&gt; (&lt;em&gt;i.e.&lt;/em&gt; TOCs auto-generated by vimwiki).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;let*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;org-element-parse-buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+       &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;progn&lt;/span&gt;
+              &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;org-element-map&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;ss&#34;&gt;&amp;#39;headline&lt;/span&gt;
+                &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;el&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+                  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;equal&lt;/span&gt;
+                         &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;car-safe&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;org-element-property&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;:title&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;el&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+                         &lt;span class=&#34;s&#34;&gt;&amp;#34;Contents&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+                    &lt;span class=&#34;c1&#34;&gt;;; Here we remove the contents from this headline.&lt;/span&gt;
+                    &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setf&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;nthcdr&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;el&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))))&lt;/span&gt;
+              &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;org-element-interpret-data&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))))&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;erase-buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;insert&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then, a little &amp;ldquo;&lt;a href=&#34;https://github.com/emacs-evil/evil&#34;&gt;evil&lt;/a&gt;&amp;rdquo; regex &lt;code&gt;%g/Contents/d&lt;/code&gt; cleans up the remaining empty TOC
+headlines. &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h3 id=&#34;fix-headlines&#34;&gt;Fix headlines&lt;/h3&gt;
+&lt;h4 id=&#34;fix-java-multiple-lines-comment&#34;&gt;Fix Java multiple lines comment&lt;/h4&gt;
+&lt;p&gt;I had a converted Java source block containing multi-lines comment like this&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-org&#34; data-lang=&#34;org&#34;&gt;&lt;span class=&#34;c&#34;&gt;#+begin_src &lt;/span&gt;&lt;span class=&#34;cs&#34;&gt;java&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;
+&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/* Comment
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;* on
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;* multiple
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;* lines
+&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;********/&lt;/span&gt;
+&lt;span class=&#34;c&#34;&gt;#+end_src&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;vimwiki2org&lt;/code&gt; didn&amp;rsquo;t &lt;a href=&#34;https://orgmode.org/manual/Literal-Examples.html#Literal-Examples&#34;&gt;put a comma before asterisk&lt;/a&gt;, and that messes up Org mode headlines. I have luckily only one such case, so I corrected it manually.&lt;/p&gt;
+&lt;h3 id=&#34;fix-source-block&#34;&gt;Fix source block&lt;/h3&gt;
+&lt;p&gt;I had some source blocks not correctly handled. Apparently, it&amp;rsquo;s possible that source block failed to convert when the content is in the same line that &lt;code&gt;{{{&lt;/code&gt;. Fortunately, only one case hit me. Again, I fixed it manually, but it&amp;rsquo;s very easy to move one line down the content with regex.&lt;/p&gt;
+&lt;h3 id=&#34;fix-markup&#34;&gt;Fix markup&lt;/h3&gt;
+&lt;p&gt;You may notice that code markup (&lt;em&gt;i.e.&lt;/em&gt; &lt;code&gt;`...`&lt;/code&gt;) failed to convert properly. A quick evil regex do the job: &lt;code&gt;%s/`\(.*?\)`/~\1~/g&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;fix-mathematics-equation&#34;&gt;Fix mathematics equation&lt;/h3&gt;
+&lt;p&gt;Well, &lt;a href=&#34;https://raw.githubusercontent.com/vimwiki/vimwiki/master/doc/vimwiki.txt&#34;&gt;vimwiki inline &amp;amp; display style maths&lt;/a&gt; are not converted at all. To be short,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;{{$ ... }}$&lt;/code&gt; corresponds to inline maths &lt;code&gt;$ ... $&lt;/code&gt; ;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{{$%align% ... }}$&lt;/code&gt; corresponds to maths environment &lt;code&gt;\[$\begin{align} ... \end{align}$\]&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And both of them can span on multiple lines.&lt;/p&gt;
+&lt;p&gt;Evaluate the following evil regexps &lt;span class=&#34;underline&#34;&gt;in order&lt;/span&gt; fixes respectively the previous issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%s/{{\$%\(\w*\)%\(\(.\|\n\)*?\)}}\$/\\[\\begin{\1}\2\\end{\1}\\]/g&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;%s/{{\$\(\(.\|\n\)*?\)}}\$/\\[\1\\]/g&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;move-headline-content-in-org-files&#34;&gt;Move headline content in Org files&lt;/h3&gt;
+&lt;p&gt;The last step is optional, but in my opinion is better to move headlines in separated
+Org files as they was originally separated as vimwiki files.&lt;/p&gt;
+&lt;h4 id=&#34;internal-link&#34;&gt;Fix internal links&lt;/h4&gt;
+&lt;p&gt;We have to make link working again. Depending on whether you are using &lt;a href=&#34;https://github.com/firmart/org-glaux&#34;&gt;org-glaux&lt;/a&gt;, use one of the following evil regexps that suits you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Org mode file link: &lt;code&gt;%s/\[\[\(.*?\)\]\[\(.*?\)\]\]/[[file:\1.org][\2]]/g&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;org-glaux&amp;rsquo;s wiki link: &lt;code&gt;%s/\[\[\(.*?\)\]\[\(.*?\)\]\]/[[wiki:../\1][\2]]/g&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;separate-contents-in-org-files&#34;&gt;Separate contents in Org files&lt;/h4&gt;
+&lt;p&gt;If you have kept the outline of &lt;code&gt;vimwiki2org&lt;/code&gt; output, &lt;em&gt;i.e.&lt;/em&gt; each second-level headings corresponding to a vimwiki file, then the following snippet, inspired from &lt;a href=&#34;https://emacs.stackexchange.com/a/54944/23697&#34;&gt;this answer&lt;/a&gt;, will output the content of each second-level headline to a single Org file.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-emacs-lisp&#34; data-lang=&#34;emacs-lisp&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;my-org-export-each-headline&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kp&#34;&gt;&amp;amp;optional&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;scope&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;s&#34;&gt;&amp;#34;Export each second-level headline to an Org file with the title as filename.
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;If SCOPE is nil headlines in the current buffer are exported.
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;For other valid values for SCOPE see &lt;/span&gt;&lt;span class=&#34;ss&#34;&gt;`org-map-entries&amp;#39;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;.
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;Already existing files are overwritten.&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;interactive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+  &lt;span class=&#34;c1&#34;&gt;;; Widen buffer temporarily as narrowing would affect the exporting.&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;org-with-wide-buffer&lt;/span&gt;
+   &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;save-mark-and-excursion&lt;/span&gt;
+     &lt;span class=&#34;c1&#34;&gt;;; Loop through each headline.&lt;/span&gt;
+     &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;org-map-entries&lt;/span&gt;
+      &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+        &lt;span class=&#34;c1&#34;&gt;;; Get the plain headline text without statistics and make filename.&lt;/span&gt;
+        &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;when&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;equal&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;org-current-level&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+          &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;let*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;car&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;last&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;org-get-outline-path&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))))&lt;/span&gt;
+                 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;dir&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;file-name-directory&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;buffer-file-name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+                 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;filename&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;concat&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;dir&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;.org&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+                 &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;;; Set the active region&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;set-mark&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;point&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;org-forward-heading-same-level&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;activate-mark&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;content&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;buffer-substring&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;region-beginning&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;region-end&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;
+            &lt;span class=&#34;c1&#34;&gt;;; Export the region&lt;/span&gt;
+            &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;with-temp-buffer&lt;/span&gt;
+              &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;insert&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+              &lt;span class=&#34;c1&#34;&gt;;; Save the buffer to file and kill it.&lt;/span&gt;
+              &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;write-file&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;filename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+              &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;kill-current-buffer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))))&lt;/span&gt;
+      &lt;span class=&#34;no&#34;&gt;nil&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;scope&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;postlude-how-many-links-are-broken&#34;&gt;Postlude: how many links are broken ?&lt;/h2&gt;
+&lt;p&gt;This little section is reserved for &lt;a href=&#34;https://github.com/firmart/org-glaux&#34;&gt;org-glaux&lt;/a&gt; users, of whom I am the only one (for now!). After all those steps, we want to make sure that all internal links are correctly interconnected. This is as simple as calling &lt;code&gt;M-x org-glaux-stats&lt;/code&gt;! That command produces a statistical overview of the current wiki including the number of broken links. As long as vimwiki files are under the same directories, no broken link is detected in my side. However, since we use relative links (see &lt;a href=&#34;#internal-link&#34;&gt;Fix internal links&lt;/a&gt;), they may be broken in the future as soon as they or their target Org files move. I plan to implement (not soon) a &amp;ldquo;safe move&amp;rdquo; feature inside &lt;a href=&#34;https://github.com/firmart/org-glaux&#34;&gt;org-glaux&lt;/a&gt; which preserves page&amp;rsquo;s link when page moves. But before that I should introduce caching (with &lt;em&gt;e.g.&lt;/em&gt; &lt;a href=&#34;https://github.com/l3kn/org-el-cache&#34;&gt;l3kn/org-el-cache&lt;/a&gt;) to annihilate links resolving overheads.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;There is probably a better solution with &lt;code&gt;org-element-map&lt;/code&gt;, but I&amp;rsquo;m not familiar enough with it.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>[Firmin Martin]</dc:creator>
         
         
@@ -138,8 +1171,94 @@ Notmuch show To retrieve header from emails, we need the command notmuch show.</
         <guid>https://firminmartin.com/en/posts/2020/06/consult_dictionaries_in_emacs/</guid>
         <description>The most time-wasting thing when learning natural languages or reading literature works is nothing more than consulting a dictionary. During my studies, I came through three stages: paperback dictionary, online dictionary and Google Chrome search engines. The time requiring to consult one entry has decreased from a few minutes to dozens of seconds, but I’m still not satisfied with this speed.
 
-  Figure 1: A Kangxi Dictionary. It was quite fascinating to read when I was a child.</description>
-        
+ Figure 1: A Kangxi Dictionary. It was quite fascinating to read when I was a child.</description>
+        <content:encoded>&lt;p&gt;The most time-wasting thing when learning natural languages or reading
+literature works is nothing more than consulting a dictionary. During my
+studies, I came through three stages: paperback dictionary, online dictionary
+and Google Chrome search engines. The time requiring to consult one entry has
+decreased from a few minutes to dozens of seconds, but I’m still not satisfied
+with this speed.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;org76a0d62&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;kang-xi.jpg&#34;
+         alt=&#34;Figure 1: A Kangxi Dictionary. It was quite fascinating to read when I was a child.&#34;/&gt;&lt;figcaption&gt;
+            &lt;p&gt;Figure 1: A &lt;a href=&#34;https://en.wikipedia.org/wiki/Kangxi%5FDictionary&#34;&gt;Kangxi Dictionary&lt;/a&gt;. It was quite fascinating to read when I was a child.&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;It happens it’s been around thirteen months that I moved from Vim to Emacs which
+means, in other words, that I handle all text-based file in Emacs. Naturally, I
+searched if there was such dictionary package for Emacs. Unsurprisingly, the
+author of Ivy, Oleh Krehel (a.k.a. abo-abo) has written an easy-to-use package
+named &lt;a href=&#34;https://github.com/abo-abo/define-word&#34;&gt;define-word&lt;/a&gt; for this purpose. In short, at each request
+it parses with regex an HTML page, retrieves the word definition and displays
+the result on minibuffer. A request can be made from a selected region or a
+prompted string.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;orgf5cf769&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;define-word.png&#34;
+         alt=&#34;Figure 2: Official screenshot of define-word&#34;/&gt;&lt;figcaption&gt;
+            &lt;p&gt;Figure 2: Official screenshot of define-word&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;As I just started to work on my first ever package (&lt;a href=&#34;https://github.com/firmart/org-glaux&#34;&gt;org-glaux&lt;/a&gt; to be precise), I
+read the source code and learn how it is easy to write a new parser. Of course,
+that is due to the design made by abo-abo&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. The first online dictionary I
+wanted to parse was Wiktionary&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, but because of its wiki specificity, it has
+complex markup and hyperlink, so I gave up straight away. Then, I moved on to a
+Franco-Chinese dictionary I use from time to time. It works, but there was still
+some sporadic issues, such as looking up conjugated verb form doesn’t redirect
+to the verb definition but to the verb morphology. Also, the HTML layout was
+barely consistent, thus not very interesting to parse for what it provides.&lt;/p&gt;
+&lt;p&gt;My thoughts then turned to the Larousse dictionary. This French-French dictionary
+despite having the problem of one word might have multiple pages, it has not so
+many defects.&lt;/p&gt;
+&lt;p&gt;My thoughts then turned to the &lt;a href=&#34;https://www.larousse.fr/dictionnaires/francais/&#34;&gt;Larousse dictionary&lt;/a&gt;. This French-French
+dictionary, despite having the problem that one word might have multiple
+corresponding pages, it has not so many defects.&lt;/p&gt;
+&lt;p&gt;After adding some utilities in the source code, such as HTML special characters
+decoding, the Larousse parser I wrote has finally highlighting for lexical
+class, examples and etymology (see figures &lt;a href=&#34;#org683df42&#34;&gt;3&lt;/a&gt; &amp;amp;
+&lt;a href=&#34;#orga18ff91&#34;&gt;4&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;If I spend more time on this, I would certainly be able to add some cool
+features like the possibility to search among multiple dictionaries, and even
+combine it to make flashcard with org-drill&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;. It is would be also good to
+add a few encyclopedias and synonym dictionaries during my spare time.&lt;/p&gt;
+&lt;p&gt;Look up one word now takes an overhead of barely one second&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;. I&amp;rsquo;m quite
+happy with the result, but of course still open to a faster solution!&lt;/p&gt;
+&lt;p&gt;You can find &lt;a href=&#34;https://github.com/firmart/define-word/tree/fr-larousse&#34;&gt;here&lt;/a&gt; my fork implementing Larousse dictionary and test it by
+yourself.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;org683df42&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;define-word-1.png&#34;
+         alt=&#34;Figure 3: Looking up the French word &amp;amp;ldquo;couture&amp;amp;rdquo; in Larousse dictionary.&#34;/&gt;&lt;figcaption&gt;
+            &lt;p&gt;Figure 3: Looking up the French word &amp;ldquo;couture&amp;rdquo; in &lt;a href=&#34;https://www.larousse.fr/dictionnaires/francais/couture&#34;&gt;Larousse&lt;/a&gt; dictionary.&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;a id=&#34;orga18ff91&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;define-word-2.png&#34;
+         alt=&#34;Figure 4: Looking up the French word &amp;amp;ldquo;abandon&amp;amp;rdquo; in Larousse dictionary.&#34;/&gt;&lt;figcaption&gt;
+            &lt;p&gt;Figure 4: Looking up the French word &amp;ldquo;abandon&amp;rdquo; in &lt;a href=&#34;https://www.larousse.fr/dictionnaires/francais/abandon&#34;&gt;Larousse&lt;/a&gt; dictionary.&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://oremacs.com/2015/05/22/define-word/&#34;&gt;According to the author&lt;/a&gt;, define-word only takes it 30 minutes to write.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;At the time of writing, I realized that define-word &lt;a href=&#34;https://github.com/abo-abo/define-word/commit/6e4a427503aef096484f88332962c346cdd10847&#34;&gt;supports now offline Wiktionary&lt;/a&gt; ! It suffices to download &lt;a href=&#34;https://en.wiktionary.org/wiki/User:Matthias%5FBuchmeier/download&#34;&gt;offline Wiktionary&lt;/a&gt; in ding format to use this feature.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;And sync it in org-agenda by schedule it.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;It&amp;rsquo;s a matter of pressing &lt;code&gt;C-c d&lt;/code&gt; upon a word.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>[Firmin Martin]</dc:creator>
         
         

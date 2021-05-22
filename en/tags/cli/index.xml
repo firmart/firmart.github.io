@@ -11,7 +11,7 @@
     <description>Recent content in cli on Firmin Martin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0100</lastBuildDate>
     <sy:updatePeriod>weekly</sy:updatePeriod>
     
@@ -28,7 +28,48 @@
         <guid>https://firminmartin.com/en/posts/2021/03/bfs-grep/</guid>
         <description>Introduction From time to time, I want to search over my dotfiles, precisely those immediately under my home directory ~/. The problem of grep -R &amp;lt;regex&amp;gt; is that it quickly delves into an oceanic trench, full of caches, xml files or databases. In other words, it uses a depth-first approach.
 bfs-grep The following shell function helps me greatly to deal with such a situation. It employs a breadth-first search, i.e. level by level.</description>
-        
+        <content:encoded>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;From time to time, I want to search over my dotfiles, precisely those immediately
+under my home directory &lt;code&gt;~/&lt;/code&gt;. The problem of &lt;code&gt;grep -R &amp;lt;regex&amp;gt;&lt;/code&gt; is that it
+quickly delves into an oceanic trench, full of caches, xml files or
+databases. In other words, it uses a depth-first approach.&lt;/p&gt;
+&lt;h2 id=&#34;bfs-grep&#34;&gt;bfs-grep&lt;/h2&gt;
+&lt;p&gt;The following shell function helps me greatly to deal with such a situation.
+It employs a breadth-first search, &lt;em&gt;i.e.&lt;/em&gt; level by level. It is written for
+&lt;code&gt;zsh&lt;/code&gt; but should work for &lt;code&gt;bash&lt;/code&gt; or &lt;code&gt;ksh93&lt;/code&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. The &lt;code&gt;tput&lt;/code&gt; commands are just
+used to redden the level announcement. Further tweaks can be made such as
+changing the dot &lt;code&gt;.&lt;/code&gt; (current directory) to a target directory or starting from
+a specific level. But that&amp;rsquo;s enough for me.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-zsh&#34; data-lang=&#34;zsh&#34;&gt;&lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; bfs-grep &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; i in &lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;seq &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
+        &amp;gt;&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;tput setaf 1&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;BFS-GREP: LEVEL &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;tput sgr0&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+        find . -mindepth &lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt; -maxdepth &lt;span class=&#34;nv&#34;&gt;$i&lt;/span&gt; -type f -exec grep &lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;@:&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt; +&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;bfs-grep&lt;/code&gt; first argument is the maximum depth to search, starting from &lt;code&gt;1&lt;/code&gt; for the
+current level. The remaining arguments are fed to &lt;code&gt;grep&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;See &lt;a href=&#34;https://unix.stackexchange.com/a/225951/216846&#34;&gt;here&lt;/a&gt; for &lt;code&gt;${@:2}&lt;/code&gt;.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</content:encoded>
         <dc:creator>[Firmin Martin]</dc:creator>
         
         
