@@ -1349,7 +1349,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Firmin Martin personal website.">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.86.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1754,7 +1754,7 @@ changing the dot <code>.</code> (current directory) to a target directory or sta
 a specific level. But that&rsquo;s enough for me.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1762,7 +1762,7 @@ a specific level. But that&rsquo;s enough for me.</p>
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-zsh" data-lang="zsh"><span class="k">function</span> bfs-grep <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh"><span class="k">function</span> bfs-grep <span class="o">{</span>
     <span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$1</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span>
         &gt;<span class="p">&amp;</span><span class="m">2</span> <span class="nb">echo</span> <span class="s2">&#34;</span><span class="k">$(</span>tput setaf 1<span class="k">)</span><span class="s2">BFS-GREP: LEVEL </span><span class="nv">$i</span><span class="k">$(</span>tput sgr0<span class="k">)</span><span class="s2">&#34;</span>
         find . -mindepth <span class="nv">$i</span> -maxdepth <span class="nv">$i</span> -type f -exec grep <span class="s2">&#34;</span><span class="si">${</span><span class="p">@:</span><span class="nv">2</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">{}</span> +<span class="p">;</span>

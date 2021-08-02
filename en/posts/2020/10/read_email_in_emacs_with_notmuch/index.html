@@ -1349,7 +1349,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Firmin Martin personal website.">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.86.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1781,10 +1781,10 @@ I have 2.6k emails taking 460MB of the disk.</p>
 the minimal configuration (the path depends on your distribution).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">cp /usr/share/doc/offlineimap/examples/offlineimap.conf.minimal ~/.offlineimaprc
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">cp /usr/share/doc/offlineimap/examples/offlineimap.conf.minimal ~/.offlineimaprc
 </code></pre></td></tr></table>
 </div>
 </div><p>Here is the relevant part of my configuration (<code>~/.offlineimaprc</code>) for reference.
@@ -1799,7 +1799,7 @@ You may consider to filter out the extra folders you don&rsquo;t want as below w
 python&rsquo;s lambda expression or a function (see the documentation).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1825,7 +1825,7 @@ python&rsquo;s lambda expression or a function (see the documentation).</p>
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># ~/.offlineimaprc</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># ~/.offlineimaprc</span>
 <span class="p">[</span><span class="n">general</span><span class="p">]</span>
 <span class="n">accounts</span> <span class="o">=</span> <span class="n">Acc1_Gmail</span><span class="p">,</span> <span class="n">Acc2</span><span class="p">,</span> <span class="n">Acc3</span> <span class="c1"># comma-separated list of accounts</span>
 
@@ -1837,11 +1837,11 @@ python&rsquo;s lambda expression or a function (see the documentation).</p>
 
 <span class="p">[</span><span class="n">Repository</span> <span class="n">LocalAcc1</span><span class="p">]</span>
 <span class="nb">type</span> <span class="o">=</span> <span class="n">Maildir</span>
-<span class="n">localfolders</span> <span class="o">=</span> <span class="o">~/.</span><span class="n">email</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">acc1</span><span class="nd">@gmail.com</span>
+<span class="n">localfolders</span> <span class="o">=</span> <span class="o">~/.</span><span class="n">email</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">acc1</span><span class="nd">@gmail</span><span class="o">.</span><span class="n">com</span>
 
 <span class="p">[</span><span class="n">Repository</span> <span class="n">RemoteAcc1</span><span class="p">]</span>
 <span class="nb">type</span> <span class="o">=</span> <span class="n">Gmail</span>
-<span class="n">remoteuser</span> <span class="o">=</span> <span class="n">my</span><span class="o">-</span><span class="n">acc1</span><span class="nd">@gmail.com</span>
+<span class="n">remoteuser</span> <span class="o">=</span> <span class="n">my</span><span class="o">-</span><span class="n">acc1</span><span class="nd">@gmail</span><span class="o">.</span><span class="n">com</span>
 <span class="n">remotepass</span> <span class="o">=</span> <span class="n">password</span>
 <span class="n">sslcacertfile</span> <span class="o">=</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssl</span><span class="o">/</span><span class="n">certs</span><span class="o">/</span><span class="n">ca</span><span class="o">-</span><span class="n">certificates</span><span class="o">.</span><span class="n">crt</span>
 <span class="n">readonly</span> <span class="o">=</span> <span class="n">true</span> <span class="c1"># readonly if you don&#39;t want mess up with the &#39;unread&#39; tag...</span>
@@ -1861,7 +1861,7 @@ name in <code>.offlineimaprc</code>. (Note that you should avoid &ldquo;@&rdquo;
 since <code>systemd</code> gives it a precise meaning).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1875,7 +1875,7 @@ since <code>systemd</code> gives it a precise meaning).</p>
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cfg" data-lang="cfg"><span class="c1"># ~/.config/systemd/user/offlineimap@.service</span>
+<pre tabindex="0" class="chroma"><code class="language-cfg" data-lang="cfg"><span class="c1"># ~/.config/systemd/user/offlineimap@.service</span>
 <span class="k">[Unit]</span>
 <span class="na">Description</span><span class="o">=</span><span class="s">Sync mail with offlineIMAP for Account %i in .offlineimaprc</span>
 <span class="na">Documentation</span><span class="o">=</span><span class="s">man:offlineimap(1)</span>
@@ -1893,12 +1893,12 @@ since <code>systemd</code> gives it a precise meaning).</p>
 The following commands enable the auto-start on boot and launch the service right now.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">systemctl <span class="nb">enable</span> --user --now offlineimap@account-1.service
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">systemctl <span class="nb">enable</span> --user --now offlineimap@account-1.service
 systemctl <span class="nb">enable</span> --user --now offlineimap@account-2.service
 systemctl <span class="nb">enable</span> --user --now offlineimap@account-3.service
 </code></pre></td></tr></table>
@@ -1916,7 +1916,7 @@ database path, your email accounts which appeared in <code>~/.offlineimaprc</cod
 tagging rule for incoming email and tag to exclude by default when searching.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1936,7 +1936,7 @@ tagging rule for incoming email and tag to exclude by default when searching.</p
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cfg" data-lang="cfg"><span class="c1"># ~/.notmuch-config</span>
+<pre tabindex="0" class="chroma"><code class="language-cfg" data-lang="cfg"><span class="c1"># ~/.notmuch-config</span>
 <span class="k">[database]</span>
 <span class="na">path</span><span class="o">=</span><span class="s">/home/firmart/.email</span>
 
@@ -1960,12 +1960,12 @@ tagging rule for incoming email and tag to exclude by default when searching.</p
 <p>The following command lists email-senders address sorted by decreasing amounts of emails sent<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">notmuch show --format<span class="o">=</span>json --body<span class="o">=</span><span class="nb">false</span> --entire-thread<span class="o">=</span><span class="nb">false</span> <span class="s2">&#34;*&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">notmuch show --format<span class="o">=</span>json --body<span class="o">=</span><span class="nb">false</span> --entire-thread<span class="o">=</span><span class="nb">false</span> <span class="s2">&#34;*&#34;</span>
 <span class="p">|</span> jq <span class="s1">&#39;.[] | .[] | .[0].headers.From&#39;</span>
 <span class="p">|</span> sort <span class="p">|</span> uniq -c <span class="p">|</span> sort -n
 </code></pre></td></tr></table>
@@ -1987,7 +1987,7 @@ to understand the syntax of tagging commands.</p>
 <!--listend-->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2048,7 +2048,7 @@ to understand the syntax of tagging commands.</p>
 </span><span class="lnt">59
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/usr/bin/env bash
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/usr/bin/env bash
 </span><span class="cp"></span><span class="c1"># ~/.email/postsync.sh</span>
 
 <span class="c1"># tag_new &lt;tags&gt; &lt;search-term&gt;</span>
@@ -2119,14 +2119,14 @@ You can define new keybindings for different notmuch views (<code>tree</code>, <
 Instead, I add a new tagging rule as depicted above.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nf">define-key</span> <span class="nv">notmuch-show-mode-map</span> <span class="s">&#34;S&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nf">define-key</span> <span class="nv">notmuch-show-mode-map</span> <span class="s">&#34;S&#34;</span>
   <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
     <span class="s">&#34;delete message and move on&#34;</span>
     <span class="p">(</span><span class="nv">notmuch-show-tag</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;+deleted&#34;</span> <span class="s">&#34;-unread&#34;</span><span class="p">))</span>
@@ -2146,7 +2146,7 @@ enough to sending email with different accounts. Fortunately, the package
 <a href="https://github.com/vapniks/smtpmail-multi">smtpmail-multi</a> made the task easier.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2164,7 +2164,7 @@ enough to sending email with different accounts. Fortunately, the package
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">smtpmail-multi</span>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">smtpmail-multi</span>
   <span class="nb">:ensure</span> <span class="no">t</span>
   <span class="nb">:config</span>
     <span class="p">(</span><span class="nb">setq</span> <span class="nv">smtpmail-multi-accounts</span>
@@ -2187,11 +2187,11 @@ the variable <code>auth-sources</code> which defaults to <code>(&quot;~/.authinf
 <p>For instance, put the following in <code>~/.authinfo</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">machine smtp.host.fr login firmin.martin port 587 password abc123
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">machine smtp.host.fr login firmin.martin port 587 password abc123
 machine smtp.gmail.com login firmin.martin port 587 password abc123
 </code></pre></td></tr></table>
 </div>
@@ -2200,11 +2200,11 @@ machine smtp.gmail.com login firmin.martin port 587 password abc123
 following patch in my configuration coming from <a href="https://emacs.stackexchange.com/a/32188/23697">here</a>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nf">&gt;=</span> <span class="nv">emacs-major-version</span> <span class="mi">25</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nf">&gt;=</span> <span class="nv">emacs-major-version</span> <span class="mi">25</span><span class="p">)</span>
   <span class="p">(</span><span class="nb">setq</span> <span class="nv">smtpmail-local-domain</span> <span class="p">(</span><span class="nf">car</span> <span class="p">(</span><span class="nv">split-string</span> <span class="p">(</span><span class="nv">shell-command-to-string</span> <span class="s">&#34;hostname -f&#34;</span><span class="p">)))))</span>
 </code></pre></td></tr></table>
 </div>
@@ -2221,10 +2221,10 @@ with <code>offlineimap</code> and in <code>~/.authinfo</code> so that Emacs is a
 <p>Create a password for your email account.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">pass insert email/myaccount
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">pass insert email/myaccount
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -2232,18 +2232,18 @@ with <code>offlineimap</code> and in <code>~/.authinfo</code> so that Emacs is a
 <p>Create a python function that retrieves the password (in <code>~/.offlineimap/pass.py</code> for instance).</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="ch">#! /usr/bin/env python3</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ch">#! /usr/bin/env python3</span>
 <span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">check_output</span>
 
 <span class="k">def</span> <span class="nf">get_pass</span><span class="p">(</span><span class="n">account</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">check_output</span><span class="p">(</span><span class="s2">&#34;pass email/&#34;</span> <span class="o">+</span> <span class="n">account</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">check_output</span><span class="p">(</span><span class="s2">&#34;pass email/&#34;</span> <span class="o">+</span> <span class="n">account</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -2251,12 +2251,12 @@ with <code>offlineimap</code> and in <code>~/.authinfo</code> so that Emacs is a
 <p>In <code>.offlineimaprc</code>, under the general section, indicate the python file</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="p">[</span><span class="n">general</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="p">[</span><span class="n">general</span><span class="p">]</span>
 <span class="c1"># ...</span>
 <span class="n">pythonfile</span> <span class="o">=</span> <span class="o">~/.</span><span class="n">offlineimap</span><span class="o">/</span><span class="k">pass</span><span class="o">.</span><span class="n">py</span>
 </code></pre></td></tr></table>
@@ -2264,10 +2264,10 @@ with <code>offlineimap</code> and in <code>~/.authinfo</code> so that Emacs is a
 </div><p>and replace each <code>remotepass = password</code> by the next one.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">remotepasseval</span> <span class="o">=</span> <span class="n">get_pass</span><span class="p">(</span><span class="s2">&#34;myaccount&#34;</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">remotepasseval</span> <span class="o">=</span> <span class="n">get_pass</span><span class="p">(</span><span class="s2">&#34;myaccount&#34;</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -2277,13 +2277,13 @@ with <code>offlineimap</code> and in <code>~/.authinfo</code> so that Emacs is a
 <a href="https://github.com/DamienCassou/auth-source-pass">auth-source-pass</a> which exactly do the job for us. The configuration is simple.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">auth-source-pass</span>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">use-package</span> <span class="nv">auth-source-pass</span>
   <span class="nb">:ensure</span> <span class="no">t</span>
   <span class="nb">:config</span>
   <span class="p">(</span><span class="nv">auth-source-pass-enable</span><span class="p">))</span>
@@ -2293,22 +2293,22 @@ with <code>offlineimap</code> and in <code>~/.authinfo</code> so that Emacs is a
 each smtp server. For instance, the entry of <code>.authinfo</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">machine smtp.host.fr login firmin.martin port 587 password abc123
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">machine smtp.host.fr login firmin.martin port 587 password abc123
 </code></pre></td></tr></table>
 </div>
 </div><p>corresponds to <code>~/.password-store/email/smtp.host.fr.gpg</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">abc123
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">abc123
 user: firmin.martin
 host: smtp.host.fr
 port: 587
@@ -2321,7 +2321,7 @@ prompted the passphrase every two hours. Why? The answer lies in the gpg agent
 options <code>default-cache-ttl</code> and <code>--max-cache-ttl</code>. The <a href="https://www.gnupg.org/documentation/manuals/gnupg/Agent-Options.html">documentation</a> says</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2335,7 +2335,7 @@ options <code>default-cache-ttl</code> and <code>--max-cache-ttl</code>. The <a 
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">--default-cache-ttl n
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">--default-cache-ttl n
     Set the time a cache entry is valid to n seconds. The default is 600
     seconds. Each time a cache entry is accessed, the entry’s timer is reset. To set
     an entry’s maximum lifetime, use max-cache-ttl. Note that a cached passphrase
@@ -2356,10 +2356,10 @@ maximum cache time. To increase the cache time permanently to one day, add the
 line below in <code>~/.gnupg/gpg-agent.conf</code>.<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cfg" data-lang="cfg"><span class="na">max-cache-ttl 86400</span>
+<pre tabindex="0" class="chroma"><code class="language-cfg" data-lang="cfg"><span class="na">max-cache-ttl 86400</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>You should restart <code>gpg-agent</code> to see the effect (<code>gpg -K</code> should be enough).

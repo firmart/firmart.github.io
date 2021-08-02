@@ -1349,7 +1349,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Firmin Martin personal website.">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.86.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1766,10 +1766,10 @@ see if I can do something and got the marvelous idea to feed the driver name to
 Google to see if I can get an up-to-date version. I found one,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/morrownr/88x2bu.git
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/morrownr/88x2bu.git
 </code></pre></td></tr></table>
 </div>
 </div><p>and followed the instructions. It compiles! The bad news is the plugged adapter
@@ -1777,10 +1777,10 @@ doesn&rsquo;t have any sign of life. Weird! After all kinds of attempts and rebo
 naively ran a new command</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">lsusb
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">lsusb
 </code></pre></td></tr></table>
 </div>
 </div><p>which reveals that the chip was actually a <code>RT18812AU</code>.  I double-checked the
@@ -1789,10 +1789,10 @@ picked a AU. So&hellip; why they ever put an outdate <code>RT18812BU</code> in t
 Mystery. Again, I searched a driver for this chip, and found this one:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/gnab/rtl8812au
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/gnab/rtl8812au
 </code></pre></td></tr></table>
 </div>
 </div><p>&hellip; followed the instructions, and bingo! The adapter LED started blinking.  I
@@ -1802,19 +1802,19 @@ devices, contrary to what I expected. After heavy surfing on the Internet, I
 found <a href="https://forum.stationx.net/t/resolved-usb-wireless-adapter-on-virtual-machine-isnt-recognized/1201/13">this relevant thread</a>. Ah, I wasn&rsquo;t in <code>vboxusers</code> group:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">groups
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">groups
 </code></pre></td></tr></table>
 </div>
 </div><p>So, I had to add it.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo usermod -a -G vboxusers firmart
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo usermod -a -G vboxusers firmart
 </code></pre></td></tr></table>
 </div>
 </div><p>Logged out. Log back. And finally:</p>

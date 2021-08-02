@@ -1349,7 +1349,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Firmin Martin personal website.">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.86.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1778,10 +1778,10 @@ manipulating image, audio, video, and PDF metadata.</p>
 <p>Rating image with exiftool is very simple.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">exiftool -rating<span class="o">=</span><span class="m">5</span> -overwrite_original_in_place &lt;files&gt;
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">exiftool -rating<span class="o">=</span><span class="m">5</span> -overwrite_original_in_place &lt;files&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>The option <code>-overwrite_original_in_place</code> overwrite directly the file(s) instead
@@ -1789,19 +1789,19 @@ of moving the original one to <code>filename.ext_original</code>. Use it wisely 
 <p>To read back the rating:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">exiftool -rating &lt;files&gt;
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">exiftool -rating &lt;files&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>&hellip; or format yourself the output:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">exiftool -p <span class="s1">&#39;$Rating $Filepath&#39;</span> -f &lt;files&gt;
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">exiftool -p <span class="s1">&#39;$Rating $Filepath&#39;</span> -f &lt;files&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>And, of course the symbolic links are followed<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>!</p>
@@ -2116,7 +2116,7 @@ images and preview them<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" ro
 It will add the custom command <code>rate_image &lt;0-5&gt; &lt;files&gt;</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2154,7 +2154,7 @@ It will add the custom command <code>rate_image &lt;0-5&gt; &lt;files&gt;</code>
 </span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># ~/.config/ranger/commands.py</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># ~/.config/ranger/commands.py</span>
 <span class="k">class</span> <span class="nc">rate_image</span><span class="p">(</span><span class="n">Command</span><span class="p">):</span>
     <span class="s2">&#34;&#34;&#34;:rate_image &lt;0-5&gt; &lt;files&gt;
 </span><span class="s2">
@@ -2166,7 +2166,7 @@ It will add the custom command <code>rate_image &lt;0-5&gt; &lt;files&gt;</code>
 	<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">arg</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
 	    <span class="n">rating_score</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">arg</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 	<span class="k">else</span><span class="p">:</span>
-	    <span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="o">.</span><span class="n">notify</span><span class="p">(</span><span class="s2">&#34;rate_image: a rating score is required!&#34;</span><span class="p">,</span> <span class="n">bad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+	    <span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="o">.</span><span class="n">notify</span><span class="p">(</span><span class="s2">&#34;rate_image: a rating score is required!&#34;</span><span class="p">,</span> <span class="n">bad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 	    <span class="k">return</span>
 	<span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">arg</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
 	    <span class="n">files</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">arg</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -2174,11 +2174,11 @@ It will add the custom command <code>rate_image &lt;0-5&gt; &lt;files&gt;</code>
 	    <span class="n">cwd</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="o">.</span><span class="n">thisdir</span>
 	    <span class="n">cf</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="o">.</span><span class="n">thisfile</span>
 	    <span class="k">if</span> <span class="ow">not</span> <span class="n">cwd</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">cf</span><span class="p">:</span>
-		<span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="o">.</span><span class="n">notify</span><span class="p">(</span><span class="s2">&#34;Error: no file selected for deletion!&#34;</span><span class="p">,</span> <span class="n">bad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="o">.</span><span class="n">notify</span><span class="p">(</span><span class="s2">&#34;Error: no file selected for deletion!&#34;</span><span class="p">,</span> <span class="n">bad</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 		<span class="k">return</span>
 	    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cwd</span><span class="o">.</span><span class="n">marked_items</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
 		<span class="n">files</span> <span class="o">=</span> <span class="s2">&#34; &#34;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">f</span><span class="o">.</span><span class="n">shell_escaped_basename</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">cwd</span><span class="o">.</span><span class="n">marked_items</span><span class="p">])</span>
-		<span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="o">.</span><span class="n">mark_files</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+		<span class="bp">self</span><span class="o">.</span><span class="n">fm</span><span class="o">.</span><span class="n">mark_files</span><span class="p">(</span><span class="nb">all</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 	    <span class="k">else</span><span class="p">:</span>
 		<span class="n">files</span> <span class="o">=</span> <span class="n">cf</span><span class="o">.</span><span class="n">shell_escaped_basename</span>
 	<span class="n">command</span> <span class="o">=</span> <span class="s2">&#34;exiftool -rating=&#34;</span> <span class="o">+</span> <span class="n">rating_score</span> <span class="o">+</span> \
@@ -2196,7 +2196,7 @@ It will add the custom command <code>rate_image &lt;0-5&gt; &lt;files&gt;</code>
 Append the following snippet to <code>~/.config/ranger/rc.conf</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2204,7 +2204,7 @@ Append the following snippet to <code>~/.config/ranger/rc.conf</code>.</p>
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-cfg" data-lang="cfg"><span class="c1"># ~/.config/ranger/rc.conf</span>
+<pre tabindex="0" class="chroma"><code class="language-cfg" data-lang="cfg"><span class="c1"># ~/.config/ranger/rc.conf</span>
 <span class="na">map r1 rate_image 1</span>
 <span class="na">map r2 rate_image 2</span>
 <span class="na">map r3 rate_image 3</span>
@@ -2225,7 +2225,7 @@ Append the following snippet to <code>~/.config/ranger/rc.conf</code>.</p>
 Add the following entries in <code>~/.config/sxiv/exec/key-handler</code><sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2236,7 +2236,7 @@ Add the following entries in <code>~/.config/sxiv/exec/key-handler</code><sup id
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># ~/.config/sxiv/exec/key-handler</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># ~/.config/sxiv/exec/key-handler</span>
 <span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
 <span class="c1"># ...</span>
 <span class="s2">&#34;C-1&#34;</span><span class="o">)</span>      tr <span class="s1">&#39;\n&#39;</span> <span class="s1">&#39;\0&#39;</span> <span class="p">|</span> xargs -0 -I <span class="o">{}</span> exiftool -rating<span class="o">=</span><span class="m">1</span> -overwrite_original_in_place <span class="s2">&#34;{}&#34;</span> <span class="p">;;</span>
@@ -2262,7 +2262,7 @@ to fit your need.</p>
 or 5 and view them with <code>sxiv</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2277,7 +2277,7 @@ or 5 and view them with <code>sxiv</code>.</p>
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 1. Find recursively all JPG under the current directory</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 1. Find recursively all JPG under the current directory</span>
 <span class="c1"># 2. Use GNU parallel, for each JPG</span>
 <span class="c1">#    (a) noglob (zsh specific): disable zsh globing to prevent &#34;No such file&#34; error</span>
 <span class="c1">#    (b) Build the string &#34;$Rating $Filepath&#34;</span>
@@ -2301,14 +2301,14 @@ want to take some time to dump the result in a file as follows.</li>
 <!--listend-->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">find -L -type f -regex <span class="s2">&#34;.*\.jpg</span>$<span class="s2">&#34;</span> <span class="p">|</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">find -L -type f -regex <span class="s2">&#34;.*\.jpg</span>$<span class="s2">&#34;</span> <span class="p">|</span>
 parallel -L <span class="m">5000</span> <span class="se">\
 </span><span class="se"></span> <span class="s1">&#39;noglob exiftool -p &#39;</span><span class="se">\&#39;</span><span class="s1">&#39;$Rating $Filename&#39;</span><span class="se">\&#39;</span><span class="s1">&#39; -f -q -q {} | \
 </span><span class="s1">  head --lines=-1 | \
@@ -2318,11 +2318,11 @@ parallel -L <span class="m">5000</span> <span class="se">\
 </div><p>And view images with specific rating with this command:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">awk <span class="s1">&#39;$1 ~ /345/ {$1=&#34;&#34;; print substr($0, 2)}&#39;</span> ratingdb.txt <span class="p">|</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">awk <span class="s1">&#39;$1 ~ /345/ {$1=&#34;&#34;; print substr($0, 2)}&#39;</span> ratingdb.txt <span class="p">|</span>
 parallel -L <span class="m">250</span> -q sxiv <span class="s2">&#34;{}&#34;</span>
 </code></pre></td></tr></table>
 </div>
@@ -2339,7 +2339,7 @@ manager of parametrizable snippet.</li>
 <p>If you migrate from <code>darktable</code> or have XMP files with rating, you can try the following commands.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2359,7 +2359,7 @@ manager of parametrizable snippet.</li>
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">zmodload zsh/mapfile
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">zmodload zsh/mapfile
 <span class="c1"># 1. Find recursively all XMP under the current directory</span>
 <span class="c1"># 2. Use GNU parallel, for each XMP</span>
 <span class="c1">#   (a) Extract the rating with grep and awk; put it in $RATE.</span>

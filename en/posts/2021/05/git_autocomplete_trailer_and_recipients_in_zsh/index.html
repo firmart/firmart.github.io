@@ -1349,7 +1349,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Firmin Martin personal website.">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.86.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1761,7 +1761,7 @@ snippet will create at most 1500 empty commits from 150 distinct developers.
 It uses <code>rig</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> to create fake identities.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1771,7 +1771,7 @@ It uses <code>rig</code><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" r
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-zsh" data-lang="zsh"><span class="nv">DIR</span><span class="o">=</span>~/tmp/Git_fzf/ mkdir -p <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh"><span class="nv">DIR</span><span class="o">=</span>~/tmp/Git_fzf/ mkdir -p <span class="nv">$DIR</span> <span class="o">&amp;&amp;</span> <span class="nb">cd</span> <span class="nv">$DIR</span>
 git init
 rig -c <span class="m">150</span> <span class="p">|</span> awk -v <span class="nv">RS</span><span class="o">=</span><span class="s1">&#39;\n\n&#39;</span> <span class="s1">&#39;{print $1 &#34; &#34; $2}&#39;</span> <span class="p">|</span>
     <span class="k">while</span> <span class="nb">read</span> name<span class="p">;</span> <span class="k">do</span>
@@ -1793,10 +1793,10 @@ rig -c <span class="m">150</span> <span class="p">|</span> awk -v <span class="n
 repository&rsquo;s developers.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-zsh" data-lang="zsh">git shortlog -sne --all <span class="p">|</span> cut -f2
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh">git shortlog -sne --all <span class="p">|</span> cut -f2
 </code></pre></td></tr></table>
 </div>
 </div><p>Breaking it down, we instruct <code>git shortlog</code></p>
@@ -1815,10 +1815,10 @@ use the option <code>-m</code> to enable multiple choices. The <code>--reverse</
 drop-down menu which I find less disruptive.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-zsh" data-lang="zsh">git shortlog -sne --all <span class="p">|</span> cut -f2 <span class="p">|</span> fzf -m --reverse
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh">git shortlog -sne --all <span class="p">|</span> cut -f2 <span class="p">|</span> fzf -m --reverse
 </code></pre></td></tr></table>
 </div>
 </div><p>Now you can select/unselect emails with <code>TAB</code> / <code>Shift+TAB</code>. Once you
@@ -1828,7 +1828,7 @@ are done, press <code>RET</code>. It will output the selected entries.</p>
 recipients options. Let&rsquo;s wrap it in a function.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1844,7 +1844,7 @@ recipients options. Let&rsquo;s wrap it in a function.</p>
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-zsh" data-lang="zsh">__fzf_git_trailer_and_option<span class="o">()</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh">__fzf_git_trailer_and_option<span class="o">()</span> <span class="o">{</span>
 cat <span class="s">&lt;&lt;- EOF | fzf --reverse
 </span><span class="s">	--to=
 </span><span class="s">	--bcc=
@@ -1868,7 +1868,7 @@ multiple addresses, returns addresses prefixed by the selected trailer or
 option.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1879,7 +1879,7 @@ option.</p>
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-zsh" data-lang="zsh">__fzf_git_authors<span class="o">()</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh">__fzf_git_authors<span class="o">()</span> <span class="o">{</span>
   <span class="k">if</span> <span class="k">$(</span>git rev-parse --is-inside-work-tree 2&gt;/dev/null<span class="k">)</span><span class="p">;</span> <span class="k">then</span>
     <span class="nb">local</span> <span class="nv">trailer_or_option</span><span class="o">=</span><span class="k">$(</span>__fzf_git_trailer_and_option<span class="k">)</span>
     git shortlog -sne --all <span class="p">|</span> cut -f2 <span class="p">|</span> fzf -m --reverse <span class="p">|</span>
@@ -1896,14 +1896,14 @@ appends the current command line. So, we keep the content on the left of the
 buffer and redisplay it.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-zsh" data-lang="zsh">fzf-git-authors<span class="o">()</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh">fzf-git-authors<span class="o">()</span> <span class="o">{</span>
   <span class="nv">LBUFFER</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">LBUFFER</span><span class="si">}</span><span class="k">$(</span>__fzf_git_authors<span class="k">)</span><span class="s2">&#34;</span>
   zle redisplay
   <span class="nb">typeset</span> -f zle-line-init &gt;/dev/null <span class="o">&amp;&amp;</span> zle zle-line-init
@@ -1913,11 +1913,11 @@ buffer and redisplay it.</p>
 </div><p>Finally, I bound that function to <code>Alt-E</code>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-zsh" data-lang="zsh">zle     -N   fzf-git-authors
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh">zle     -N   fzf-git-authors
 bindkey <span class="s1">&#39;\ee&#39;</span> fzf-git-authors
 </code></pre></td></tr></table>
 </div>
@@ -2262,6 +2262,13 @@ bindkey <span class="s1">&#39;\ee&#39;</span> fzf-git-authors
       </a>
     
     <div class="grow"></div>
+    
+      <a href="https://firminmartin.com/en/posts/2021/07/ctf_js_with_restricted_chars_set/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">CTF: JS with restricted chars set</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>

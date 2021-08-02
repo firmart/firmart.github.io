@@ -1349,7 +1349,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Firmin Martin personal website.">
 
-<meta name="generator" content="Hugo 0.83.1" />
+<meta name="generator" content="Hugo 0.86.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1756,10 +1756,10 @@ query, we need the options <code>--body=false</code> and <code>--entire-thread=f
 above, we also want S-expression as output format, <em>e.g.</em> <code>--format=sexp</code>. Putting together:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">notmuch show --body<span class="o">=</span><span class="nb">false</span> --entire-thread<span class="o">=</span><span class="nb">false</span> --format<span class="o">=</span>sexp &lt;search-term&gt;
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">notmuch show --body<span class="o">=</span><span class="nb">false</span> --entire-thread<span class="o">=</span><span class="nb">false</span> --format<span class="o">=</span>sexp &lt;search-term&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>where <a href="https://notmuchmail.org/manpages/notmuch-search-terms-7/">search-term</a> corresponds, in notmuch jargon, to the query expression.</p>
@@ -1768,7 +1768,7 @@ For testing purpose, I wrote to myself several emails to obtain two threads of t
 following structure (with the sent time to better identifying them later):</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1781,7 +1781,7 @@ following structure (with the sent time to better identifying them later):</p>
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">|- email 1 (12:32:37)
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">|- email 1 (12:32:37)
 |  |
 |  |-- email 2 (12:32:56)
 |  |  |
@@ -1800,11 +1800,11 @@ to convert the shell output to Emacs Lisp S-expression.<sup id="fnref:1"><a href
 translate the previous shell command into</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">notmuch-call-notmuch-sexp</span>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">notmuch-call-notmuch-sexp</span>
      <span class="s">&#34;show&#34;</span> <span class="s">&#34;--body=false&#34;</span> <span class="s">&#34;--entire-thread=false&#34;</span> <span class="s">&#34;--format=sexp&#34;</span> <span class="nv">search-term</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
@@ -1814,10 +1814,10 @@ functions actually call <code>notmuch-call-notmuch-sexp</code> brings me to the 
 function call above can, kind of<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, be simplify to</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">notmuch-query-get-threads</span> <span class="p">(</span><span class="nf">list</span> <span class="nv">search-term</span><span class="p">))</span>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">notmuch-query-get-threads</span> <span class="p">(</span><span class="nf">list</span> <span class="nv">search-term</span><span class="p">))</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="notmuch-thread-structure">Notmuch thread structure</h2>
@@ -1830,7 +1830,7 @@ parentheses. To understand better the structure, I replaced the plists by the
 sent time:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1839,7 +1839,7 @@ sent time:</p>
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(((</span><span class="s">&#34;12:44:34&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(((</span><span class="s">&#34;12:44:34&#34;</span>
    <span class="p">((</span><span class="s">&#34;12:45:41&#34;</span> <span class="no">nil</span><span class="p">))))</span>
 
  <span class="p">((</span><span class="s">&#34;12:32:37&#34;</span>
@@ -1856,11 +1856,11 @@ stated above, the <code>notmuch-query</code> library provides some functions we 
 directly. It can be done by</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">notmuch-query-map-threads</span> <span class="nf">#&#39;identity</span>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">notmuch-query-map-threads</span> <span class="nf">#&#39;identity</span>
 			   <span class="p">(</span><span class="nv">notmuch-query-get-threads</span> <span class="p">(</span><span class="nf">list</span> <span class="nv">search-term</span><span class="p">)))</span>
 </code></pre></td></tr></table>
 </div>
@@ -1868,13 +1868,13 @@ directly. It can be done by</p>
 define the following function.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">notmuch-notify--show-headers</span> <span class="p">(</span><span class="nv">search-term</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">notmuch-notify--show-headers</span> <span class="p">(</span><span class="nv">search-term</span><span class="p">)</span>
   <span class="p">(</span><span class="nv">notmuch-query-map-threads</span>
    <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nv">p</span><span class="p">)</span> <span class="p">(</span><span class="nf">plist-get</span> <span class="nv">p</span> <span class="nb">:headers</span><span class="p">))</span>
    <span class="p">(</span><span class="nv">notmuch-query-get-threads</span> <span class="p">(</span><span class="nf">list</span> <span class="nv">search-term</span><span class="p">))))</span>
